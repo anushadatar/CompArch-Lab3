@@ -1,0 +1,13 @@
+Wednesday 10/24: 
+Create block diagram + Determine necessary components + dataflow - 2 hours
+Wednesday 10/24:
+Collect, evaluate, and re-test existing components without integration - 2 hours
+    - Create high-coverage and well-documented testbenches as needed 
+Monday 10/30:
+Integrate components into a complete module and create testing framework - 5 hours
+Thursday 11/1:
+Write test program - 30 minutes
+Test module with class assembly programs and debug - 2 hours
+Friday 11/2:
+Report + Documentation - 1.5 hours
+
