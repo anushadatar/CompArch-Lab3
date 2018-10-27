@@ -1,6 +1,6 @@
-`include "operations/multiplexer.v"
-`include "operations/gates.v"
-`include "operations/add_sub.v"
+`include "ALU/operations/multiplexer.v"
+`include "ALU/operations/gates.v"
+`include "ALU/operations/add_sub.v"
 
 `define MUX     multiplexer #120
 `define AND     ALUand
@@ -98,11 +98,11 @@ module ALU_1bit
 endmodule
 
 /*
-Full 32-bit ALU. Contains 32 individual 1-bit ALU units - 31 of 
+Full 32-bit ALU. Contains 32 individual 1-bit ALU units - 31 of
 the standard modules and one of the final one.
 
-Takes in A, B, and select command. Outputs result of specified 
-operation, carryout, zero (returns 1 if all values are zero), 
+Takes in A, B, and select command. Outputs result of specified
+operation, carryout, zero (returns 1 if all values are zero),
 and an overflow flag.
 */
 
