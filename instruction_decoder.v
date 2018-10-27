@@ -13,7 +13,7 @@
 
 module instructionDecoder
 (
-    input clk;
+    input clk,
     input data
 )
 
