@@ -5,7 +5,7 @@
 `define JAL  6'b000011
 `define BNE  6'b000101
 `define BEQ  6'b000100
-`define XORI 6'b001110 
+`define XORI 6'b001110
 `define ADDI 6'b001000
 `define ADD  6'b100000
 `define SUB  6'b100010
@@ -14,13 +14,21 @@
 module instructionDecoder
 (
     input clk,
-    input data
+    input data,
+    output operation,
+    output rs,
+    output rt,
+    output rd,
+    output immediate,
+    output funct,
+    output shamt,
 )
 
 wire[31:0] instruction;
 
 assign opcode = instruction[31:26];
-always (@OP) begin
+
+always (@opcode) begin
     case(opcode)
         `LW begin
             //control signals and register processing
