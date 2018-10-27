@@ -14,7 +14,7 @@
 module instructionDecoder
 (
     input clk,
-    input data,
+    input[31:0] instruction,
     output operation,
     output rs,
     output rt,
@@ -23,8 +23,6 @@ module instructionDecoder
     output funct,
     output shamt,
 )
-
-wire[31:0] instruction;
 
 assign opcode = instruction[31:26];
 
