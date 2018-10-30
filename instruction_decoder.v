@@ -60,18 +60,10 @@ address[25:0] = instruction[25:0];
         `XORI: begin reg_WE = 1; ALU_op = `aluXOR; op_imm = 1; DM_WE = 0; dest_add = 1; reg_in = 0; DM_add = 0; end //I type
         `ADDI: begin reg_WE = 1; ALU_op = `aluADD; op_imm = 1; DM_WE = 0; dest_add = 1; reg_in = 0; DM_add = 0; end //I type
         `R: begin
-          if (funct==`ADD)begin
-            reg_WE = 1; ALU_op = `aluADD; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0;
-          end
-          else if (funct==`SUB)begin
-            reg_WE = 1; ALU_op = `aluSUB; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0;
-          end
-          else if (funct == `SLT)begin
-            reg_WE = 1; ALU_op = `aluSLT; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0;
-          end
-          else if (funct == `JR)begin
-            reg_WE = 0; ALU_op = `aluADD; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0;
-          end
+          if (funct==`ADD)        begin reg_WE = 1; ALU_op = `aluADD; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0; end
+          else if (funct==`SUB)   begin reg_WE = 1; ALU_op = `aluSUB; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0; end
+          else if (funct == `SLT) begin reg_WE = 1; ALU_op = `aluSLT; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0; end
+          else if (funct == `JR)  begin reg_WE = 0; ALU_op = `aluADD; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0; end
        end
     endcase
 end
