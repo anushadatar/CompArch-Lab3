@@ -4,25 +4,24 @@
 //  time or jumps to a new address.
 //---------------------------------------------------------------------------
 
-`include "ALU/alu.v"
+`include "ALU/32bitadder.v"
 `include "pc_multiplexer.v"
 
 module programcounter
 (
   input   clk,
   input[31:0]   jump_address,
-  input   alu_command,
   input   mux_command,
-  output reg[31:0] instruction_address
+  output reg[31:0] PC
 );
-  wire[31:0] alu_out;
+  wire[31:0] incremented;
   wire[31:0] mux_out;
 
-  pc_multiplexer mux(.out(mux_out), .I0(32'd4), .I1(jump_address), .S(mux_command)); // choose if you want to use incremented PC or jump address
+  pc_multiplexer mux(.out(mux_out), .I0(incremented), .I1(jump_address), .S(mux_command)); // choose if you want to use incremented PC or jump address
 
-  ALU alu(.result(alu_out),.A(instruction_address),.B(mux_out),.command(alu_command)); // add chosen value
+  FullAdder32bit adder(.sum(incremented),.a(PC),.b(32'd4),.carryin(1'd0)); // add chosen value
 
-  always @(posedge_clk) begin
-    instruction_address <= alu_out; // get next instruction on clock edge
+  always @(posedge clk) begin
+    PC <= mux_out; // get next instruction on clock edge
   end
 endmodule

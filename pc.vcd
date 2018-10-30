@@ -1,0 +1,1150 @@
+$date
+	Tue Oct 30 11:42:20 2018
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module testPC $end
+$var wire 32 ! PC [31:0] $end
+$var reg 1 " clk $end
+$var reg 32 # jump_address [31:0] $end
+$var reg 1 $ mux_command $end
+$scope module pc $end
+$var wire 1 " clk $end
+$var wire 32 % jump_address [31:0] $end
+$var wire 1 $ mux_command $end
+$var wire 32 & mux_out [31:0] $end
+$var wire 32 ' incremented [31:0] $end
+$var reg 32 ( PC [31:0] $end
+$scope module adder $end
+$var wire 32 ) a [31:0] $end
+$var wire 1 * a3inv $end
+$var wire 32 + b [31:0] $end
+$var wire 1 , b3inv $end
+$var wire 1 - carryin $end
+$var wire 1 . negand $end
+$var wire 1 / one $end
+$var wire 1 0 overflow $end
+$var wire 1 1 posand $end
+$var wire 1 2 s3inv $end
+$var wire 1 3 zeros $end
+$var wire 32 4 sum [31:0] $end
+$var wire 32 5 carryout0 [31:0] $end
+$var wire 1 6 carryout $end
+$scope begin genblock[1] $end
+$scope module _adder $end
+$var wire 1 7 a $end
+$var wire 1 8 and0 $end
+$var wire 1 9 and1 $end
+$var wire 1 : b $end
+$var wire 1 ; carryin $end
+$var wire 1 < carryout $end
+$var wire 1 = sum $end
+$var wire 1 > xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[2] $end
+$scope module _adder $end
+$var wire 1 ? a $end
+$var wire 1 @ and0 $end
+$var wire 1 A and1 $end
+$var wire 1 B b $end
+$var wire 1 C carryin $end
+$var wire 1 D carryout $end
+$var wire 1 E sum $end
+$var wire 1 F xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[3] $end
+$scope module _adder $end
+$var wire 1 G a $end
+$var wire 1 H and0 $end
+$var wire 1 I and1 $end
+$var wire 1 J b $end
+$var wire 1 K carryin $end
+$var wire 1 L carryout $end
+$var wire 1 M sum $end
+$var wire 1 N xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[4] $end
+$scope module _adder $end
+$var wire 1 O a $end
+$var wire 1 P and0 $end
+$var wire 1 Q and1 $end
+$var wire 1 R b $end
+$var wire 1 S carryin $end
+$var wire 1 T carryout $end
+$var wire 1 U sum $end
+$var wire 1 V xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[5] $end
+$scope module _adder $end
+$var wire 1 W a $end
+$var wire 1 X and0 $end
+$var wire 1 Y and1 $end
+$var wire 1 Z b $end
+$var wire 1 [ carryin $end
+$var wire 1 \ carryout $end
+$var wire 1 ] sum $end
+$var wire 1 ^ xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[6] $end
+$scope module _adder $end
+$var wire 1 _ a $end
+$var wire 1 ` and0 $end
+$var wire 1 a and1 $end
+$var wire 1 b b $end
+$var wire 1 c carryin $end
+$var wire 1 d carryout $end
+$var wire 1 e sum $end
+$var wire 1 f xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[7] $end
+$scope module _adder $end
+$var wire 1 g a $end
+$var wire 1 h and0 $end
+$var wire 1 i and1 $end
+$var wire 1 j b $end
+$var wire 1 k carryin $end
+$var wire 1 l carryout $end
+$var wire 1 m sum $end
+$var wire 1 n xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[8] $end
+$scope module _adder $end
+$var wire 1 o a $end
+$var wire 1 p and0 $end
+$var wire 1 q and1 $end
+$var wire 1 r b $end
+$var wire 1 s carryin $end
+$var wire 1 t carryout $end
+$var wire 1 u sum $end
+$var wire 1 v xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[9] $end
+$scope module _adder $end
+$var wire 1 w a $end
+$var wire 1 x and0 $end
+$var wire 1 y and1 $end
+$var wire 1 z b $end
+$var wire 1 { carryin $end
+$var wire 1 | carryout $end
+$var wire 1 } sum $end
+$var wire 1 ~ xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[10] $end
+$scope module _adder $end
+$var wire 1 !" a $end
+$var wire 1 "" and0 $end
+$var wire 1 #" and1 $end
+$var wire 1 $" b $end
+$var wire 1 %" carryin $end
+$var wire 1 &" carryout $end
+$var wire 1 '" sum $end
+$var wire 1 (" xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[11] $end
+$scope module _adder $end
+$var wire 1 )" a $end
+$var wire 1 *" and0 $end
+$var wire 1 +" and1 $end
+$var wire 1 ," b $end
+$var wire 1 -" carryin $end
+$var wire 1 ." carryout $end
+$var wire 1 /" sum $end
+$var wire 1 0" xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[12] $end
+$scope module _adder $end
+$var wire 1 1" a $end
+$var wire 1 2" and0 $end
+$var wire 1 3" and1 $end
+$var wire 1 4" b $end
+$var wire 1 5" carryin $end
+$var wire 1 6" carryout $end
+$var wire 1 7" sum $end
+$var wire 1 8" xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[13] $end
+$scope module _adder $end
+$var wire 1 9" a $end
+$var wire 1 :" and0 $end
+$var wire 1 ;" and1 $end
+$var wire 1 <" b $end
+$var wire 1 =" carryin $end
+$var wire 1 >" carryout $end
+$var wire 1 ?" sum $end
+$var wire 1 @" xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[14] $end
+$scope module _adder $end
+$var wire 1 A" a $end
+$var wire 1 B" and0 $end
+$var wire 1 C" and1 $end
+$var wire 1 D" b $end
+$var wire 1 E" carryin $end
+$var wire 1 F" carryout $end
+$var wire 1 G" sum $end
+$var wire 1 H" xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[15] $end
+$scope module _adder $end
+$var wire 1 I" a $end
+$var wire 1 J" and0 $end
+$var wire 1 K" and1 $end
+$var wire 1 L" b $end
+$var wire 1 M" carryin $end
+$var wire 1 N" carryout $end
+$var wire 1 O" sum $end
+$var wire 1 P" xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[16] $end
+$scope module _adder $end
+$var wire 1 Q" a $end
+$var wire 1 R" and0 $end
+$var wire 1 S" and1 $end
+$var wire 1 T" b $end
+$var wire 1 U" carryin $end
+$var wire 1 V" carryout $end
+$var wire 1 W" sum $end
+$var wire 1 X" xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[17] $end
+$scope module _adder $end
+$var wire 1 Y" a $end
+$var wire 1 Z" and0 $end
+$var wire 1 [" and1 $end
+$var wire 1 \" b $end
+$var wire 1 ]" carryin $end
+$var wire 1 ^" carryout $end
+$var wire 1 _" sum $end
+$var wire 1 `" xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[18] $end
+$scope module _adder $end
+$var wire 1 a" a $end
+$var wire 1 b" and0 $end
+$var wire 1 c" and1 $end
+$var wire 1 d" b $end
+$var wire 1 e" carryin $end
+$var wire 1 f" carryout $end
+$var wire 1 g" sum $end
+$var wire 1 h" xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[19] $end
+$scope module _adder $end
+$var wire 1 i" a $end
+$var wire 1 j" and0 $end
+$var wire 1 k" and1 $end
+$var wire 1 l" b $end
+$var wire 1 m" carryin $end
+$var wire 1 n" carryout $end
+$var wire 1 o" sum $end
+$var wire 1 p" xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[20] $end
+$scope module _adder $end
+$var wire 1 q" a $end
+$var wire 1 r" and0 $end
+$var wire 1 s" and1 $end
+$var wire 1 t" b $end
+$var wire 1 u" carryin $end
+$var wire 1 v" carryout $end
+$var wire 1 w" sum $end
+$var wire 1 x" xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[21] $end
+$scope module _adder $end
+$var wire 1 y" a $end
+$var wire 1 z" and0 $end
+$var wire 1 {" and1 $end
+$var wire 1 |" b $end
+$var wire 1 }" carryin $end
+$var wire 1 ~" carryout $end
+$var wire 1 !# sum $end
+$var wire 1 "# xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[22] $end
+$scope module _adder $end
+$var wire 1 ## a $end
+$var wire 1 $# and0 $end
+$var wire 1 %# and1 $end
+$var wire 1 &# b $end
+$var wire 1 '# carryin $end
+$var wire 1 (# carryout $end
+$var wire 1 )# sum $end
+$var wire 1 *# xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[23] $end
+$scope module _adder $end
+$var wire 1 +# a $end
+$var wire 1 ,# and0 $end
+$var wire 1 -# and1 $end
+$var wire 1 .# b $end
+$var wire 1 /# carryin $end
+$var wire 1 0# carryout $end
+$var wire 1 1# sum $end
+$var wire 1 2# xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[24] $end
+$scope module _adder $end
+$var wire 1 3# a $end
+$var wire 1 4# and0 $end
+$var wire 1 5# and1 $end
+$var wire 1 6# b $end
+$var wire 1 7# carryin $end
+$var wire 1 8# carryout $end
+$var wire 1 9# sum $end
+$var wire 1 :# xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[25] $end
+$scope module _adder $end
+$var wire 1 ;# a $end
+$var wire 1 <# and0 $end
+$var wire 1 =# and1 $end
+$var wire 1 ># b $end
+$var wire 1 ?# carryin $end
+$var wire 1 @# carryout $end
+$var wire 1 A# sum $end
+$var wire 1 B# xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[26] $end
+$scope module _adder $end
+$var wire 1 C# a $end
+$var wire 1 D# and0 $end
+$var wire 1 E# and1 $end
+$var wire 1 F# b $end
+$var wire 1 G# carryin $end
+$var wire 1 H# carryout $end
+$var wire 1 I# sum $end
+$var wire 1 J# xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[27] $end
+$scope module _adder $end
+$var wire 1 K# a $end
+$var wire 1 L# and0 $end
+$var wire 1 M# and1 $end
+$var wire 1 N# b $end
+$var wire 1 O# carryin $end
+$var wire 1 P# carryout $end
+$var wire 1 Q# sum $end
+$var wire 1 R# xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[28] $end
+$scope module _adder $end
+$var wire 1 S# a $end
+$var wire 1 T# and0 $end
+$var wire 1 U# and1 $end
+$var wire 1 V# b $end
+$var wire 1 W# carryin $end
+$var wire 1 X# carryout $end
+$var wire 1 Y# sum $end
+$var wire 1 Z# xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[29] $end
+$scope module _adder $end
+$var wire 1 [# a $end
+$var wire 1 \# and0 $end
+$var wire 1 ]# and1 $end
+$var wire 1 ^# b $end
+$var wire 1 _# carryin $end
+$var wire 1 `# carryout $end
+$var wire 1 a# sum $end
+$var wire 1 b# xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[30] $end
+$scope module _adder $end
+$var wire 1 c# a $end
+$var wire 1 d# and0 $end
+$var wire 1 e# and1 $end
+$var wire 1 f# b $end
+$var wire 1 g# carryin $end
+$var wire 1 h# carryout $end
+$var wire 1 i# sum $end
+$var wire 1 j# xor0 $end
+$upscope $end
+$upscope $end
+$scope begin genblock[31] $end
+$scope module _adder $end
+$var wire 1 k# a $end
+$var wire 1 l# and0 $end
+$var wire 1 m# and1 $end
+$var wire 1 n# b $end
+$var wire 1 o# carryin $end
+$var wire 1 p# carryout $end
+$var wire 1 q# sum $end
+$var wire 1 r# xor0 $end
+$upscope $end
+$upscope $end
+$scope module _adder $end
+$var wire 1 s# a $end
+$var wire 1 t# and0 $end
+$var wire 1 u# and1 $end
+$var wire 1 v# b $end
+$var wire 1 - carryin $end
+$var wire 1 w# carryout $end
+$var wire 1 x# sum $end
+$var wire 1 y# xor0 $end
+$upscope $end
+$upscope $end
+$scope module mux $end
+$var wire 32 z# I0 [31:0] $end
+$var wire 32 {# I1 [31:0] $end
+$var wire 1 $ S $end
+$var reg 32 |# out [31:0] $end
+$upscope $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 |#
+b0 {#
+bx z#
+xy#
+xx#
+xw#
+0v#
+xu#
+xt#
+xs#
+xr#
+xq#
+xp#
+xo#
+0n#
+xm#
+xl#
+xk#
+xj#
+xi#
+xh#
+xg#
+0f#
+xe#
+xd#
+xc#
+xb#
+xa#
+x`#
+x_#
+0^#
+x]#
+x\#
+x[#
+xZ#
+xY#
+xX#
+xW#
+0V#
+xU#
+xT#
+xS#
+xR#
+xQ#
+xP#
+xO#
+0N#
+xM#
+xL#
+xK#
+xJ#
+xI#
+xH#
+xG#
+0F#
+xE#
+xD#
+xC#
+xB#
+xA#
+x@#
+x?#
+0>#
+x=#
+x<#
+x;#
+x:#
+x9#
+x8#
+x7#
+06#
+x5#
+x4#
+x3#
+x2#
+x1#
+x0#
+x/#
+0.#
+x-#
+x,#
+x+#
+x*#
+x)#
+x(#
+x'#
+0&#
+x%#
+x$#
+x##
+x"#
+x!#
+x~"
+x}"
+0|"
+x{"
+xz"
+xy"
+xx"
+xw"
+xv"
+xu"
+0t"
+xs"
+xr"
+xq"
+xp"
+xo"
+xn"
+xm"
+0l"
+xk"
+xj"
+xi"
+xh"
+xg"
+xf"
+xe"
+0d"
+xc"
+xb"
+xa"
+x`"
+x_"
+x^"
+x]"
+0\"
+x["
+xZ"
+xY"
+xX"
+xW"
+xV"
+xU"
+0T"
+xS"
+xR"
+xQ"
+xP"
+xO"
+xN"
+xM"
+0L"
+xK"
+xJ"
+xI"
+xH"
+xG"
+xF"
+xE"
+0D"
+xC"
+xB"
+xA"
+x@"
+x?"
+x>"
+x="
+0<"
+x;"
+x:"
+x9"
+x8"
+x7"
+x6"
+x5"
+04"
+x3"
+x2"
+x1"
+x0"
+x/"
+x."
+x-"
+0,"
+x+"
+x*"
+x)"
+x("
+x'"
+x&"
+x%"
+0$"
+x#"
+x""
+x!"
+x~
+x}
+x|
+x{
+0z
+xy
+xx
+xw
+xv
+xu
+xt
+xs
+0r
+xq
+xp
+xo
+xn
+xm
+xl
+xk
+0j
+xi
+xh
+xg
+xf
+xe
+xd
+xc
+0b
+xa
+x`
+x_
+x^
+x]
+x\
+x[
+0Z
+xY
+xX
+xW
+xV
+xU
+xT
+xS
+0R
+xQ
+xP
+xO
+xN
+xM
+xL
+xK
+0J
+xI
+xH
+xG
+xF
+xE
+xD
+xC
+1B
+xA
+x@
+x?
+x>
+x=
+x<
+x;
+0:
+x9
+x8
+x7
+x6
+bx 5
+bx 4
+x3
+x2
+x1
+x0
+x/
+x.
+0-
+x,
+b100 +
+x*
+bx )
+bx (
+bx '
+b0 &
+b0 %
+1$
+b0 #
+0"
+bx !
+$end
+#10000
+1,
+#30000
+0l#
+0d#
+0\#
+0T#
+0L#
+0D#
+0<#
+04#
+0,#
+0$#
+0z"
+0r"
+0j"
+0b"
+0Z"
+0R"
+0J"
+0B"
+0:"
+02"
+0*"
+0""
+0x
+0p
+0h
+0`
+0X
+0P
+0H
+08
+0t#
+0u#
+#40000
+0.
+#60000
+0;
+bx0 5
+0w#
+#90000
+09
+#120000
+0C
+bx00 5
+0<
+#150000
+0A
+#200000
+07
+0?
+0G
+0O
+0W
+0_
+0g
+0o
+0w
+0!"
+0)"
+01"
+09"
+0A"
+0I"
+0Q"
+0Y"
+0a"
+0i"
+0q"
+0y"
+0##
+0+#
+03#
+0;#
+0C#
+0K#
+0S#
+0[#
+0c#
+0k#
+0s#
+b0 !
+b0 (
+b0 )
+1"
+#210000
+1*
+#230000
+0>
+1F
+0@
+0N
+0V
+0^
+0f
+0n
+0v
+0~
+0("
+00"
+08"
+0@"
+0H"
+0P"
+0X"
+0`"
+0h"
+0p"
+0x"
+0"#
+0*#
+02#
+0:#
+0B#
+0J#
+0R#
+0Z#
+0b#
+0j#
+0r#
+0y#
+#260000
+0K
+0=
+1E
+bx000 5
+0D
+0I
+0Q
+0Y
+0a
+0i
+0q
+0y
+0#"
+0+"
+03"
+0;"
+0C"
+0K"
+0S"
+0["
+0c"
+0k"
+0s"
+0{"
+0%#
+0-#
+05#
+0=#
+0E#
+0M#
+0U#
+0]#
+0e#
+0m#
+bx100 '
+bx100 4
+bx100 z#
+0x#
+#290000
+0S
+0[
+0c
+0k
+0s
+0{
+0%"
+0-"
+05"
+0="
+0E"
+0M"
+0U"
+0]"
+0e"
+0m"
+0u"
+0}"
+0'#
+0/#
+07#
+0?#
+0G#
+0O#
+0W#
+0_#
+0g#
+0o#
+06
+bx0100 '
+bx0100 4
+bx0100 z#
+0M
+0L
+0T
+0\
+0d
+0l
+0t
+0|
+0&"
+0."
+06"
+0>"
+0F"
+0N"
+0V"
+0^"
+0f"
+0n"
+0v"
+0~"
+0(#
+00#
+08#
+0@#
+0H#
+0P#
+0X#
+0`#
+0h#
+b0 5
+0p#
+#320000
+0U
+0]
+0e
+0m
+0u
+0}
+0'"
+0/"
+07"
+0?"
+0G"
+0O"
+0W"
+0_"
+0g"
+0o"
+0w"
+0!#
+0)#
+01#
+09#
+0A#
+0I#
+0Q#
+0Y#
+0a#
+0i#
+b100 '
+b100 4
+b100 z#
+0q#
+#330000
+12
+01
+#360000
+00
+#400000
+b100 &
+b100 |#
+0$
+b10100 #
+b10100 %
+b10100 {#
+0"
+#590000
+1/
+#600000
+1?
+b100 !
+b100 (
+b100 )
+03
+1"
+#630000
+0F
+1@
+#660000
+b0 &
+b0 |#
+1K
+b0 '
+b0 4
+b0 z#
+0E
+b100 5
+1D
+#690000
+b1000 &
+b1000 |#
+b1000 '
+b1000 4
+b1000 z#
+1M
+#800000
+0"
+#1000000
+0?
+1G
+b1000 !
+b1000 (
+b1000 )
+1"
+#1030000
+1F
+0@
+1N
+#1060000
+0K
+b100 &
+b100 |#
+1E
+b0 5
+0D
+b100 '
+b100 4
+b100 z#
+0M
+1I
+#1090000
+b1100 &
+b1100 |#
+1S
+b1100 '
+b1100 4
+b1100 z#
+1M
+0I
+b1000 5
+1L
+#1120000
+b11100 &
+b11100 |#
+0S
+b11100 '
+b11100 4
+b11100 z#
+1U
+b0 5
+0L
+#1150000
+b1100 &
+b1100 |#
+b1100 '
+b1100 4
+b1100 z#
+0U
+#1200000
+0"
+#1400000
+1?
+b1100 !
+b1100 (
+b1100 )
+1"
+#1430000
+0F
+1@
+#1460000
+b1000 &
+b1000 |#
+1K
+b1000 '
+b1000 4
+b1000 z#
+0E
+b100 5
+1D
+#1490000
+b0 &
+b0 |#
+b0 '
+b0 4
+b0 z#
+0M
+1I
+#1520000
+1S
+b1100 5
+1L
+#1550000
+b10000 &
+b10000 |#
+b10000 '
+b10000 4
+b10000 z#
+1U
+#1600000
+b10100 &
+b10100 |#
+1$
+0"
+#1800000
+0G
+1O
+b10100 !
+b10100 (
+b10100 )
+1"
+#1830000
+0N
+1V
+#1860000
+1M
+0I
+b1000 '
+b1000 4
+b1000 z#
+0U
+1Q
+#1890000
+0S
+1[
+0L
+b10100 5
+1T
+#1920000
+1U
+0Q
+b111000 '
+b111000 4
+b111000 z#
+1]
+#1950000
+0[
+b100 5
+0T
+#1980000
+b11000 '
+b11000 4
+b11000 z#
+0]
+#2000000
+0"
