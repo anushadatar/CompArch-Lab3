@@ -13,8 +13,8 @@ module instructionDecoder
   output reg[1:0] controlSig
 );
 always @(opcode)
-  if (opcode == `BEQ || opcode == `BNE) begin controlSig = 2'd2;  end
-  else if (opcode == `JAL || opcode == `J) begin  controlSig = 2'd1; end
-  else if (opcode == `JR && function1 == `JR_f) begin controlSig = 2'd3; end
-  else begin controlSig = 2'd0; end
+  if   (opcode == `JR && function1 == `JR_f) begin controlSig = 2'd3; end //MUX INPUT 3 is R(rs)
+  else if (opcode == `BEQ || opcode == `BNE) begin controlSig = 2'd2; end //MUX INPUT 2 is [PC[31:28],address,00]
+  else if (opcode == `JAL || opcode == `J)   begin controlSig = 2'd1; end //MUX INPUT 1 is address
+  else begin controlSig = 2'd0; end                                       //MUX INPUT 0 is PC+4
 endmodule
