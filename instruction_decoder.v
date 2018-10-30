@@ -1,6 +1,6 @@
 `define LW   6'b100011
 `define SW   6'b101011
-`define J   6'b000010
+`define J    6'b000010
 `define R    6'b000000
 `define JR   6'b001000  //R Type
 `define JAL  6'b000011
@@ -42,37 +42,48 @@ always (@opcode) begin
         `LW begin
           //control signals and register processing
           //I type
+          reg_WE = 1; ALU_op = `ADD; op_imm = 1; DM_WE = 0; dest_add = 1; reg_in = 1; DM_add = 1;
         end
         `SW begin
           //I type
+          reg_WE = 0; ALU_op = `ADD; op_imm = 1; DM_WE = 1; dest_add = 1; reg_in = 0; DM_add = 1;
         end
         `J begin
           //J type
+          reg_WE = 0; ALU_op = `ADD; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0;
         end
         `JAL begin
           //J type
+
         end
         `BNE begin
           //I type
+
         end
         `BEQ begin
           //I type
+          reg_WE = ; ALU_op = ; op_imm = ; DM_WE = ; dest_add = ; reg_in = ; DM_add = ;
         end
         `XORI begin
           //I type
+          reg_WE = ; ALU_op = ; op_imm = ; DM_WE = ; dest_add = ; reg_in = ; DM_add = ;
         end
         `ADDI begin
           // I type
+          reg_WE = ; ALU_op = ; op_imm = ; DM_WE = ; dest_add = ; reg_in = ; DM_add = ;
         end
         `R begin
           if (funct==`ADD)begin
 
           end
           else if (funct==`SUB)begin
+            reg_WE = ; ALU_op = ; op_imm = ; DM_WE = ; dest_add = ; reg_in = ; DM_add = ;
           end
           else if (funct == `SLT)begin
+          reg_WE = ; ALU_op = ; op_imm = ; DM_WE = ; dest_add = ; reg_in = ; DM_add = ;
           end
           else if (funct == `JR)begin
+          reg_WE = ; ALU_op = ; op_imm = ; DM_WE = ; dest_add = ; reg_in = ; DM_add = ;
           end
 
           //add, sub, slt, jr
