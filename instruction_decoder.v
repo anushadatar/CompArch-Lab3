@@ -12,82 +12,67 @@
 `define SUB  6'b100010  //R Type
 `define SLT  6'b101010  //R Type
 
+`define aluADD 4'd0
+`define aluSUB 4'd1
+`define aluXOR 4'd2
+`define aluSLT 4'd3
+
 module instructionDecoder
 (
     input clk,
     input[31:0] instruction,
-    output operation,
-    output rs,
-    output rt,
-    output rd,
-    output immediate,
-    output funct,
-    output shamt,
-    output address,
-    output aluop,
-    output memWE,
-)
+    output[5:0] operation,
+    output reg[5:0] rs,
+    output reg[6:0] rt,
+    output reg[5:0] rd,
+    output reg[31:0] immediate,
+    output reg[5:0] funct,
+    output reg[5:0] shamt,
+    output reg[31:0] address,
+    output reg[3:0] ALU_op,
+    output reg reg_WE,
+    output reg op_imm,
+    output reg DM_WE,
+    output reg[1:0] dest_add,
+    output reg[1:0] reg_in,
+    output reg DM_add,
+    output reg[5:0] opcode
+);
 
-assign opcode = instruction[31:26];
-assign funct = instruction[5:0];
-assign rs = instruction[25:21];
-assign rt = instruction[20:16];
-assign rd = instruction[15:11];
-assign shamt = instruction[10:6];
-assign immediate = instruction[15:0];
-assign address = instruction[25:0];
-
-always (@opcode) begin
+always @(instruction)begin
+opcode = instruction[31:26];
+funct = instruction[5:0];
+rs = instruction[25:21];
+rt = instruction[20:16];
+rd = instruction[15:11];
+shamt = instruction[10:6];
+immediate[31:16] = 16'b0;
+immediate[15:0] = instruction[15:0];
+address[31:26] = 6'b0;
+address[25:0] = instruction[25:0];
     case(opcode)
-        `LW begin
-          //control signals and register processing
-          //I type
-          reg_WE = 1; ALU_op = `ADD; op_imm = 1; DM_WE = 0; dest_add = 1; reg_in = 1; DM_add = 1;
-        end
-        `SW begin
-          //I type
-          reg_WE = 0; ALU_op = `ADD; op_imm = 1; DM_WE = 1; dest_add = 1; reg_in = 0; DM_add = 1;
-        end
-        `J begin
-          //J type
-          reg_WE = 0; ALU_op = `ADD; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0;
-        end
-        `JAL begin
-          //J type
-
-        end
-        `BNE begin
-          //I type
-
-        end
-        `BEQ begin
-          //I type
-          reg_WE = ; ALU_op = ; op_imm = ; DM_WE = ; dest_add = ; reg_in = ; DM_add = ;
-        end
-        `XORI begin
-          //I type
-          reg_WE = ; ALU_op = ; op_imm = ; DM_WE = ; dest_add = ; reg_in = ; DM_add = ;
-        end
-        `ADDI begin
-          // I type
-          reg_WE = ; ALU_op = ; op_imm = ; DM_WE = ; dest_add = ; reg_in = ; DM_add = ;
-        end
-        `R begin
+        `LW:   begin reg_WE = 1; ALU_op = `aluADD; op_imm = 1; DM_WE = 0; dest_add = 1; reg_in = 1; DM_add = 1; end //I Type
+        `SW:   begin reg_WE = 0; ALU_op = `aluADD; op_imm = 1; DM_WE = 1; dest_add = 1; reg_in = 0; DM_add = 1; end //I Type
+        `J:    begin reg_WE = 0; ALU_op = `aluADD; op_imm = 0; DM_WE = 0; dest_add = 0; reg_in = 0; DM_add = 0; end //J type
+        `JAL:  begin reg_WE = 1; ALU_op = `aluADD; op_imm = 0; DM_WE = 0; dest_add = 2; reg_in = 2; DM_add = 0; end //J type
+        `BNE:  begin reg_WE = 0; ALU_op = `aluSUB; op_imm = 0; DM_WE = 0; dest_add = 0; reg_in = 0; DM_add = 0; end //I type
+        `BEQ:  begin reg_WE = 0; ALU_op = `aluSUB; op_imm = 0; DM_WE = 0; dest_add = 0; reg_in = 0; DM_add = 0; end //I type
+        `XORI: begin reg_WE = 1; ALU_op = `aluXOR; op_imm = 1; DM_WE = 0; dest_add = 1; reg_in = 0; DM_add = 0; end //I type
+        `ADDI: begin reg_WE = 1; ALU_op = `aluADD; op_imm = 1; DM_WE = 0; dest_add = 1; reg_in = 0; DM_add = 0; end //I type
+        `R: begin
           if (funct==`ADD)begin
-
+            reg_WE = 1; ALU_op = `aluADD; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0;
           end
           else if (funct==`SUB)begin
-            reg_WE = ; ALU_op = ; op_imm = ; DM_WE = ; dest_add = ; reg_in = ; DM_add = ;
+            reg_WE = 1; ALU_op = `aluSUB; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0;
           end
           else if (funct == `SLT)begin
-          reg_WE = ; ALU_op = ; op_imm = ; DM_WE = ; dest_add = ; reg_in = ; DM_add = ;
+            reg_WE = 1; ALU_op = `aluSLT; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0;
           end
           else if (funct == `JR)begin
-          reg_WE = ; ALU_op = ; op_imm = ; DM_WE = ; dest_add = ; reg_in = ; DM_add = ;
+            reg_WE = 0; ALU_op = `aluADD; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0;
           end
-
-          //add, sub, slt, jr
-        end
-    end
+       end
+    endcase
 end
 endmodule
