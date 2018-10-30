@@ -23,7 +23,7 @@ module instructionDecoder
     input[31:0] instruction,
     output[5:0] operation,
     output reg[5:0] rs,
-    output reg[6:0] rt,
+    output reg[5:0] rt,
     output reg[5:0] rd,
     output reg[31:0] immediate,
     output reg[5:0] funct,
