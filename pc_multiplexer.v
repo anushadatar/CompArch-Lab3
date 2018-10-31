@@ -7,17 +7,27 @@
 module pc_multiplexer
 (
 output reg[31:0] out,
-input[31:0] I0,
-input[31:0] I1,
-input S
+input wire[31:0] nextPC,
+input wire[25:0] address,
+input wire[31:0] regRs,
+input[1:0] S
 );
-wire[31:0]  I0;
-wire[31:0] I1;
 
-always @(I0,I1,S) begin
-  if (S == 1)
-    out = I1;
-  else
-    out = I0;
+always @(nextPC,address,regRs,S) begin
+  if (S == 0) begin
+    out = nextPC;
+  end
+  else if (S == 2'd1)begin
+    out[25:0] <= address;
+    out[31:26] <= 0;
+  end
+  else if (S == 2'd2)begin
+    out[27:2] <= address;
+    out[1:0] <= 0;
+    out[31:28] <= nextPC[31:28];
+  end
+  else begin
+    out = regRs;
+  end
   end
 endmodule
