@@ -20,6 +20,7 @@ always #200 clk = !clk;
 
   $dumpfile("pc.vcd");
   $dumpvars;
+    #400
     jump_address = 32'd0; mux_command = 1'd1; #200
     if (PC !== 0) begin
     $display("initialization failed");
