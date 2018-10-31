@@ -29,5 +29,5 @@ always @(nextPC,address,regRs,S) begin
   else begin
     out = regRs;
   end
-  end
+end
 endmodule
