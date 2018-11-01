@@ -6,31 +6,39 @@
 
 module pc_multiplexer
 (
-output reg[31:0] out,
-input wire[31:0] nextPC,
+output reg[31:0] PC,
 input wire[31:0] immediate,
 input wire[25:0] JumpAddress,
 input wire[31:0] regRs,
+input clk,
 input[1:0] S
 );
 reg[31:0] temp;
+reg[31:0] mux_out;
+reg[31:0] nextPC;
+
 always @(nextPC,JumpAddress,immediate,regRs,S) begin
-  if (S == 0) begin
-    out <= nextPC;
+  if (S == 2'd0) begin
+    mux_out <= nextPC;
   end
   else if (S == 2'd1)begin  //jump
-    out[27:2] <= JumpAddress;
-    out[31:28] <= nextPC[31:28];
-    out[1:0] <= 0;
+    mux_out[27:2] <= JumpAddress;
+    mux_out[31:28] <= nextPC[31:28];
+    mux_out[1:0] <= 0;
   end
   else if (S == 2'd2)begin  //branch
     temp[1:0] = 0;
     temp[18:2] = immediate;
     temp[31:19] = 0;
-    out = temp+nextPC;
+    mux_out = temp+nextPC;
   end
   else begin
-    out <= regRs;
+    mux_out <= regRs;
   end
+  nextPC <= PC+4;
+end
+
+always @(posedge clk) begin
+  PC <= mux_out;
 end
 endmodule
