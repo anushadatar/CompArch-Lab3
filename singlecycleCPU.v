@@ -30,7 +30,9 @@ reg DM_add;
 reg[5:0] opcode;
 wire[31:0] alu_out;
 wire[31:0] reg_select_mux_out, reg_in_mux_out;
-wire[31:0] alu1,alu2;
+wire[31:0] alu2;
+wire co_flag, zero_flag, ov_flag;
+
 
 
 pc_multiplexer pcmux(.PC(PC), .immediate(immediate), .JumpAddress(JumpAddress), .regRS(regRS), .clk(clk), .S(S));
@@ -42,6 +44,8 @@ instructionDecoder decode(.clk(clk),.instruction(instruction), .rs(rs), .rt(rt),
     .op_imm(op_imm), .DM_WE(DM_WE), .dest_add(dest_add), .reg_in(reg_in), .DM_add(DM_add),.opcode(opcode));
 
 regfile reg(.ReadData1(rs), .ReadData2(rt), .WriteData(reg_in_mux_out), .ReadRegister1(regRS), .ReadRegister2(regRT), .WriteRegister(reg_select_mux_out),.RegWrite(reg_WE),.Clk(clk));
+
+ALU lulu(.result(alu_out), .carryout(co_flag), .zero(zero_flag), .overflow(ov_flag), .A(regRS), .B(alu2), .command(ALU_op));
 
 mux3 reg_select_mux(.input0(rd),.input1(rt),.input3(32'd31),.select0(dest_add),.out(reg_select_mux_out));
 mux3 reg_in_mux(.input0(alu_out),.input1(rt),.input3(32'd31),.select0(reg_in),.out(reg_in_mux_out));
