@@ -12,7 +12,7 @@ module memory
   reg [31:0] mem[31:0]; //1023 will change based on size of address
       //address was size 10 and thus mem was 1023 big
   always @(posedge clk) begin
-    $display("thing %b",mem);
+    $display("thing %b",mem[1]);
     if (regWE) begin
       mem[Addr0] <= DataIn0;
     end

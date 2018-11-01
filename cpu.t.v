@@ -1,12 +1,44 @@
 `include "singlecycleCPU.v"
+
 module cpu_test();
+
 reg clk;
-wire[31:0] dataMem;
+wire[31:0] dataMem, regRT;
 initial clk = 0;
 always #200 clk = !clk;
-singlecycleCPU cpu(clk, dataMem);
+singlecycleCPU cpu(clk, dataMem, regRT);
 initial begin
-$display(dataMem);
+$dumpfile("cpu.vcd");
+$dumpvars;
+#200
+$display("dataMem: %b", dataMem);
+$display("reg RT : %b", regRT);
+
+#200
+$display("dataMem: %b", dataMem);
+$display("reg RT : %b", regRT);
+
+#200
+$display("dataMem: %b", dataMem);
+$display("reg RT : %b", regRT);
+
+#200
+$display("dataMem: %b", dataMem);
+$display("reg RT : %b", regRT);
+#200
+$display("dataMem: %b", dataMem);
+$display("reg RT : %b", regRT);
+
+#200
+$display("dataMem: %b", dataMem);
+$display("reg RT : %b", regRT);
+#200
+$display("dataMem: %b", dataMem);
+$display("reg RT : %b", regRT);
+
+#200
+$display("dataMem: %b", dataMem);
+$display("reg RT : %b", regRT);
 $finish;
 end
 endmodule

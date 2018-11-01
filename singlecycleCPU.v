@@ -15,9 +15,11 @@
 module singlecycleCPU
 (
   input clk,
-  output[31:0] dataMem
+  output[31:0] dataMem,
+  output[31:0] regRT
 );
-wire[31:0] PC, regRS, regRT;
+reg[31:0] PC;
+wire[31:0]regRS;
 wire[4:0] rs, rt, rd;
 wire[31:0] immediate;
 wire[25:0] JumpAddress;
@@ -40,10 +42,14 @@ wire[31:0] alu2;
 wire co_flag, zero_flag, ov_flag;
 wire [1:0] S;
 wire[31:0] data_mem_address;
+wire[31:0] tempPC;
+initial PC <= 0;
 
-
+always@(posedge clk) begin
+PC = tempPC;
+end
+pc_multiplexer pcmux(.PC(tempPC), .immediate(immediate), .JumpAddress(JumpAddress), .regRs(regRS), .clk(clk), .S(S));
 pcController controlPC(.zeroFlag(zero_flag),.opcode(opcode),.function1(funct),.controlSig(S));
-pc_multiplexer pcmux(.PC(PC), .immediate(immediate), .JumpAddress(JumpAddress), .regRs(regRS), .clk(clk), .S(S));
 
 memory mem(.clk(clk), .regWE(reg_WE), .Addr0(data_mem_address), .instruct_Addr1(PC),.DataIn0(regRT), .DataOut0(dataMem), .instruct_DataOut1(instruction));
 
