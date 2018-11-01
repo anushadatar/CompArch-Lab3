@@ -22,10 +22,11 @@ initial clk = 0;
 always #200 clk = !clk;
 
   initial begin
-
     $dumpfile("decoder.vcd");
     $dumpvars;
-    instruction = 32'b10001100000000000000000000000000; 
-
+    instruction =   32'b00000011111111101110000000100000; #1000    
+    //instruction = 32'b10001100000000000000000000000000; #1000
+     
+    $finish;
   end
   endmodule
