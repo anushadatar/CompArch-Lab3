@@ -9,15 +9,15 @@ module memory
   output[31:0]  instruct_DataOut1
 );
 
-  reg [31:0] mem[1023:0]; //1023 will change based on size of address
+  reg [31:0] mem[31:0]; //1023 will change based on size of address
       //address was size 10 and thus mem was 1023 big
   always @(posedge clk) begin
+    $display("thing %b",mem);
     if (regWE) begin
       mem[Addr0] <= DataIn0;
     end
   end
-
-  //initial $readmemh(“file.dat”, mem);
+  initial $readmemh("add_sub_test.dat", mem);
 
   assign DataOut0 = mem[Addr0];
   assign instruct_DataOut1 = mem[instruct_Addr1];
