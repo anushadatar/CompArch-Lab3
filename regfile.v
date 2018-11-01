@@ -1,4 +1,6 @@
-
+`include "register.v"
+`include "multiplexer.v"
+`include "decoders.v"
 
 
 //------------------------------------------------------------------------------
@@ -20,7 +22,7 @@ input[4:0]	WriteRegister,	// Address of register to write
 input		RegWrite,	// Enable writing of register when High
 input		Clk		// Clock (Positive Edge Triggered)
 );
-
+    
     // Setup.
     wire[31:0] RegisterFile[31:0];
     wire[31:0] Decoder;
@@ -30,7 +32,7 @@ input		Clk		// Clock (Positive Edge Triggered)
     assign ReadData2 = RegisterFile[ReadRegister2];
 
     // Write.
-
+    
     // I am surprised this syntax works, but I won't fight it.
     decoder1to32 decoder(.out(Decoder), .enable(RegWrite), .address(WriteRegister));
     register32zero register(.q(RegisterFile[0]), .d(WriteData), .wrenable(Decoder[0]), .clk(Clk));

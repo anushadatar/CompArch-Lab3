@@ -12,23 +12,23 @@
 `define SUB  6'b100010  //R Type
 `define SLT  6'b101010  //R Type
 
-`define aluADD 4'd0
-`define aluSUB 4'd1
-`define aluXOR 4'd2
-`define aluSLT 4'd3
+`define aluADD 2'd0
+`define aluSUB 2'd1
+`define aluXOR 2'd2
+`define aluSLT 2'd3
 
 module instructionDecoder
 (
     input clk,
     input[31:0] instruction,
-    output reg[5:0] rs,
-    output reg[5:0] rt,
-    output reg[5:0] rd,
+    output reg[4:0] rs,
+    output reg[4:0] rt,
+    output reg[4:0] rd,
     output reg[31:0] immediate,
     output reg[5:0] funct,
     output reg[5:0] shamt,
     output reg[25:0] address,
-    output reg[3:0] ALU_op,
+    output reg[2:0] ALU_op,
     output reg reg_WE,
     output reg op_imm,
     output reg DM_WE,

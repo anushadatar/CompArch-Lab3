@@ -1,6 +1,4 @@
-`include "ALU/operations/multiplexer.v"
-`include "ALU/operations/gates.v"
-`include "ALU/operations/add_sub.v"
+
 
 `define MUX     multiplexer #120
 `define AND     ALUand
@@ -153,7 +151,7 @@ module ALU
   `ALULAST alu31(result[31], overflow, carryout, A[31], B[31],  cout[30], command);
 
 
-  `NORZ    nor(zero, result[0], result[1], result[2], result[3], result[4],
+  nor(zero, result[0], result[1], result[2], result[3], result[4],
                 result[5], result[6], result[7], result[8], result[9],
                 result[10], result[11], result[12], result[13], result[14],
                 result[15], result[16], result[17], result[18], result[19],

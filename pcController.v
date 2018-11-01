@@ -5,11 +5,11 @@
 `define JR   6'b000000
 `define JR_f 6'b001000  //R Type
 
-module instructionDecoder
+module pcController
 (
   input zeroFlag,
-  input opcode,
-  input function1,
+  input[5:0] opcode,
+  input[5:0] function1,
   output reg[1:0] controlSig
 );
 always @(opcode)
