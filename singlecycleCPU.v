@@ -11,13 +11,12 @@ module singlecycleCPU
 );
 reg[31:0] PC, regRS;
 reg[4:0] rs, rt, rd;
-reg[15:0] immediate;
+reg[31:0] immediate;
 reg[25:0] JumpAddress;
 reg[31:0] instruction;
 reg[5:0] rs;
 reg[5:0] rt;
 reg[5:0] rd;
-reg[31:0] immediate;
 reg[5:0] funct;
 reg[5:0] shamt;
 reg[31:0] address;
@@ -46,8 +45,8 @@ regfile reg(.ReadData1(rs), .ReadData2(rt), .WriteData(reg_in_mux_out), .ReadReg
 
 mux3 reg_select_mux(.input0(rd),.input1(rt),.input3(32'd31),.select0(dest_add),.out(reg_select_mux_out));
 mux3 reg_in_mux(.input0(alu_out),.input1(rt),.input3(32'd31),.select0(reg_in),.out(reg_in_mux_out));
-mux2 op_imm_mux(.input0(),.input1(),.select0(op_imm),.out(alu2));
-mux2 dm_we_mux()
+mux2 op_imm_mux(.input0(regRT),.input1(immediate),.select0(op_imm),.out(alu2));
+mux2 dm_we_mux(.input0(immediate),.input1(alu_out),.select0(DM_add),.out(data_mem_address));
 
 
 

@@ -7,7 +7,7 @@
 module pc_multiplexer
 (
 output reg[31:0] PC,
-input wire[15:0] immediate,
+input wire[31:0] immediate,
 input wire[25:0] JumpAddress,
 input wire[31:0] regRs,
 input clk,
@@ -27,10 +27,7 @@ always @(nextPC,JumpAddress,immediate,regRs,S) begin
     mux_out[1:0] <= 0;
   end
   else if (S == 2'd2)begin  //branch
-    temp[1:0] = 0;
-    temp[18:2] = immediate;
-    temp[31:19] = 0;
-    mux_out = temp+nextPC;
+    mux_out = immediate+nextPC;
   end
   else begin
     mux_out <= regRs;
