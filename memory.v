@@ -17,7 +17,7 @@ module memory
       mem[Addr0] <= DataIn0;
     end
   end
-  initial $readmemh("add_sub_test.dat", mem);
+  initial $readmemh("add_sub_test.text", mem);
 
   assign DataOut0 = mem[Addr0];
   assign instruct_DataOut1 = mem[instruct_Addr1];

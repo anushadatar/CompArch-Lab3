@@ -43,7 +43,7 @@ wire co_flag, zero_flag, ov_flag;
 wire [1:0] S;
 wire[31:0] data_mem_address;
 wire[31:0] tempPC;
-initial PC <= 0;
+initial PC <= 32'd0;
 
 always@(posedge clk) begin
 PC = tempPC;
