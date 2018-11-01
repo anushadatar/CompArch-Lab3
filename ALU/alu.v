@@ -1,6 +1,4 @@
-
-
-`define MUX     multiplexer #120
+`define MUX     multiplexer 
 `define AND     ALUand
 `define OR      ALUor
 `define NAND    ALUnand

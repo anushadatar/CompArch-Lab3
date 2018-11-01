@@ -1,6 +1,6 @@
-`define AND and #30
-`define XOR xor #30
-`define OR or #30
+`define AND and 
+`define XOR xor
+`define OR or
 
 /*
 Addition and subtraction module for one bit general case.

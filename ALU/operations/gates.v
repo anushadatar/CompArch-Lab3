@@ -1,8 +1,8 @@
-`define AND and #30
-`define OR or #30
-`define NAND nand #20
-`define NOR nor #20
-`define XOR xor #10
+`define AND and 
+`define OR or 
+`define NAND nand 
+`define NOR nor 
+`define XOR xor
 
 
 module ALUand

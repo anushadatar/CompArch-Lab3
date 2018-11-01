@@ -1,10 +1,10 @@
 // Adder circuit
-`define AND2 and #30
-`define OR2 or  #30
-`define XOR2 xor  #30
-`define NOT not #10
-`define OR32 or #330
-`define AND3 and  #40
+`define AND2 and 
+`define OR2 or  
+`define XOR2 xor
+`define NOT not
+`define OR32 or
+`define AND3 and 
 
 
 //Single bit adder for bitpliced adder design.
