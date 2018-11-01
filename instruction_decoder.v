@@ -27,7 +27,7 @@ module instructionDecoder
     output reg[31:0] immediate,
     output reg[5:0] funct,
     output reg[5:0] shamt,
-    output reg[31:0] address,
+    output reg[25:0] address,
     output reg[3:0] ALU_op,
     output reg reg_WE,
     output reg op_imm,
@@ -47,7 +47,6 @@ rd = instruction[15:11];
 shamt = instruction[10:6];
 immediate[31:16] = 16'b0;
 immediate[15:0] = instruction[15:0];
-address[31:26] = 6'b0;
 address[25:0] = instruction[25:0];
     case(opcode)
         `LW:   begin reg_WE = 1; ALU_op = `aluADD; op_imm = 1; DM_WE = 0; dest_add = 1; reg_in = 1; DM_add = 1; end //I Type
