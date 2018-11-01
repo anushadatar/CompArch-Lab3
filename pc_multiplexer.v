@@ -7,7 +7,7 @@
 module pc_multiplexer
 (
 output reg[31:0] PC,
-input wire[31:0] immediate,
+input wire[15:0] immediate,
 input wire[25:0] JumpAddress,
 input wire[31:0] regRs,
 input clk,
@@ -39,6 +39,7 @@ always @(nextPC,JumpAddress,immediate,regRs,S) begin
 end
 
 always @(posedge clk) begin
-  PC <= mux_out;
+  PC = mux_out;
+  nextPC = PC+4;
 end
 endmodule
