@@ -35,7 +35,8 @@ module instructionDecoder
     output reg[1:0] dest_add,
     output reg[1:0] reg_in,
     output reg DM_add,
-    output reg[5:0] opcode
+    output reg[5:0] opcode,
+    output reg[1:0] pc
 );
 
 always @(instruction)begin
@@ -49,19 +50,19 @@ immediate[31:16] = 16'b0;
 immediate[15:0] = instruction[15:0];
 address[25:0] = instruction[25:0];
     case(opcode)
-        `LW:   begin reg_WE = 1; ALU_op = `aluADD; op_imm = 1; DM_WE = 0; dest_add = 1; reg_in = 1; DM_add = 1; end //I Type
-        `SW:   begin reg_WE = 0; ALU_op = `aluADD; op_imm = 1; DM_WE = 1; dest_add = 1; reg_in = 0; DM_add = 1; end //I Type
-        `J:    begin reg_WE = 0; ALU_op = `aluADD; op_imm = 0; DM_WE = 0; dest_add = 0; reg_in = 0; DM_add = 0; end //J type
-        `JAL:  begin reg_WE = 1; ALU_op = `aluADD; op_imm = 0; DM_WE = 0; dest_add = 2; reg_in = 2; DM_add = 0; end //J type
-        `BNE:  begin reg_WE = 0; ALU_op = `aluSUB; op_imm = 0; DM_WE = 0; dest_add = 0; reg_in = 0; DM_add = 0; end //I type
-        `BEQ:  begin reg_WE = 0; ALU_op = `aluSUB; op_imm = 0; DM_WE = 0; dest_add = 0; reg_in = 0; DM_add = 0; end //I type
-        `XORI: begin reg_WE = 1; ALU_op = `aluXOR; op_imm = 1; DM_WE = 0; dest_add = 1; reg_in = 0; DM_add = 0; end //I type
-        `ADDI: begin reg_WE = 1; ALU_op = `aluADD; op_imm = 1; DM_WE = 0; dest_add = 1; reg_in = 0; DM_add = 0; end //I type
+        `LW:   begin reg_WE = 1; ALU_op = `aluADD; op_imm = 1; DM_WE = 0; dest_add = 1; reg_in = 1; DM_add = 1; pc = 0; end //I Type
+        `SW:   begin reg_WE = 0; ALU_op = `aluADD; op_imm = 1; DM_WE = 1; dest_add = 1; reg_in = 0; DM_add = 1; pc = 0; end //I Type
+        `J:    begin reg_WE = 0; ALU_op = `aluADD; op_imm = 0; DM_WE = 0; dest_add = 0; reg_in = 0; DM_add = 0; pc = 1; end //J type
+        `JAL:  begin reg_WE = 1; ALU_op = `aluADD; op_imm = 0; DM_WE = 0; dest_add = 2; reg_in = 2; DM_add = 0; pc = 1; end //J type
+        `BNE:  begin reg_WE = 0; ALU_op = `aluSUB; op_imm = 0; DM_WE = 0; dest_add = 0; reg_in = 0; DM_add = 0; pc = 2; end //I type
+        `BEQ:  begin reg_WE = 0; ALU_op = `aluSUB; op_imm = 0; DM_WE = 0; dest_add = 0; reg_in = 0; DM_add = 0; pc = 2; end //I type
+        `XORI: begin reg_WE = 1; ALU_op = `aluXOR; op_imm = 1; DM_WE = 0; dest_add = 1; reg_in = 0; DM_add = 0; pc = 0; end //I type
+        `ADDI: begin reg_WE = 1; ALU_op = `aluADD; op_imm = 1; DM_WE = 0; dest_add = 1; reg_in = 0; DM_add = 0; pc = 0; end //I type
         `R: begin
-          if (funct==`ADD)        begin reg_WE = 1; ALU_op = `aluADD; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0; end
-          else if (funct==`SUB)   begin reg_WE = 1; ALU_op = `aluSUB; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0; end
-          else if (funct == `SLT) begin reg_WE = 1; ALU_op = `aluSLT; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0; end
-          else if (funct == `JR)  begin reg_WE = 0; ALU_op = `aluADD; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0; end
+          if (funct==`ADD)        begin reg_WE = 1; ALU_op = `aluADD; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0; pc = 0; end
+          else if (funct==`SUB)   begin reg_WE = 1; ALU_op = `aluSUB; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0; pc = 0; end
+          else if (funct == `SLT) begin reg_WE = 1; ALU_op = `aluSLT; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0; pc = 0; end
+          else if (funct == `JR)  begin reg_WE = 0; ALU_op = `aluADD; op_imm = 0; DM_WE =0; dest_add = 0; reg_in = 0; DM_add = 0; pc = 3; end
        end
     endcase
 end

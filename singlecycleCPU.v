@@ -41,6 +41,7 @@ wire[1:0] dest_add;
 wire[1:0] reg_in;
 wire DM_add;
 wire[5:0] opcode;
+wire[1:0] pc;
 wire[31:0] alu_out;
 wire[4:0] reg_select_mux_out;
 wire[31:0]reg_in_mux_out;
@@ -54,14 +55,14 @@ assign PC = 32'd0;
 //always@(posedge clk) begin
   //  PC = PC;
 //end
-pc_multiplexer pcmux(.PC(PC), .immediate(immediate), .JumpAddress(JumpAddress), .regRs(regRS), .clk(clk), .S(S));
+pc_multiplexer pcmux(.PC(PC), .immediate(immediate), .JumpAddress(JumpAddress), .regRs(regRS), .clk(clk), .S(pc));
 pcController controlPC(.zeroFlag(zero_flag),.opcode(opcode),.function1(funct),.controlSig(S));
 
 memory mem(.clk(clk), .regWE(reg_WE), .Addr0(data_mem_address), .instruct_Addr1(PC),.DataIn0(regRT), .DataOut0(dataMem), .instruct_DataOut1(instruction));
 
 instructionDecoder decode(.clk(clk),.instruction(instruction), .rs(rs), .rt(rt), .rd(rd),
     .immediate(immediate), .funct(funct), .shamt(shamt), .address(JumpAddress), .ALU_op(ALU_op), .reg_WE(reg_WE),
-    .op_imm(op_imm), .DM_WE(DM_WE), .dest_add(dest_add), .reg_in(reg_in), .DM_add(DM_add),.opcode(opcode));
+    .op_imm(op_imm), .DM_WE(DM_WE), .dest_add(dest_add), .reg_in(reg_in), .DM_add(DM_add),.opcode(opcode), .pc(pc));
 
 regfile regi(.ReadData1(regRS), .ReadData2(regRT), .WriteData(reg_in_mux_out), .ReadRegister1(rs), .ReadRegister2(rt), .WriteRegister(reg_select_mux_out), .RegWrite(reg_WE), .Clk(clk));
 
