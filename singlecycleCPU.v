@@ -49,12 +49,7 @@ wire[31:0] alu2;
 wire co_flag, zero_flag, ov_flag;
 wire [1:0] S;
 wire[31:0] data_mem_address;
-// wire[31:0] tempPC;
-assign PC = 32'd0;
 
-//always@(posedge clk) begin
-  //  PC = PC;
-//end
 pc_multiplexer pcmux(.PC(PC), .immediate(immediate), .JumpAddress(JumpAddress), .regRs(regRS), .clk(clk), .S(pc));
 pcController controlPC(.zeroFlag(zero_flag),.opcode(opcode),.function1(funct),.controlSig(S));
 
