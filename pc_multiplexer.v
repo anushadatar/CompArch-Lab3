@@ -17,6 +17,8 @@ reg[31:0] temp;
 reg[31:0] mux_out;
 reg[31:0] nextPC;
 
+initial PC <= 0;
+
 always @(nextPC,JumpAddress,immediate,regRs,S) begin
   if (S == 2'd0) begin
     mux_out <= nextPC;

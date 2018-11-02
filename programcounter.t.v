@@ -22,7 +22,6 @@ always #200 clk = !clk;
 
   $dumpfile("pc.vcd");
   $dumpvars;
-    #400
     immediate = 32'd10; jumpaddress = 26'd20; regRs = 32'd0; S = 2'd3; #210
     if (PC !== 32'd0) begin
     $display("initialization failed");
