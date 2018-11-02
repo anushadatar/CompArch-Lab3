@@ -70,7 +70,7 @@ ALU lulu(.result(alu_out), .carryout(co_flag), .zero(zero_flag), .overflow(ov_fl
 
 mux3_5bit reg_select_mux(.input0(rd),.input1(rt),.input2(5'd31),.select0(dest_add),.out(reg_select_mux_out));
 mux3_32bit reg_in_mux(.input0(alu_out),.input1(dataMem),.input2(PC),.select0(reg_in),.out(reg_in_mux_out));
-mux2 op_imm_mux(.input0(regRT),.input1(immediate),.select0(op_imm),.out(alu2));
+mux2 op_imm_mux(.input0(immediate),.input1(regRT),.select0(op_imm),.out(alu2));
 mux2 dm_we_mux(.input0(immediate),.input1(alu_out),.select0(DM_add),.out(data_mem_address));
 
 endmodule
