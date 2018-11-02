@@ -34,11 +34,11 @@ always @(nextPC,JumpAddress,immediate,regRs,S) begin
   else begin
     mux_out <= regRs;
   end
-  nextPC <= PC+4;
+  nextPC <= PC+1;
 end
 
 always @(posedge clk) begin
   PC = mux_out;
-  nextPC = PC+4;
+  nextPC = PC+1;
 end
 endmodule
