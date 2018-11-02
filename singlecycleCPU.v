@@ -1,12 +1,18 @@
 `include "pc_multiplexer.v"
 `include "instruction_decoder.v"
 `include "memory.v"
-`include "register/regfile.v"
+`include "decoders.v"
+`include "mux.v"
+`include "regfile.v"
+//`include "register32.v"
+//`include "register32zero.v"
+`include "register.v"
+//`include "register/regfile.v"
 `include "muxes.v"
 `include "ALU/alu.v"
-`include "register/register.v"
-`include "register/multiplexer.v"
-`include "register/decoders.v"
+//`include "register/register.v"
+//`include "register/multiplexer.v"
+//`include "register/decoders.v"
 `include "ALU/operations/multiplexer.v"
 `include "ALU/operations/gates.v"
 `include "ALU/operations/add_sub.v"
@@ -18,7 +24,7 @@ module singlecycleCPU
   output[31:0] dataMem,
   output[31:0] regRT
 );
-reg[31:0] PC;
+wire[31:0] PC;
 wire[31:0]regRS;
 wire[4:0] rs, rt, rd;
 wire[31:0] immediate;
@@ -42,13 +48,13 @@ wire[31:0] alu2;
 wire co_flag, zero_flag, ov_flag;
 wire [1:0] S;
 wire[31:0] data_mem_address;
-wire[31:0] tempPC;
-initial PC <= 32'd0;
+// wire[31:0] tempPC;
+assign PC = 32'd0;
 
-always@(posedge clk) begin
-PC = tempPC;
-end
-pc_multiplexer pcmux(.PC(tempPC), .immediate(immediate), .JumpAddress(JumpAddress), .regRs(regRS), .clk(clk), .S(S));
+//always@(posedge clk) begin
+  //  PC = PC;
+//end
+pc_multiplexer pcmux(.PC(PC), .immediate(immediate), .JumpAddress(JumpAddress), .regRs(regRS), .clk(clk), .S(S));
 pcController controlPC(.zeroFlag(zero_flag),.opcode(opcode),.function1(funct),.controlSig(S));
 
 memory mem(.clk(clk), .regWE(reg_WE), .Addr0(data_mem_address), .instruct_Addr1(PC),.DataIn0(regRT), .DataOut0(dataMem), .instruct_DataOut1(instruction));
@@ -65,8 +71,5 @@ mux3_5bit reg_select_mux(.input0(rd),.input1(rt),.input2(5'd31),.select0(dest_ad
 mux3_32bit reg_in_mux(.input0(alu_out),.input1(dataMem),.input2(PC),.select0(reg_in),.out(reg_in_mux_out));
 mux2 op_imm_mux(.input0(regRT),.input1(immediate),.select0(op_imm),.out(alu2));
 mux2 dm_we_mux(.input0(immediate),.input1(alu_out),.select0(DM_add),.out(data_mem_address));
-
-
-
 
 endmodule
