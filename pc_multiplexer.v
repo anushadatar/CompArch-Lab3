@@ -16,6 +16,7 @@ input[1:0] S
 reg[31:0] temp;
 reg[31:0] mux_out;
 reg[31:0] nextPC;
+reg[31:0] tempimmediate;
 
 initial PC <= 0;
 
@@ -29,16 +30,16 @@ always @(nextPC,JumpAddress,immediate,regRs,S) begin
     mux_out[1:0] <= 0;
   end
   else if (S == 2'd2)begin  //branch
-    mux_out = immediate+nextPC;
+    tempimmediate = immediate<<2;
+    mux_out = tempimmediate+nextPC;
   end
   else begin
     mux_out <= regRs;
   end
-  nextPC <= PC+1;
+  nextPC <= PC+4;
 end
 
 always @(posedge clk) begin
   PC = mux_out;
-  nextPC = PC+1;
 end
 endmodule
