@@ -53,7 +53,7 @@ wire[31:0] data_mem_address;
 pc_multiplexer pcmux(.PC(PC), .immediate(immediate), .JumpAddress(JumpAddress), .regRs(regRS), .clk(clk), .S(pc));
 pcController controlPC(.zeroFlag(zero_flag),.opcode(opcode),.function1(funct),.controlSig(S));
 
-memory mem(.clk(clk), .regWE(reg_WE), .Addr0(immediate+regRS), .instruct_Addr1(PC>>2),.DataIn0(regRT), .DataOut0(dataMem), .instruct_DataOut1(instruction));
+memory mem(.clk(clk), .regWE(DM_WE), .Addr0(immediate+regRS), .instruct_Addr1(PC>>2),.DataIn0(regRT), .DataOut0(dataMem), .instruct_DataOut1(instruction));
 
 instructionDecoder decode(.clk(clk),.instruction(instruction), .rs(rs), .rt(rt), .rd(rd),
     .immediate(immediate), .funct(funct), .shamt(shamt), .address(JumpAddress), .ALU_op(ALU_op), .reg_WE(reg_WE),
