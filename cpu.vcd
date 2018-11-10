@@ -1,5 +1,5 @@
 $date
-	Sun Nov  4 18:38:26 2018
+	Sat Nov 10 10:49:41 2018
 $end
 $version
 	Icarus Verilog
@@ -43,1912 +43,1906 @@ $var wire 32 < instruction [31:0] $end
 $var wire 32 = immediate [31:0] $end
 $var wire 6 > funct [5:0] $end
 $var wire 2 ? dest_add [1:0] $end
-$var wire 32 @ data_mem_address [31:0] $end
-$var wire 32 A dataMem [31:0] $end
-$var wire 1 B co_flag $end
-$var wire 32 C alu_out [31:0] $end
-$var wire 32 D alu2 [31:0] $end
-$var wire 2 E S [1:0] $end
-$var wire 32 F PC [31:0] $end
-$var wire 26 G JumpAddress [25:0] $end
-$var wire 1 H DM_add $end
-$var wire 1 I DM_WE $end
-$var wire 3 J ALU_op [2:0] $end
+$var wire 32 @ dataMem [31:0] $end
+$var wire 1 A co_flag $end
+$var wire 32 B alu_out [31:0] $end
+$var wire 32 C alu2 [31:0] $end
+$var wire 2 D S [1:0] $end
+$var wire 32 E PC [31:0] $end
+$var wire 26 F JumpAddress [25:0] $end
+$var wire 1 G DM_add $end
+$var wire 1 H DM_WE $end
+$var wire 3 I ALU_op [2:0] $end
 $scope module controlPC $end
 $var wire 1 - zeroFlag $end
-$var wire 6 K opcode [5:0] $end
-$var wire 6 L function1 [5:0] $end
-$var reg 2 M controlSig [1:0] $end
+$var wire 6 J opcode [5:0] $end
+$var wire 6 K function1 [5:0] $end
+$var reg 2 L controlSig [1:0] $end
 $upscope $end
 $scope module decode $end
 $var wire 1 , clk $end
-$var wire 32 N instruction [31:0] $end
-$var reg 3 O ALU_op [2:0] $end
-$var reg 1 I DM_WE $end
-$var reg 1 H DM_add $end
-$var reg 26 P address [25:0] $end
-$var reg 2 Q dest_add [1:0] $end
-$var reg 6 R funct [5:0] $end
-$var reg 32 S immediate [31:0] $end
+$var wire 32 M instruction [31:0] $end
+$var reg 3 N ALU_op [2:0] $end
+$var reg 1 H DM_WE $end
+$var reg 1 G DM_add $end
+$var reg 26 O address [25:0] $end
+$var reg 2 P dest_add [1:0] $end
+$var reg 6 Q funct [5:0] $end
+$var reg 32 R immediate [31:0] $end
 $var reg 1 ; op_imm $end
-$var reg 6 T opcode [5:0] $end
-$var reg 2 U pc [1:0] $end
-$var reg 5 V rd [4:0] $end
+$var reg 6 S opcode [5:0] $end
+$var reg 2 T pc [1:0] $end
+$var reg 5 U rd [4:0] $end
 $var reg 1 4 reg_WE $end
-$var reg 2 W reg_in [1:0] $end
-$var reg 5 X rs [4:0] $end
-$var reg 5 Y rt [4:0] $end
-$var reg 6 Z shamt [5:0] $end
-$upscope $end
-$scope module dm_we_mux $end
-$var wire 32 [ input0 [31:0] $end
-$var wire 1 H select0 $end
-$var wire 32 \ out [31:0] $end
-$var wire 32 ] input1 [31:0] $end
+$var reg 2 V reg_in [1:0] $end
+$var reg 5 W rs [4:0] $end
+$var reg 5 X rt [4:0] $end
+$var reg 6 Y shamt [5:0] $end
 $upscope $end
 $scope module lulu $end
-$var wire 3 ^ command [2:0] $end
+$var wire 3 Z command [2:0] $end
 $var wire 1 - zero $end
-$var wire 32 _ result [31:0] $end
+$var wire 32 [ result [31:0] $end
 $var wire 1 9 overflow $end
-$var wire 31 ` cout [30:0] $end
-$var wire 1 B carryout $end
-$var wire 32 a B [31:0] $end
-$var wire 32 b A [31:0] $end
+$var wire 31 \ cout [30:0] $end
+$var wire 1 A carryout $end
+$var wire 32 ] B [31:0] $end
+$var wire 32 ^ A [31:0] $end
 $scope module alu0 $end
-$var wire 1 c A $end
-$var wire 1 d B $end
-$var wire 3 e S [2:0] $end
-$var wire 1 f carryin $end
-$var wire 1 g out $end
-$var wire 1 h modB $end
-$var wire 1 i carryout $end
-$var wire 1 j addORsub $end
-$var wire 8 k I [7:0] $end
+$var wire 1 _ A $end
+$var wire 1 ` B $end
+$var wire 3 a S [2:0] $end
+$var wire 1 b carryin $end
+$var wire 1 c out $end
+$var wire 1 d modB $end
+$var wire 1 e carryout $end
+$var wire 1 f addORsub $end
+$var wire 8 g I [7:0] $end
 $scope module addsub $end
-$var wire 1 c A $end
-$var wire 1 f carryin $end
-$var wire 1 i carryout $end
-$var wire 1 l out1 $end
-$var wire 1 m out2 $end
-$var wire 1 n out3 $end
-$var wire 1 j sum $end
-$var wire 1 h B $end
+$var wire 1 _ A $end
+$var wire 1 b carryin $end
+$var wire 1 e carryout $end
+$var wire 1 h out1 $end
+$var wire 1 i out2 $end
+$var wire 1 j out3 $end
+$var wire 1 f sum $end
+$var wire 1 d B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 c A $end
-$var wire 1 d B $end
-$var wire 1 o out $end
+$var wire 1 _ A $end
+$var wire 1 ` B $end
+$var wire 1 k out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 p I [7:0] $end
-$var wire 3 q S [2:0] $end
-$var wire 1 g out $end
+$var wire 8 l I [7:0] $end
+$var wire 3 m S [2:0] $end
+$var wire 1 c out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 c A $end
-$var wire 1 d B $end
-$var wire 1 r out $end
+$var wire 1 _ A $end
+$var wire 1 ` B $end
+$var wire 1 n out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 c A $end
-$var wire 1 d B $end
-$var wire 1 s out $end
+$var wire 1 _ A $end
+$var wire 1 ` B $end
+$var wire 1 o out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 c A $end
-$var wire 1 d B $end
-$var wire 1 t out $end
+$var wire 1 _ A $end
+$var wire 1 ` B $end
+$var wire 1 p out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 d A $end
-$var wire 1 u B $end
-$var wire 1 h out $end
+$var wire 1 ` A $end
+$var wire 1 q B $end
+$var wire 1 d out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 c A $end
-$var wire 1 d B $end
-$var wire 1 v out $end
+$var wire 1 _ A $end
+$var wire 1 ` B $end
+$var wire 1 r out $end
 $upscope $end
 $upscope $end
 $scope module alu1 $end
-$var wire 1 w A $end
-$var wire 1 x B $end
-$var wire 3 y S [2:0] $end
-$var wire 1 z carryin $end
-$var wire 1 { out $end
-$var wire 1 | modB $end
-$var wire 1 } carryout $end
-$var wire 1 ~ addORsub $end
-$var wire 8 !" I [7:0] $end
+$var wire 1 s A $end
+$var wire 1 t B $end
+$var wire 3 u S [2:0] $end
+$var wire 1 v carryin $end
+$var wire 1 w out $end
+$var wire 1 x modB $end
+$var wire 1 y carryout $end
+$var wire 1 z addORsub $end
+$var wire 8 { I [7:0] $end
 $scope module addsub $end
-$var wire 1 w A $end
-$var wire 1 z carryin $end
-$var wire 1 } carryout $end
-$var wire 1 "" out1 $end
-$var wire 1 #" out2 $end
-$var wire 1 $" out3 $end
-$var wire 1 ~ sum $end
-$var wire 1 | B $end
+$var wire 1 s A $end
+$var wire 1 v carryin $end
+$var wire 1 y carryout $end
+$var wire 1 | out1 $end
+$var wire 1 } out2 $end
+$var wire 1 ~ out3 $end
+$var wire 1 z sum $end
+$var wire 1 x B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 w A $end
-$var wire 1 x B $end
-$var wire 1 %" out $end
+$var wire 1 s A $end
+$var wire 1 t B $end
+$var wire 1 !" out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 &" I [7:0] $end
-$var wire 3 '" S [2:0] $end
-$var wire 1 { out $end
+$var wire 8 "" I [7:0] $end
+$var wire 3 #" S [2:0] $end
+$var wire 1 w out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 w A $end
-$var wire 1 x B $end
-$var wire 1 (" out $end
+$var wire 1 s A $end
+$var wire 1 t B $end
+$var wire 1 $" out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 w A $end
-$var wire 1 x B $end
-$var wire 1 )" out $end
+$var wire 1 s A $end
+$var wire 1 t B $end
+$var wire 1 %" out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 w A $end
-$var wire 1 x B $end
-$var wire 1 *" out $end
+$var wire 1 s A $end
+$var wire 1 t B $end
+$var wire 1 &" out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 x A $end
-$var wire 1 +" B $end
-$var wire 1 | out $end
+$var wire 1 t A $end
+$var wire 1 '" B $end
+$var wire 1 x out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 w A $end
-$var wire 1 x B $end
-$var wire 1 ," out $end
+$var wire 1 s A $end
+$var wire 1 t B $end
+$var wire 1 (" out $end
 $upscope $end
 $upscope $end
 $scope module alu10 $end
-$var wire 1 -" A $end
-$var wire 1 ." B $end
-$var wire 3 /" S [2:0] $end
-$var wire 1 0" carryin $end
-$var wire 1 1" out $end
-$var wire 1 2" modB $end
-$var wire 1 3" carryout $end
-$var wire 1 4" addORsub $end
-$var wire 8 5" I [7:0] $end
+$var wire 1 )" A $end
+$var wire 1 *" B $end
+$var wire 3 +" S [2:0] $end
+$var wire 1 ," carryin $end
+$var wire 1 -" out $end
+$var wire 1 ." modB $end
+$var wire 1 /" carryout $end
+$var wire 1 0" addORsub $end
+$var wire 8 1" I [7:0] $end
 $scope module addsub $end
-$var wire 1 -" A $end
-$var wire 1 0" carryin $end
-$var wire 1 3" carryout $end
-$var wire 1 6" out1 $end
-$var wire 1 7" out2 $end
-$var wire 1 8" out3 $end
-$var wire 1 4" sum $end
-$var wire 1 2" B $end
+$var wire 1 )" A $end
+$var wire 1 ," carryin $end
+$var wire 1 /" carryout $end
+$var wire 1 2" out1 $end
+$var wire 1 3" out2 $end
+$var wire 1 4" out3 $end
+$var wire 1 0" sum $end
+$var wire 1 ." B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 -" A $end
-$var wire 1 ." B $end
-$var wire 1 9" out $end
+$var wire 1 )" A $end
+$var wire 1 *" B $end
+$var wire 1 5" out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 :" I [7:0] $end
-$var wire 3 ;" S [2:0] $end
-$var wire 1 1" out $end
+$var wire 8 6" I [7:0] $end
+$var wire 3 7" S [2:0] $end
+$var wire 1 -" out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 -" A $end
-$var wire 1 ." B $end
-$var wire 1 <" out $end
+$var wire 1 )" A $end
+$var wire 1 *" B $end
+$var wire 1 8" out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 -" A $end
-$var wire 1 ." B $end
-$var wire 1 =" out $end
+$var wire 1 )" A $end
+$var wire 1 *" B $end
+$var wire 1 9" out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 -" A $end
-$var wire 1 ." B $end
-$var wire 1 >" out $end
+$var wire 1 )" A $end
+$var wire 1 *" B $end
+$var wire 1 :" out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 ." A $end
-$var wire 1 ?" B $end
-$var wire 1 2" out $end
+$var wire 1 *" A $end
+$var wire 1 ;" B $end
+$var wire 1 ." out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 -" A $end
-$var wire 1 ." B $end
-$var wire 1 @" out $end
+$var wire 1 )" A $end
+$var wire 1 *" B $end
+$var wire 1 <" out $end
 $upscope $end
 $upscope $end
 $scope module alu11 $end
-$var wire 1 A" A $end
-$var wire 1 B" B $end
-$var wire 3 C" S [2:0] $end
-$var wire 1 D" carryin $end
-$var wire 1 E" out $end
-$var wire 1 F" modB $end
-$var wire 1 G" carryout $end
-$var wire 1 H" addORsub $end
-$var wire 8 I" I [7:0] $end
+$var wire 1 =" A $end
+$var wire 1 >" B $end
+$var wire 3 ?" S [2:0] $end
+$var wire 1 @" carryin $end
+$var wire 1 A" out $end
+$var wire 1 B" modB $end
+$var wire 1 C" carryout $end
+$var wire 1 D" addORsub $end
+$var wire 8 E" I [7:0] $end
 $scope module addsub $end
-$var wire 1 A" A $end
-$var wire 1 D" carryin $end
-$var wire 1 G" carryout $end
-$var wire 1 J" out1 $end
-$var wire 1 K" out2 $end
-$var wire 1 L" out3 $end
-$var wire 1 H" sum $end
-$var wire 1 F" B $end
+$var wire 1 =" A $end
+$var wire 1 @" carryin $end
+$var wire 1 C" carryout $end
+$var wire 1 F" out1 $end
+$var wire 1 G" out2 $end
+$var wire 1 H" out3 $end
+$var wire 1 D" sum $end
+$var wire 1 B" B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 A" A $end
-$var wire 1 B" B $end
-$var wire 1 M" out $end
+$var wire 1 =" A $end
+$var wire 1 >" B $end
+$var wire 1 I" out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 N" I [7:0] $end
-$var wire 3 O" S [2:0] $end
-$var wire 1 E" out $end
+$var wire 8 J" I [7:0] $end
+$var wire 3 K" S [2:0] $end
+$var wire 1 A" out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 A" A $end
-$var wire 1 B" B $end
-$var wire 1 P" out $end
+$var wire 1 =" A $end
+$var wire 1 >" B $end
+$var wire 1 L" out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 A" A $end
-$var wire 1 B" B $end
-$var wire 1 Q" out $end
+$var wire 1 =" A $end
+$var wire 1 >" B $end
+$var wire 1 M" out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 A" A $end
-$var wire 1 B" B $end
-$var wire 1 R" out $end
+$var wire 1 =" A $end
+$var wire 1 >" B $end
+$var wire 1 N" out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 B" A $end
-$var wire 1 S" B $end
-$var wire 1 F" out $end
+$var wire 1 >" A $end
+$var wire 1 O" B $end
+$var wire 1 B" out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 A" A $end
-$var wire 1 B" B $end
-$var wire 1 T" out $end
+$var wire 1 =" A $end
+$var wire 1 >" B $end
+$var wire 1 P" out $end
 $upscope $end
 $upscope $end
 $scope module alu12 $end
-$var wire 1 U" A $end
-$var wire 1 V" B $end
-$var wire 3 W" S [2:0] $end
-$var wire 1 X" carryin $end
-$var wire 1 Y" out $end
-$var wire 1 Z" modB $end
-$var wire 1 [" carryout $end
-$var wire 1 \" addORsub $end
-$var wire 8 ]" I [7:0] $end
+$var wire 1 Q" A $end
+$var wire 1 R" B $end
+$var wire 3 S" S [2:0] $end
+$var wire 1 T" carryin $end
+$var wire 1 U" out $end
+$var wire 1 V" modB $end
+$var wire 1 W" carryout $end
+$var wire 1 X" addORsub $end
+$var wire 8 Y" I [7:0] $end
 $scope module addsub $end
-$var wire 1 U" A $end
-$var wire 1 X" carryin $end
-$var wire 1 [" carryout $end
-$var wire 1 ^" out1 $end
-$var wire 1 _" out2 $end
-$var wire 1 `" out3 $end
-$var wire 1 \" sum $end
-$var wire 1 Z" B $end
+$var wire 1 Q" A $end
+$var wire 1 T" carryin $end
+$var wire 1 W" carryout $end
+$var wire 1 Z" out1 $end
+$var wire 1 [" out2 $end
+$var wire 1 \" out3 $end
+$var wire 1 X" sum $end
+$var wire 1 V" B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 U" A $end
-$var wire 1 V" B $end
-$var wire 1 a" out $end
+$var wire 1 Q" A $end
+$var wire 1 R" B $end
+$var wire 1 ]" out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 b" I [7:0] $end
-$var wire 3 c" S [2:0] $end
-$var wire 1 Y" out $end
+$var wire 8 ^" I [7:0] $end
+$var wire 3 _" S [2:0] $end
+$var wire 1 U" out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 U" A $end
-$var wire 1 V" B $end
-$var wire 1 d" out $end
+$var wire 1 Q" A $end
+$var wire 1 R" B $end
+$var wire 1 `" out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 U" A $end
-$var wire 1 V" B $end
-$var wire 1 e" out $end
+$var wire 1 Q" A $end
+$var wire 1 R" B $end
+$var wire 1 a" out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 U" A $end
-$var wire 1 V" B $end
-$var wire 1 f" out $end
+$var wire 1 Q" A $end
+$var wire 1 R" B $end
+$var wire 1 b" out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 V" A $end
-$var wire 1 g" B $end
-$var wire 1 Z" out $end
+$var wire 1 R" A $end
+$var wire 1 c" B $end
+$var wire 1 V" out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 U" A $end
-$var wire 1 V" B $end
-$var wire 1 h" out $end
+$var wire 1 Q" A $end
+$var wire 1 R" B $end
+$var wire 1 d" out $end
 $upscope $end
 $upscope $end
 $scope module alu13 $end
-$var wire 1 i" A $end
-$var wire 1 j" B $end
-$var wire 3 k" S [2:0] $end
-$var wire 1 l" carryin $end
-$var wire 1 m" out $end
-$var wire 1 n" modB $end
-$var wire 1 o" carryout $end
-$var wire 1 p" addORsub $end
-$var wire 8 q" I [7:0] $end
+$var wire 1 e" A $end
+$var wire 1 f" B $end
+$var wire 3 g" S [2:0] $end
+$var wire 1 h" carryin $end
+$var wire 1 i" out $end
+$var wire 1 j" modB $end
+$var wire 1 k" carryout $end
+$var wire 1 l" addORsub $end
+$var wire 8 m" I [7:0] $end
 $scope module addsub $end
-$var wire 1 i" A $end
-$var wire 1 l" carryin $end
-$var wire 1 o" carryout $end
-$var wire 1 r" out1 $end
-$var wire 1 s" out2 $end
-$var wire 1 t" out3 $end
-$var wire 1 p" sum $end
-$var wire 1 n" B $end
+$var wire 1 e" A $end
+$var wire 1 h" carryin $end
+$var wire 1 k" carryout $end
+$var wire 1 n" out1 $end
+$var wire 1 o" out2 $end
+$var wire 1 p" out3 $end
+$var wire 1 l" sum $end
+$var wire 1 j" B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 i" A $end
-$var wire 1 j" B $end
-$var wire 1 u" out $end
+$var wire 1 e" A $end
+$var wire 1 f" B $end
+$var wire 1 q" out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 v" I [7:0] $end
-$var wire 3 w" S [2:0] $end
-$var wire 1 m" out $end
+$var wire 8 r" I [7:0] $end
+$var wire 3 s" S [2:0] $end
+$var wire 1 i" out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 i" A $end
-$var wire 1 j" B $end
-$var wire 1 x" out $end
+$var wire 1 e" A $end
+$var wire 1 f" B $end
+$var wire 1 t" out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 i" A $end
-$var wire 1 j" B $end
-$var wire 1 y" out $end
+$var wire 1 e" A $end
+$var wire 1 f" B $end
+$var wire 1 u" out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 i" A $end
-$var wire 1 j" B $end
-$var wire 1 z" out $end
+$var wire 1 e" A $end
+$var wire 1 f" B $end
+$var wire 1 v" out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 j" A $end
-$var wire 1 {" B $end
-$var wire 1 n" out $end
+$var wire 1 f" A $end
+$var wire 1 w" B $end
+$var wire 1 j" out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 i" A $end
-$var wire 1 j" B $end
-$var wire 1 |" out $end
+$var wire 1 e" A $end
+$var wire 1 f" B $end
+$var wire 1 x" out $end
 $upscope $end
 $upscope $end
 $scope module alu14 $end
-$var wire 1 }" A $end
-$var wire 1 ~" B $end
-$var wire 3 !# S [2:0] $end
-$var wire 1 "# carryin $end
-$var wire 1 ## out $end
-$var wire 1 $# modB $end
-$var wire 1 %# carryout $end
-$var wire 1 &# addORsub $end
-$var wire 8 '# I [7:0] $end
+$var wire 1 y" A $end
+$var wire 1 z" B $end
+$var wire 3 {" S [2:0] $end
+$var wire 1 |" carryin $end
+$var wire 1 }" out $end
+$var wire 1 ~" modB $end
+$var wire 1 !# carryout $end
+$var wire 1 "# addORsub $end
+$var wire 8 ## I [7:0] $end
 $scope module addsub $end
-$var wire 1 }" A $end
-$var wire 1 "# carryin $end
-$var wire 1 %# carryout $end
-$var wire 1 (# out1 $end
-$var wire 1 )# out2 $end
-$var wire 1 *# out3 $end
-$var wire 1 &# sum $end
-$var wire 1 $# B $end
+$var wire 1 y" A $end
+$var wire 1 |" carryin $end
+$var wire 1 !# carryout $end
+$var wire 1 $# out1 $end
+$var wire 1 %# out2 $end
+$var wire 1 &# out3 $end
+$var wire 1 "# sum $end
+$var wire 1 ~" B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 }" A $end
-$var wire 1 ~" B $end
-$var wire 1 +# out $end
+$var wire 1 y" A $end
+$var wire 1 z" B $end
+$var wire 1 '# out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 ,# I [7:0] $end
-$var wire 3 -# S [2:0] $end
-$var wire 1 ## out $end
+$var wire 8 (# I [7:0] $end
+$var wire 3 )# S [2:0] $end
+$var wire 1 }" out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 }" A $end
-$var wire 1 ~" B $end
-$var wire 1 .# out $end
+$var wire 1 y" A $end
+$var wire 1 z" B $end
+$var wire 1 *# out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 }" A $end
-$var wire 1 ~" B $end
-$var wire 1 /# out $end
+$var wire 1 y" A $end
+$var wire 1 z" B $end
+$var wire 1 +# out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 }" A $end
-$var wire 1 ~" B $end
-$var wire 1 0# out $end
+$var wire 1 y" A $end
+$var wire 1 z" B $end
+$var wire 1 ,# out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 ~" A $end
-$var wire 1 1# B $end
-$var wire 1 $# out $end
+$var wire 1 z" A $end
+$var wire 1 -# B $end
+$var wire 1 ~" out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 }" A $end
-$var wire 1 ~" B $end
-$var wire 1 2# out $end
+$var wire 1 y" A $end
+$var wire 1 z" B $end
+$var wire 1 .# out $end
 $upscope $end
 $upscope $end
 $scope module alu15 $end
-$var wire 1 3# A $end
-$var wire 1 4# B $end
-$var wire 3 5# S [2:0] $end
-$var wire 1 6# carryin $end
-$var wire 1 7# out $end
-$var wire 1 8# modB $end
-$var wire 1 9# carryout $end
-$var wire 1 :# addORsub $end
-$var wire 8 ;# I [7:0] $end
+$var wire 1 /# A $end
+$var wire 1 0# B $end
+$var wire 3 1# S [2:0] $end
+$var wire 1 2# carryin $end
+$var wire 1 3# out $end
+$var wire 1 4# modB $end
+$var wire 1 5# carryout $end
+$var wire 1 6# addORsub $end
+$var wire 8 7# I [7:0] $end
 $scope module addsub $end
-$var wire 1 3# A $end
-$var wire 1 6# carryin $end
-$var wire 1 9# carryout $end
-$var wire 1 <# out1 $end
-$var wire 1 =# out2 $end
-$var wire 1 ># out3 $end
-$var wire 1 :# sum $end
-$var wire 1 8# B $end
+$var wire 1 /# A $end
+$var wire 1 2# carryin $end
+$var wire 1 5# carryout $end
+$var wire 1 8# out1 $end
+$var wire 1 9# out2 $end
+$var wire 1 :# out3 $end
+$var wire 1 6# sum $end
+$var wire 1 4# B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 3# A $end
-$var wire 1 4# B $end
-$var wire 1 ?# out $end
+$var wire 1 /# A $end
+$var wire 1 0# B $end
+$var wire 1 ;# out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 @# I [7:0] $end
-$var wire 3 A# S [2:0] $end
-$var wire 1 7# out $end
+$var wire 8 <# I [7:0] $end
+$var wire 3 =# S [2:0] $end
+$var wire 1 3# out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 3# A $end
-$var wire 1 4# B $end
-$var wire 1 B# out $end
+$var wire 1 /# A $end
+$var wire 1 0# B $end
+$var wire 1 ># out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 3# A $end
-$var wire 1 4# B $end
-$var wire 1 C# out $end
+$var wire 1 /# A $end
+$var wire 1 0# B $end
+$var wire 1 ?# out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 3# A $end
-$var wire 1 4# B $end
-$var wire 1 D# out $end
+$var wire 1 /# A $end
+$var wire 1 0# B $end
+$var wire 1 @# out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 4# A $end
-$var wire 1 E# B $end
-$var wire 1 8# out $end
+$var wire 1 0# A $end
+$var wire 1 A# B $end
+$var wire 1 4# out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 3# A $end
-$var wire 1 4# B $end
-$var wire 1 F# out $end
+$var wire 1 /# A $end
+$var wire 1 0# B $end
+$var wire 1 B# out $end
 $upscope $end
 $upscope $end
 $scope module alu16 $end
-$var wire 1 G# A $end
-$var wire 1 H# B $end
-$var wire 3 I# S [2:0] $end
-$var wire 1 J# carryin $end
-$var wire 1 K# out $end
-$var wire 1 L# modB $end
-$var wire 1 M# carryout $end
-$var wire 1 N# addORsub $end
-$var wire 8 O# I [7:0] $end
+$var wire 1 C# A $end
+$var wire 1 D# B $end
+$var wire 3 E# S [2:0] $end
+$var wire 1 F# carryin $end
+$var wire 1 G# out $end
+$var wire 1 H# modB $end
+$var wire 1 I# carryout $end
+$var wire 1 J# addORsub $end
+$var wire 8 K# I [7:0] $end
 $scope module addsub $end
-$var wire 1 G# A $end
-$var wire 1 J# carryin $end
-$var wire 1 M# carryout $end
-$var wire 1 P# out1 $end
-$var wire 1 Q# out2 $end
-$var wire 1 R# out3 $end
-$var wire 1 N# sum $end
-$var wire 1 L# B $end
+$var wire 1 C# A $end
+$var wire 1 F# carryin $end
+$var wire 1 I# carryout $end
+$var wire 1 L# out1 $end
+$var wire 1 M# out2 $end
+$var wire 1 N# out3 $end
+$var wire 1 J# sum $end
+$var wire 1 H# B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 G# A $end
-$var wire 1 H# B $end
-$var wire 1 S# out $end
+$var wire 1 C# A $end
+$var wire 1 D# B $end
+$var wire 1 O# out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 T# I [7:0] $end
-$var wire 3 U# S [2:0] $end
-$var wire 1 K# out $end
+$var wire 8 P# I [7:0] $end
+$var wire 3 Q# S [2:0] $end
+$var wire 1 G# out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 G# A $end
-$var wire 1 H# B $end
-$var wire 1 V# out $end
+$var wire 1 C# A $end
+$var wire 1 D# B $end
+$var wire 1 R# out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 G# A $end
-$var wire 1 H# B $end
-$var wire 1 W# out $end
+$var wire 1 C# A $end
+$var wire 1 D# B $end
+$var wire 1 S# out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 G# A $end
-$var wire 1 H# B $end
-$var wire 1 X# out $end
+$var wire 1 C# A $end
+$var wire 1 D# B $end
+$var wire 1 T# out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 H# A $end
-$var wire 1 Y# B $end
-$var wire 1 L# out $end
+$var wire 1 D# A $end
+$var wire 1 U# B $end
+$var wire 1 H# out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 G# A $end
-$var wire 1 H# B $end
-$var wire 1 Z# out $end
+$var wire 1 C# A $end
+$var wire 1 D# B $end
+$var wire 1 V# out $end
 $upscope $end
 $upscope $end
 $scope module alu17 $end
-$var wire 1 [# A $end
-$var wire 1 \# B $end
-$var wire 3 ]# S [2:0] $end
-$var wire 1 ^# carryin $end
-$var wire 1 _# out $end
-$var wire 1 `# modB $end
-$var wire 1 a# carryout $end
-$var wire 1 b# addORsub $end
-$var wire 8 c# I [7:0] $end
+$var wire 1 W# A $end
+$var wire 1 X# B $end
+$var wire 3 Y# S [2:0] $end
+$var wire 1 Z# carryin $end
+$var wire 1 [# out $end
+$var wire 1 \# modB $end
+$var wire 1 ]# carryout $end
+$var wire 1 ^# addORsub $end
+$var wire 8 _# I [7:0] $end
 $scope module addsub $end
-$var wire 1 [# A $end
-$var wire 1 ^# carryin $end
-$var wire 1 a# carryout $end
-$var wire 1 d# out1 $end
-$var wire 1 e# out2 $end
-$var wire 1 f# out3 $end
-$var wire 1 b# sum $end
-$var wire 1 `# B $end
+$var wire 1 W# A $end
+$var wire 1 Z# carryin $end
+$var wire 1 ]# carryout $end
+$var wire 1 `# out1 $end
+$var wire 1 a# out2 $end
+$var wire 1 b# out3 $end
+$var wire 1 ^# sum $end
+$var wire 1 \# B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 [# A $end
-$var wire 1 \# B $end
-$var wire 1 g# out $end
+$var wire 1 W# A $end
+$var wire 1 X# B $end
+$var wire 1 c# out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 h# I [7:0] $end
-$var wire 3 i# S [2:0] $end
-$var wire 1 _# out $end
+$var wire 8 d# I [7:0] $end
+$var wire 3 e# S [2:0] $end
+$var wire 1 [# out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 [# A $end
-$var wire 1 \# B $end
-$var wire 1 j# out $end
+$var wire 1 W# A $end
+$var wire 1 X# B $end
+$var wire 1 f# out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 [# A $end
-$var wire 1 \# B $end
-$var wire 1 k# out $end
+$var wire 1 W# A $end
+$var wire 1 X# B $end
+$var wire 1 g# out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 [# A $end
-$var wire 1 \# B $end
-$var wire 1 l# out $end
+$var wire 1 W# A $end
+$var wire 1 X# B $end
+$var wire 1 h# out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 \# A $end
-$var wire 1 m# B $end
-$var wire 1 `# out $end
+$var wire 1 X# A $end
+$var wire 1 i# B $end
+$var wire 1 \# out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 [# A $end
-$var wire 1 \# B $end
-$var wire 1 n# out $end
+$var wire 1 W# A $end
+$var wire 1 X# B $end
+$var wire 1 j# out $end
 $upscope $end
 $upscope $end
 $scope module alu18 $end
-$var wire 1 o# A $end
-$var wire 1 p# B $end
-$var wire 3 q# S [2:0] $end
-$var wire 1 r# carryin $end
-$var wire 1 s# out $end
-$var wire 1 t# modB $end
-$var wire 1 u# carryout $end
-$var wire 1 v# addORsub $end
-$var wire 8 w# I [7:0] $end
+$var wire 1 k# A $end
+$var wire 1 l# B $end
+$var wire 3 m# S [2:0] $end
+$var wire 1 n# carryin $end
+$var wire 1 o# out $end
+$var wire 1 p# modB $end
+$var wire 1 q# carryout $end
+$var wire 1 r# addORsub $end
+$var wire 8 s# I [7:0] $end
 $scope module addsub $end
-$var wire 1 o# A $end
-$var wire 1 r# carryin $end
-$var wire 1 u# carryout $end
-$var wire 1 x# out1 $end
-$var wire 1 y# out2 $end
-$var wire 1 z# out3 $end
-$var wire 1 v# sum $end
-$var wire 1 t# B $end
+$var wire 1 k# A $end
+$var wire 1 n# carryin $end
+$var wire 1 q# carryout $end
+$var wire 1 t# out1 $end
+$var wire 1 u# out2 $end
+$var wire 1 v# out3 $end
+$var wire 1 r# sum $end
+$var wire 1 p# B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 o# A $end
-$var wire 1 p# B $end
-$var wire 1 {# out $end
+$var wire 1 k# A $end
+$var wire 1 l# B $end
+$var wire 1 w# out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 |# I [7:0] $end
-$var wire 3 }# S [2:0] $end
-$var wire 1 s# out $end
+$var wire 8 x# I [7:0] $end
+$var wire 3 y# S [2:0] $end
+$var wire 1 o# out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 o# A $end
-$var wire 1 p# B $end
-$var wire 1 ~# out $end
+$var wire 1 k# A $end
+$var wire 1 l# B $end
+$var wire 1 z# out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 o# A $end
-$var wire 1 p# B $end
-$var wire 1 !$ out $end
+$var wire 1 k# A $end
+$var wire 1 l# B $end
+$var wire 1 {# out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 o# A $end
-$var wire 1 p# B $end
-$var wire 1 "$ out $end
+$var wire 1 k# A $end
+$var wire 1 l# B $end
+$var wire 1 |# out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 p# A $end
-$var wire 1 #$ B $end
-$var wire 1 t# out $end
+$var wire 1 l# A $end
+$var wire 1 }# B $end
+$var wire 1 p# out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 o# A $end
-$var wire 1 p# B $end
-$var wire 1 $$ out $end
+$var wire 1 k# A $end
+$var wire 1 l# B $end
+$var wire 1 ~# out $end
 $upscope $end
 $upscope $end
 $scope module alu19 $end
-$var wire 1 %$ A $end
-$var wire 1 &$ B $end
-$var wire 3 '$ S [2:0] $end
-$var wire 1 ($ carryin $end
-$var wire 1 )$ out $end
-$var wire 1 *$ modB $end
-$var wire 1 +$ carryout $end
-$var wire 1 ,$ addORsub $end
-$var wire 8 -$ I [7:0] $end
+$var wire 1 !$ A $end
+$var wire 1 "$ B $end
+$var wire 3 #$ S [2:0] $end
+$var wire 1 $$ carryin $end
+$var wire 1 %$ out $end
+$var wire 1 &$ modB $end
+$var wire 1 '$ carryout $end
+$var wire 1 ($ addORsub $end
+$var wire 8 )$ I [7:0] $end
 $scope module addsub $end
-$var wire 1 %$ A $end
-$var wire 1 ($ carryin $end
-$var wire 1 +$ carryout $end
-$var wire 1 .$ out1 $end
-$var wire 1 /$ out2 $end
-$var wire 1 0$ out3 $end
-$var wire 1 ,$ sum $end
-$var wire 1 *$ B $end
+$var wire 1 !$ A $end
+$var wire 1 $$ carryin $end
+$var wire 1 '$ carryout $end
+$var wire 1 *$ out1 $end
+$var wire 1 +$ out2 $end
+$var wire 1 ,$ out3 $end
+$var wire 1 ($ sum $end
+$var wire 1 &$ B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 %$ A $end
-$var wire 1 &$ B $end
-$var wire 1 1$ out $end
+$var wire 1 !$ A $end
+$var wire 1 "$ B $end
+$var wire 1 -$ out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 2$ I [7:0] $end
-$var wire 3 3$ S [2:0] $end
-$var wire 1 )$ out $end
+$var wire 8 .$ I [7:0] $end
+$var wire 3 /$ S [2:0] $end
+$var wire 1 %$ out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 %$ A $end
-$var wire 1 &$ B $end
-$var wire 1 4$ out $end
+$var wire 1 !$ A $end
+$var wire 1 "$ B $end
+$var wire 1 0$ out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 %$ A $end
-$var wire 1 &$ B $end
-$var wire 1 5$ out $end
+$var wire 1 !$ A $end
+$var wire 1 "$ B $end
+$var wire 1 1$ out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 %$ A $end
-$var wire 1 &$ B $end
-$var wire 1 6$ out $end
+$var wire 1 !$ A $end
+$var wire 1 "$ B $end
+$var wire 1 2$ out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 &$ A $end
-$var wire 1 7$ B $end
-$var wire 1 *$ out $end
+$var wire 1 "$ A $end
+$var wire 1 3$ B $end
+$var wire 1 &$ out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 %$ A $end
-$var wire 1 &$ B $end
-$var wire 1 8$ out $end
+$var wire 1 !$ A $end
+$var wire 1 "$ B $end
+$var wire 1 4$ out $end
 $upscope $end
 $upscope $end
 $scope module alu2 $end
-$var wire 1 9$ A $end
-$var wire 1 :$ B $end
-$var wire 3 ;$ S [2:0] $end
-$var wire 1 <$ carryin $end
-$var wire 1 =$ out $end
-$var wire 1 >$ modB $end
-$var wire 1 ?$ carryout $end
-$var wire 1 @$ addORsub $end
-$var wire 8 A$ I [7:0] $end
+$var wire 1 5$ A $end
+$var wire 1 6$ B $end
+$var wire 3 7$ S [2:0] $end
+$var wire 1 8$ carryin $end
+$var wire 1 9$ out $end
+$var wire 1 :$ modB $end
+$var wire 1 ;$ carryout $end
+$var wire 1 <$ addORsub $end
+$var wire 8 =$ I [7:0] $end
 $scope module addsub $end
-$var wire 1 9$ A $end
-$var wire 1 <$ carryin $end
-$var wire 1 ?$ carryout $end
-$var wire 1 B$ out1 $end
-$var wire 1 C$ out2 $end
-$var wire 1 D$ out3 $end
-$var wire 1 @$ sum $end
-$var wire 1 >$ B $end
+$var wire 1 5$ A $end
+$var wire 1 8$ carryin $end
+$var wire 1 ;$ carryout $end
+$var wire 1 >$ out1 $end
+$var wire 1 ?$ out2 $end
+$var wire 1 @$ out3 $end
+$var wire 1 <$ sum $end
+$var wire 1 :$ B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 9$ A $end
-$var wire 1 :$ B $end
-$var wire 1 E$ out $end
+$var wire 1 5$ A $end
+$var wire 1 6$ B $end
+$var wire 1 A$ out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 F$ I [7:0] $end
-$var wire 3 G$ S [2:0] $end
-$var wire 1 =$ out $end
+$var wire 8 B$ I [7:0] $end
+$var wire 3 C$ S [2:0] $end
+$var wire 1 9$ out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 9$ A $end
-$var wire 1 :$ B $end
-$var wire 1 H$ out $end
+$var wire 1 5$ A $end
+$var wire 1 6$ B $end
+$var wire 1 D$ out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 9$ A $end
-$var wire 1 :$ B $end
-$var wire 1 I$ out $end
+$var wire 1 5$ A $end
+$var wire 1 6$ B $end
+$var wire 1 E$ out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 9$ A $end
-$var wire 1 :$ B $end
-$var wire 1 J$ out $end
+$var wire 1 5$ A $end
+$var wire 1 6$ B $end
+$var wire 1 F$ out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 :$ A $end
-$var wire 1 K$ B $end
-$var wire 1 >$ out $end
+$var wire 1 6$ A $end
+$var wire 1 G$ B $end
+$var wire 1 :$ out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 9$ A $end
-$var wire 1 :$ B $end
-$var wire 1 L$ out $end
+$var wire 1 5$ A $end
+$var wire 1 6$ B $end
+$var wire 1 H$ out $end
 $upscope $end
 $upscope $end
 $scope module alu20 $end
-$var wire 1 M$ A $end
-$var wire 1 N$ B $end
-$var wire 3 O$ S [2:0] $end
-$var wire 1 P$ carryin $end
-$var wire 1 Q$ out $end
-$var wire 1 R$ modB $end
-$var wire 1 S$ carryout $end
-$var wire 1 T$ addORsub $end
-$var wire 8 U$ I [7:0] $end
+$var wire 1 I$ A $end
+$var wire 1 J$ B $end
+$var wire 3 K$ S [2:0] $end
+$var wire 1 L$ carryin $end
+$var wire 1 M$ out $end
+$var wire 1 N$ modB $end
+$var wire 1 O$ carryout $end
+$var wire 1 P$ addORsub $end
+$var wire 8 Q$ I [7:0] $end
 $scope module addsub $end
-$var wire 1 M$ A $end
-$var wire 1 P$ carryin $end
-$var wire 1 S$ carryout $end
-$var wire 1 V$ out1 $end
-$var wire 1 W$ out2 $end
-$var wire 1 X$ out3 $end
-$var wire 1 T$ sum $end
-$var wire 1 R$ B $end
+$var wire 1 I$ A $end
+$var wire 1 L$ carryin $end
+$var wire 1 O$ carryout $end
+$var wire 1 R$ out1 $end
+$var wire 1 S$ out2 $end
+$var wire 1 T$ out3 $end
+$var wire 1 P$ sum $end
+$var wire 1 N$ B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 M$ A $end
-$var wire 1 N$ B $end
-$var wire 1 Y$ out $end
+$var wire 1 I$ A $end
+$var wire 1 J$ B $end
+$var wire 1 U$ out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 Z$ I [7:0] $end
-$var wire 3 [$ S [2:0] $end
-$var wire 1 Q$ out $end
+$var wire 8 V$ I [7:0] $end
+$var wire 3 W$ S [2:0] $end
+$var wire 1 M$ out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 M$ A $end
-$var wire 1 N$ B $end
-$var wire 1 \$ out $end
+$var wire 1 I$ A $end
+$var wire 1 J$ B $end
+$var wire 1 X$ out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 M$ A $end
-$var wire 1 N$ B $end
-$var wire 1 ]$ out $end
+$var wire 1 I$ A $end
+$var wire 1 J$ B $end
+$var wire 1 Y$ out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 M$ A $end
-$var wire 1 N$ B $end
-$var wire 1 ^$ out $end
+$var wire 1 I$ A $end
+$var wire 1 J$ B $end
+$var wire 1 Z$ out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 N$ A $end
-$var wire 1 _$ B $end
-$var wire 1 R$ out $end
+$var wire 1 J$ A $end
+$var wire 1 [$ B $end
+$var wire 1 N$ out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 M$ A $end
-$var wire 1 N$ B $end
-$var wire 1 `$ out $end
+$var wire 1 I$ A $end
+$var wire 1 J$ B $end
+$var wire 1 \$ out $end
 $upscope $end
 $upscope $end
 $scope module alu21 $end
-$var wire 1 a$ A $end
-$var wire 1 b$ B $end
-$var wire 3 c$ S [2:0] $end
-$var wire 1 d$ carryin $end
-$var wire 1 e$ out $end
-$var wire 1 f$ modB $end
-$var wire 1 g$ carryout $end
-$var wire 1 h$ addORsub $end
-$var wire 8 i$ I [7:0] $end
+$var wire 1 ]$ A $end
+$var wire 1 ^$ B $end
+$var wire 3 _$ S [2:0] $end
+$var wire 1 `$ carryin $end
+$var wire 1 a$ out $end
+$var wire 1 b$ modB $end
+$var wire 1 c$ carryout $end
+$var wire 1 d$ addORsub $end
+$var wire 8 e$ I [7:0] $end
 $scope module addsub $end
-$var wire 1 a$ A $end
-$var wire 1 d$ carryin $end
-$var wire 1 g$ carryout $end
-$var wire 1 j$ out1 $end
-$var wire 1 k$ out2 $end
-$var wire 1 l$ out3 $end
-$var wire 1 h$ sum $end
-$var wire 1 f$ B $end
+$var wire 1 ]$ A $end
+$var wire 1 `$ carryin $end
+$var wire 1 c$ carryout $end
+$var wire 1 f$ out1 $end
+$var wire 1 g$ out2 $end
+$var wire 1 h$ out3 $end
+$var wire 1 d$ sum $end
+$var wire 1 b$ B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 a$ A $end
-$var wire 1 b$ B $end
-$var wire 1 m$ out $end
+$var wire 1 ]$ A $end
+$var wire 1 ^$ B $end
+$var wire 1 i$ out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 n$ I [7:0] $end
-$var wire 3 o$ S [2:0] $end
-$var wire 1 e$ out $end
+$var wire 8 j$ I [7:0] $end
+$var wire 3 k$ S [2:0] $end
+$var wire 1 a$ out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 a$ A $end
-$var wire 1 b$ B $end
-$var wire 1 p$ out $end
+$var wire 1 ]$ A $end
+$var wire 1 ^$ B $end
+$var wire 1 l$ out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 a$ A $end
-$var wire 1 b$ B $end
-$var wire 1 q$ out $end
+$var wire 1 ]$ A $end
+$var wire 1 ^$ B $end
+$var wire 1 m$ out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 a$ A $end
-$var wire 1 b$ B $end
-$var wire 1 r$ out $end
+$var wire 1 ]$ A $end
+$var wire 1 ^$ B $end
+$var wire 1 n$ out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 b$ A $end
-$var wire 1 s$ B $end
-$var wire 1 f$ out $end
+$var wire 1 ^$ A $end
+$var wire 1 o$ B $end
+$var wire 1 b$ out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 a$ A $end
-$var wire 1 b$ B $end
-$var wire 1 t$ out $end
+$var wire 1 ]$ A $end
+$var wire 1 ^$ B $end
+$var wire 1 p$ out $end
 $upscope $end
 $upscope $end
 $scope module alu22 $end
-$var wire 1 u$ A $end
-$var wire 1 v$ B $end
-$var wire 3 w$ S [2:0] $end
-$var wire 1 x$ carryin $end
-$var wire 1 y$ out $end
-$var wire 1 z$ modB $end
-$var wire 1 {$ carryout $end
-$var wire 1 |$ addORsub $end
-$var wire 8 }$ I [7:0] $end
+$var wire 1 q$ A $end
+$var wire 1 r$ B $end
+$var wire 3 s$ S [2:0] $end
+$var wire 1 t$ carryin $end
+$var wire 1 u$ out $end
+$var wire 1 v$ modB $end
+$var wire 1 w$ carryout $end
+$var wire 1 x$ addORsub $end
+$var wire 8 y$ I [7:0] $end
 $scope module addsub $end
-$var wire 1 u$ A $end
-$var wire 1 x$ carryin $end
-$var wire 1 {$ carryout $end
-$var wire 1 ~$ out1 $end
-$var wire 1 !% out2 $end
-$var wire 1 "% out3 $end
-$var wire 1 |$ sum $end
-$var wire 1 z$ B $end
+$var wire 1 q$ A $end
+$var wire 1 t$ carryin $end
+$var wire 1 w$ carryout $end
+$var wire 1 z$ out1 $end
+$var wire 1 {$ out2 $end
+$var wire 1 |$ out3 $end
+$var wire 1 x$ sum $end
+$var wire 1 v$ B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 u$ A $end
-$var wire 1 v$ B $end
-$var wire 1 #% out $end
+$var wire 1 q$ A $end
+$var wire 1 r$ B $end
+$var wire 1 }$ out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 $% I [7:0] $end
-$var wire 3 %% S [2:0] $end
-$var wire 1 y$ out $end
+$var wire 8 ~$ I [7:0] $end
+$var wire 3 !% S [2:0] $end
+$var wire 1 u$ out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 u$ A $end
-$var wire 1 v$ B $end
-$var wire 1 &% out $end
+$var wire 1 q$ A $end
+$var wire 1 r$ B $end
+$var wire 1 "% out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 u$ A $end
-$var wire 1 v$ B $end
-$var wire 1 '% out $end
+$var wire 1 q$ A $end
+$var wire 1 r$ B $end
+$var wire 1 #% out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 u$ A $end
-$var wire 1 v$ B $end
-$var wire 1 (% out $end
+$var wire 1 q$ A $end
+$var wire 1 r$ B $end
+$var wire 1 $% out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 v$ A $end
-$var wire 1 )% B $end
-$var wire 1 z$ out $end
+$var wire 1 r$ A $end
+$var wire 1 %% B $end
+$var wire 1 v$ out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 u$ A $end
-$var wire 1 v$ B $end
-$var wire 1 *% out $end
+$var wire 1 q$ A $end
+$var wire 1 r$ B $end
+$var wire 1 &% out $end
 $upscope $end
 $upscope $end
 $scope module alu23 $end
-$var wire 1 +% A $end
-$var wire 1 ,% B $end
-$var wire 3 -% S [2:0] $end
-$var wire 1 .% carryin $end
-$var wire 1 /% out $end
-$var wire 1 0% modB $end
-$var wire 1 1% carryout $end
-$var wire 1 2% addORsub $end
-$var wire 8 3% I [7:0] $end
+$var wire 1 '% A $end
+$var wire 1 (% B $end
+$var wire 3 )% S [2:0] $end
+$var wire 1 *% carryin $end
+$var wire 1 +% out $end
+$var wire 1 ,% modB $end
+$var wire 1 -% carryout $end
+$var wire 1 .% addORsub $end
+$var wire 8 /% I [7:0] $end
 $scope module addsub $end
-$var wire 1 +% A $end
-$var wire 1 .% carryin $end
-$var wire 1 1% carryout $end
-$var wire 1 4% out1 $end
-$var wire 1 5% out2 $end
-$var wire 1 6% out3 $end
-$var wire 1 2% sum $end
-$var wire 1 0% B $end
+$var wire 1 '% A $end
+$var wire 1 *% carryin $end
+$var wire 1 -% carryout $end
+$var wire 1 0% out1 $end
+$var wire 1 1% out2 $end
+$var wire 1 2% out3 $end
+$var wire 1 .% sum $end
+$var wire 1 ,% B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 +% A $end
-$var wire 1 ,% B $end
-$var wire 1 7% out $end
+$var wire 1 '% A $end
+$var wire 1 (% B $end
+$var wire 1 3% out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 8% I [7:0] $end
-$var wire 3 9% S [2:0] $end
-$var wire 1 /% out $end
+$var wire 8 4% I [7:0] $end
+$var wire 3 5% S [2:0] $end
+$var wire 1 +% out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 +% A $end
-$var wire 1 ,% B $end
-$var wire 1 :% out $end
+$var wire 1 '% A $end
+$var wire 1 (% B $end
+$var wire 1 6% out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 +% A $end
-$var wire 1 ,% B $end
-$var wire 1 ;% out $end
+$var wire 1 '% A $end
+$var wire 1 (% B $end
+$var wire 1 7% out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 +% A $end
-$var wire 1 ,% B $end
-$var wire 1 <% out $end
+$var wire 1 '% A $end
+$var wire 1 (% B $end
+$var wire 1 8% out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 ,% A $end
-$var wire 1 =% B $end
-$var wire 1 0% out $end
+$var wire 1 (% A $end
+$var wire 1 9% B $end
+$var wire 1 ,% out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 +% A $end
-$var wire 1 ,% B $end
-$var wire 1 >% out $end
+$var wire 1 '% A $end
+$var wire 1 (% B $end
+$var wire 1 :% out $end
 $upscope $end
 $upscope $end
 $scope module alu24 $end
-$var wire 1 ?% A $end
-$var wire 1 @% B $end
-$var wire 3 A% S [2:0] $end
-$var wire 1 B% carryin $end
-$var wire 1 C% out $end
-$var wire 1 D% modB $end
-$var wire 1 E% carryout $end
-$var wire 1 F% addORsub $end
-$var wire 8 G% I [7:0] $end
+$var wire 1 ;% A $end
+$var wire 1 <% B $end
+$var wire 3 =% S [2:0] $end
+$var wire 1 >% carryin $end
+$var wire 1 ?% out $end
+$var wire 1 @% modB $end
+$var wire 1 A% carryout $end
+$var wire 1 B% addORsub $end
+$var wire 8 C% I [7:0] $end
 $scope module addsub $end
-$var wire 1 ?% A $end
-$var wire 1 B% carryin $end
-$var wire 1 E% carryout $end
-$var wire 1 H% out1 $end
-$var wire 1 I% out2 $end
-$var wire 1 J% out3 $end
-$var wire 1 F% sum $end
-$var wire 1 D% B $end
+$var wire 1 ;% A $end
+$var wire 1 >% carryin $end
+$var wire 1 A% carryout $end
+$var wire 1 D% out1 $end
+$var wire 1 E% out2 $end
+$var wire 1 F% out3 $end
+$var wire 1 B% sum $end
+$var wire 1 @% B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 ?% A $end
-$var wire 1 @% B $end
-$var wire 1 K% out $end
+$var wire 1 ;% A $end
+$var wire 1 <% B $end
+$var wire 1 G% out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 L% I [7:0] $end
-$var wire 3 M% S [2:0] $end
-$var wire 1 C% out $end
+$var wire 8 H% I [7:0] $end
+$var wire 3 I% S [2:0] $end
+$var wire 1 ?% out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 ?% A $end
-$var wire 1 @% B $end
-$var wire 1 N% out $end
+$var wire 1 ;% A $end
+$var wire 1 <% B $end
+$var wire 1 J% out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 ?% A $end
-$var wire 1 @% B $end
-$var wire 1 O% out $end
+$var wire 1 ;% A $end
+$var wire 1 <% B $end
+$var wire 1 K% out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 ?% A $end
-$var wire 1 @% B $end
-$var wire 1 P% out $end
+$var wire 1 ;% A $end
+$var wire 1 <% B $end
+$var wire 1 L% out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 @% A $end
-$var wire 1 Q% B $end
-$var wire 1 D% out $end
+$var wire 1 <% A $end
+$var wire 1 M% B $end
+$var wire 1 @% out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 ?% A $end
-$var wire 1 @% B $end
-$var wire 1 R% out $end
+$var wire 1 ;% A $end
+$var wire 1 <% B $end
+$var wire 1 N% out $end
 $upscope $end
 $upscope $end
 $scope module alu25 $end
-$var wire 1 S% A $end
-$var wire 1 T% B $end
-$var wire 3 U% S [2:0] $end
-$var wire 1 V% carryin $end
-$var wire 1 W% out $end
-$var wire 1 X% modB $end
-$var wire 1 Y% carryout $end
-$var wire 1 Z% addORsub $end
-$var wire 8 [% I [7:0] $end
+$var wire 1 O% A $end
+$var wire 1 P% B $end
+$var wire 3 Q% S [2:0] $end
+$var wire 1 R% carryin $end
+$var wire 1 S% out $end
+$var wire 1 T% modB $end
+$var wire 1 U% carryout $end
+$var wire 1 V% addORsub $end
+$var wire 8 W% I [7:0] $end
 $scope module addsub $end
-$var wire 1 S% A $end
-$var wire 1 V% carryin $end
-$var wire 1 Y% carryout $end
-$var wire 1 \% out1 $end
-$var wire 1 ]% out2 $end
-$var wire 1 ^% out3 $end
-$var wire 1 Z% sum $end
-$var wire 1 X% B $end
+$var wire 1 O% A $end
+$var wire 1 R% carryin $end
+$var wire 1 U% carryout $end
+$var wire 1 X% out1 $end
+$var wire 1 Y% out2 $end
+$var wire 1 Z% out3 $end
+$var wire 1 V% sum $end
+$var wire 1 T% B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 S% A $end
-$var wire 1 T% B $end
-$var wire 1 _% out $end
+$var wire 1 O% A $end
+$var wire 1 P% B $end
+$var wire 1 [% out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 `% I [7:0] $end
-$var wire 3 a% S [2:0] $end
-$var wire 1 W% out $end
+$var wire 8 \% I [7:0] $end
+$var wire 3 ]% S [2:0] $end
+$var wire 1 S% out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 S% A $end
-$var wire 1 T% B $end
-$var wire 1 b% out $end
+$var wire 1 O% A $end
+$var wire 1 P% B $end
+$var wire 1 ^% out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 S% A $end
-$var wire 1 T% B $end
-$var wire 1 c% out $end
+$var wire 1 O% A $end
+$var wire 1 P% B $end
+$var wire 1 _% out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 S% A $end
-$var wire 1 T% B $end
-$var wire 1 d% out $end
+$var wire 1 O% A $end
+$var wire 1 P% B $end
+$var wire 1 `% out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 T% A $end
-$var wire 1 e% B $end
-$var wire 1 X% out $end
+$var wire 1 P% A $end
+$var wire 1 a% B $end
+$var wire 1 T% out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 S% A $end
-$var wire 1 T% B $end
-$var wire 1 f% out $end
+$var wire 1 O% A $end
+$var wire 1 P% B $end
+$var wire 1 b% out $end
 $upscope $end
 $upscope $end
 $scope module alu26 $end
-$var wire 1 g% A $end
-$var wire 1 h% B $end
-$var wire 3 i% S [2:0] $end
-$var wire 1 j% carryin $end
-$var wire 1 k% out $end
-$var wire 1 l% modB $end
-$var wire 1 m% carryout $end
-$var wire 1 n% addORsub $end
-$var wire 8 o% I [7:0] $end
+$var wire 1 c% A $end
+$var wire 1 d% B $end
+$var wire 3 e% S [2:0] $end
+$var wire 1 f% carryin $end
+$var wire 1 g% out $end
+$var wire 1 h% modB $end
+$var wire 1 i% carryout $end
+$var wire 1 j% addORsub $end
+$var wire 8 k% I [7:0] $end
 $scope module addsub $end
-$var wire 1 g% A $end
-$var wire 1 j% carryin $end
-$var wire 1 m% carryout $end
-$var wire 1 p% out1 $end
-$var wire 1 q% out2 $end
-$var wire 1 r% out3 $end
-$var wire 1 n% sum $end
-$var wire 1 l% B $end
+$var wire 1 c% A $end
+$var wire 1 f% carryin $end
+$var wire 1 i% carryout $end
+$var wire 1 l% out1 $end
+$var wire 1 m% out2 $end
+$var wire 1 n% out3 $end
+$var wire 1 j% sum $end
+$var wire 1 h% B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 g% A $end
-$var wire 1 h% B $end
-$var wire 1 s% out $end
+$var wire 1 c% A $end
+$var wire 1 d% B $end
+$var wire 1 o% out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 t% I [7:0] $end
-$var wire 3 u% S [2:0] $end
-$var wire 1 k% out $end
+$var wire 8 p% I [7:0] $end
+$var wire 3 q% S [2:0] $end
+$var wire 1 g% out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 g% A $end
-$var wire 1 h% B $end
-$var wire 1 v% out $end
+$var wire 1 c% A $end
+$var wire 1 d% B $end
+$var wire 1 r% out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 g% A $end
-$var wire 1 h% B $end
-$var wire 1 w% out $end
+$var wire 1 c% A $end
+$var wire 1 d% B $end
+$var wire 1 s% out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 g% A $end
-$var wire 1 h% B $end
-$var wire 1 x% out $end
+$var wire 1 c% A $end
+$var wire 1 d% B $end
+$var wire 1 t% out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 h% A $end
-$var wire 1 y% B $end
-$var wire 1 l% out $end
+$var wire 1 d% A $end
+$var wire 1 u% B $end
+$var wire 1 h% out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 g% A $end
-$var wire 1 h% B $end
-$var wire 1 z% out $end
+$var wire 1 c% A $end
+$var wire 1 d% B $end
+$var wire 1 v% out $end
 $upscope $end
 $upscope $end
 $scope module alu27 $end
-$var wire 1 {% A $end
-$var wire 1 |% B $end
-$var wire 3 }% S [2:0] $end
-$var wire 1 ~% carryin $end
-$var wire 1 !& out $end
-$var wire 1 "& modB $end
-$var wire 1 #& carryout $end
-$var wire 1 $& addORsub $end
-$var wire 8 %& I [7:0] $end
+$var wire 1 w% A $end
+$var wire 1 x% B $end
+$var wire 3 y% S [2:0] $end
+$var wire 1 z% carryin $end
+$var wire 1 {% out $end
+$var wire 1 |% modB $end
+$var wire 1 }% carryout $end
+$var wire 1 ~% addORsub $end
+$var wire 8 !& I [7:0] $end
 $scope module addsub $end
-$var wire 1 {% A $end
-$var wire 1 ~% carryin $end
-$var wire 1 #& carryout $end
-$var wire 1 && out1 $end
-$var wire 1 '& out2 $end
-$var wire 1 (& out3 $end
-$var wire 1 $& sum $end
-$var wire 1 "& B $end
+$var wire 1 w% A $end
+$var wire 1 z% carryin $end
+$var wire 1 }% carryout $end
+$var wire 1 "& out1 $end
+$var wire 1 #& out2 $end
+$var wire 1 $& out3 $end
+$var wire 1 ~% sum $end
+$var wire 1 |% B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 {% A $end
-$var wire 1 |% B $end
-$var wire 1 )& out $end
+$var wire 1 w% A $end
+$var wire 1 x% B $end
+$var wire 1 %& out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 *& I [7:0] $end
-$var wire 3 +& S [2:0] $end
-$var wire 1 !& out $end
+$var wire 8 && I [7:0] $end
+$var wire 3 '& S [2:0] $end
+$var wire 1 {% out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 {% A $end
-$var wire 1 |% B $end
-$var wire 1 ,& out $end
+$var wire 1 w% A $end
+$var wire 1 x% B $end
+$var wire 1 (& out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 {% A $end
-$var wire 1 |% B $end
-$var wire 1 -& out $end
+$var wire 1 w% A $end
+$var wire 1 x% B $end
+$var wire 1 )& out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 {% A $end
-$var wire 1 |% B $end
-$var wire 1 .& out $end
+$var wire 1 w% A $end
+$var wire 1 x% B $end
+$var wire 1 *& out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 |% A $end
-$var wire 1 /& B $end
-$var wire 1 "& out $end
+$var wire 1 x% A $end
+$var wire 1 +& B $end
+$var wire 1 |% out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 {% A $end
-$var wire 1 |% B $end
-$var wire 1 0& out $end
+$var wire 1 w% A $end
+$var wire 1 x% B $end
+$var wire 1 ,& out $end
 $upscope $end
 $upscope $end
 $scope module alu28 $end
-$var wire 1 1& A $end
-$var wire 1 2& B $end
-$var wire 3 3& S [2:0] $end
-$var wire 1 4& carryin $end
-$var wire 1 5& out $end
-$var wire 1 6& modB $end
-$var wire 1 7& carryout $end
-$var wire 1 8& addORsub $end
-$var wire 8 9& I [7:0] $end
+$var wire 1 -& A $end
+$var wire 1 .& B $end
+$var wire 3 /& S [2:0] $end
+$var wire 1 0& carryin $end
+$var wire 1 1& out $end
+$var wire 1 2& modB $end
+$var wire 1 3& carryout $end
+$var wire 1 4& addORsub $end
+$var wire 8 5& I [7:0] $end
 $scope module addsub $end
-$var wire 1 1& A $end
-$var wire 1 4& carryin $end
-$var wire 1 7& carryout $end
-$var wire 1 :& out1 $end
-$var wire 1 ;& out2 $end
-$var wire 1 <& out3 $end
-$var wire 1 8& sum $end
-$var wire 1 6& B $end
+$var wire 1 -& A $end
+$var wire 1 0& carryin $end
+$var wire 1 3& carryout $end
+$var wire 1 6& out1 $end
+$var wire 1 7& out2 $end
+$var wire 1 8& out3 $end
+$var wire 1 4& sum $end
+$var wire 1 2& B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 1& A $end
-$var wire 1 2& B $end
-$var wire 1 =& out $end
+$var wire 1 -& A $end
+$var wire 1 .& B $end
+$var wire 1 9& out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 >& I [7:0] $end
-$var wire 3 ?& S [2:0] $end
-$var wire 1 5& out $end
+$var wire 8 :& I [7:0] $end
+$var wire 3 ;& S [2:0] $end
+$var wire 1 1& out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 1& A $end
-$var wire 1 2& B $end
-$var wire 1 @& out $end
+$var wire 1 -& A $end
+$var wire 1 .& B $end
+$var wire 1 <& out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 1& A $end
-$var wire 1 2& B $end
-$var wire 1 A& out $end
+$var wire 1 -& A $end
+$var wire 1 .& B $end
+$var wire 1 =& out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 1& A $end
-$var wire 1 2& B $end
-$var wire 1 B& out $end
+$var wire 1 -& A $end
+$var wire 1 .& B $end
+$var wire 1 >& out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 2& A $end
-$var wire 1 C& B $end
-$var wire 1 6& out $end
+$var wire 1 .& A $end
+$var wire 1 ?& B $end
+$var wire 1 2& out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 1& A $end
-$var wire 1 2& B $end
-$var wire 1 D& out $end
+$var wire 1 -& A $end
+$var wire 1 .& B $end
+$var wire 1 @& out $end
 $upscope $end
 $upscope $end
 $scope module alu29 $end
-$var wire 1 E& A $end
-$var wire 1 F& B $end
-$var wire 3 G& S [2:0] $end
-$var wire 1 H& carryin $end
-$var wire 1 I& out $end
-$var wire 1 J& modB $end
-$var wire 1 K& carryout $end
-$var wire 1 L& addORsub $end
-$var wire 8 M& I [7:0] $end
+$var wire 1 A& A $end
+$var wire 1 B& B $end
+$var wire 3 C& S [2:0] $end
+$var wire 1 D& carryin $end
+$var wire 1 E& out $end
+$var wire 1 F& modB $end
+$var wire 1 G& carryout $end
+$var wire 1 H& addORsub $end
+$var wire 8 I& I [7:0] $end
 $scope module addsub $end
-$var wire 1 E& A $end
-$var wire 1 H& carryin $end
-$var wire 1 K& carryout $end
-$var wire 1 N& out1 $end
-$var wire 1 O& out2 $end
-$var wire 1 P& out3 $end
-$var wire 1 L& sum $end
-$var wire 1 J& B $end
+$var wire 1 A& A $end
+$var wire 1 D& carryin $end
+$var wire 1 G& carryout $end
+$var wire 1 J& out1 $end
+$var wire 1 K& out2 $end
+$var wire 1 L& out3 $end
+$var wire 1 H& sum $end
+$var wire 1 F& B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 E& A $end
-$var wire 1 F& B $end
-$var wire 1 Q& out $end
+$var wire 1 A& A $end
+$var wire 1 B& B $end
+$var wire 1 M& out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 R& I [7:0] $end
-$var wire 3 S& S [2:0] $end
-$var wire 1 I& out $end
+$var wire 8 N& I [7:0] $end
+$var wire 3 O& S [2:0] $end
+$var wire 1 E& out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 E& A $end
-$var wire 1 F& B $end
-$var wire 1 T& out $end
+$var wire 1 A& A $end
+$var wire 1 B& B $end
+$var wire 1 P& out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 E& A $end
-$var wire 1 F& B $end
-$var wire 1 U& out $end
+$var wire 1 A& A $end
+$var wire 1 B& B $end
+$var wire 1 Q& out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 E& A $end
-$var wire 1 F& B $end
-$var wire 1 V& out $end
+$var wire 1 A& A $end
+$var wire 1 B& B $end
+$var wire 1 R& out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 F& A $end
-$var wire 1 W& B $end
-$var wire 1 J& out $end
+$var wire 1 B& A $end
+$var wire 1 S& B $end
+$var wire 1 F& out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 E& A $end
-$var wire 1 F& B $end
-$var wire 1 X& out $end
+$var wire 1 A& A $end
+$var wire 1 B& B $end
+$var wire 1 T& out $end
 $upscope $end
 $upscope $end
 $scope module alu3 $end
-$var wire 1 Y& A $end
-$var wire 1 Z& B $end
-$var wire 3 [& S [2:0] $end
-$var wire 1 \& carryin $end
-$var wire 1 ]& out $end
-$var wire 1 ^& modB $end
-$var wire 1 _& carryout $end
-$var wire 1 `& addORsub $end
-$var wire 8 a& I [7:0] $end
+$var wire 1 U& A $end
+$var wire 1 V& B $end
+$var wire 3 W& S [2:0] $end
+$var wire 1 X& carryin $end
+$var wire 1 Y& out $end
+$var wire 1 Z& modB $end
+$var wire 1 [& carryout $end
+$var wire 1 \& addORsub $end
+$var wire 8 ]& I [7:0] $end
 $scope module addsub $end
-$var wire 1 Y& A $end
-$var wire 1 \& carryin $end
-$var wire 1 _& carryout $end
-$var wire 1 b& out1 $end
-$var wire 1 c& out2 $end
-$var wire 1 d& out3 $end
-$var wire 1 `& sum $end
-$var wire 1 ^& B $end
+$var wire 1 U& A $end
+$var wire 1 X& carryin $end
+$var wire 1 [& carryout $end
+$var wire 1 ^& out1 $end
+$var wire 1 _& out2 $end
+$var wire 1 `& out3 $end
+$var wire 1 \& sum $end
+$var wire 1 Z& B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 Y& A $end
-$var wire 1 Z& B $end
-$var wire 1 e& out $end
+$var wire 1 U& A $end
+$var wire 1 V& B $end
+$var wire 1 a& out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 f& I [7:0] $end
-$var wire 3 g& S [2:0] $end
-$var wire 1 ]& out $end
+$var wire 8 b& I [7:0] $end
+$var wire 3 c& S [2:0] $end
+$var wire 1 Y& out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 Y& A $end
-$var wire 1 Z& B $end
-$var wire 1 h& out $end
+$var wire 1 U& A $end
+$var wire 1 V& B $end
+$var wire 1 d& out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 Y& A $end
-$var wire 1 Z& B $end
-$var wire 1 i& out $end
+$var wire 1 U& A $end
+$var wire 1 V& B $end
+$var wire 1 e& out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 Y& A $end
-$var wire 1 Z& B $end
-$var wire 1 j& out $end
+$var wire 1 U& A $end
+$var wire 1 V& B $end
+$var wire 1 f& out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 Z& A $end
-$var wire 1 k& B $end
-$var wire 1 ^& out $end
+$var wire 1 V& A $end
+$var wire 1 g& B $end
+$var wire 1 Z& out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 Y& A $end
-$var wire 1 Z& B $end
-$var wire 1 l& out $end
+$var wire 1 U& A $end
+$var wire 1 V& B $end
+$var wire 1 h& out $end
 $upscope $end
 $upscope $end
 $scope module alu30 $end
-$var wire 1 m& A $end
-$var wire 1 n& B $end
-$var wire 3 o& S [2:0] $end
-$var wire 1 p& carryin $end
-$var wire 1 q& out $end
-$var wire 1 r& modB $end
-$var wire 1 s& carryout $end
-$var wire 1 t& addORsub $end
-$var wire 8 u& I [7:0] $end
+$var wire 1 i& A $end
+$var wire 1 j& B $end
+$var wire 3 k& S [2:0] $end
+$var wire 1 l& carryin $end
+$var wire 1 m& out $end
+$var wire 1 n& modB $end
+$var wire 1 o& carryout $end
+$var wire 1 p& addORsub $end
+$var wire 8 q& I [7:0] $end
 $scope module addsub $end
-$var wire 1 m& A $end
-$var wire 1 p& carryin $end
-$var wire 1 s& carryout $end
-$var wire 1 v& out1 $end
-$var wire 1 w& out2 $end
-$var wire 1 x& out3 $end
-$var wire 1 t& sum $end
-$var wire 1 r& B $end
+$var wire 1 i& A $end
+$var wire 1 l& carryin $end
+$var wire 1 o& carryout $end
+$var wire 1 r& out1 $end
+$var wire 1 s& out2 $end
+$var wire 1 t& out3 $end
+$var wire 1 p& sum $end
+$var wire 1 n& B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 m& A $end
-$var wire 1 n& B $end
-$var wire 1 y& out $end
+$var wire 1 i& A $end
+$var wire 1 j& B $end
+$var wire 1 u& out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 z& I [7:0] $end
-$var wire 3 {& S [2:0] $end
-$var wire 1 q& out $end
+$var wire 8 v& I [7:0] $end
+$var wire 3 w& S [2:0] $end
+$var wire 1 m& out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 m& A $end
-$var wire 1 n& B $end
-$var wire 1 |& out $end
+$var wire 1 i& A $end
+$var wire 1 j& B $end
+$var wire 1 x& out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 m& A $end
-$var wire 1 n& B $end
-$var wire 1 }& out $end
+$var wire 1 i& A $end
+$var wire 1 j& B $end
+$var wire 1 y& out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 m& A $end
-$var wire 1 n& B $end
-$var wire 1 ~& out $end
+$var wire 1 i& A $end
+$var wire 1 j& B $end
+$var wire 1 z& out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 n& A $end
-$var wire 1 !' B $end
-$var wire 1 r& out $end
+$var wire 1 j& A $end
+$var wire 1 {& B $end
+$var wire 1 n& out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 m& A $end
-$var wire 1 n& B $end
-$var wire 1 "' out $end
+$var wire 1 i& A $end
+$var wire 1 j& B $end
+$var wire 1 |& out $end
 $upscope $end
 $upscope $end
 $scope module alu31 $end
-$var wire 1 #' A $end
-$var wire 1 $' B $end
-$var wire 3 %' S [2:0] $end
-$var wire 1 &' carryin $end
+$var wire 1 }& A $end
+$var wire 1 ~& B $end
+$var wire 3 !' S [2:0] $end
+$var wire 1 "' carryin $end
 $var wire 1 9 overflow $end
-$var wire 1 '' out $end
-$var wire 1 (' modB $end
-$var wire 1 B carryout $end
-$var wire 1 )' as $end
-$var wire 8 *' I [7:0] $end
+$var wire 1 #' out $end
+$var wire 1 $' modB $end
+$var wire 1 A carryout $end
+$var wire 1 %' as $end
+$var wire 8 &' I [7:0] $end
 $scope module addsub $end
-$var wire 1 #' A $end
-$var wire 1 &' carryin $end
-$var wire 1 B carryout $end
-$var wire 1 +' out1 $end
-$var wire 1 ,' out2 $end
-$var wire 1 -' out3 $end
-$var wire 1 )' sum $end
-$var wire 1 (' B $end
+$var wire 1 }& A $end
+$var wire 1 "' carryin $end
+$var wire 1 A carryout $end
+$var wire 1 '' out1 $end
+$var wire 1 (' out2 $end
+$var wire 1 )' out3 $end
+$var wire 1 %' sum $end
+$var wire 1 $' B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 #' A $end
-$var wire 1 $' B $end
-$var wire 1 .' out $end
+$var wire 1 }& A $end
+$var wire 1 ~& B $end
+$var wire 1 *' out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 /' I [7:0] $end
-$var wire 3 0' S [2:0] $end
-$var wire 1 '' out $end
+$var wire 8 +' I [7:0] $end
+$var wire 3 ,' S [2:0] $end
+$var wire 1 #' out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 #' A $end
-$var wire 1 $' B $end
-$var wire 1 1' out $end
+$var wire 1 }& A $end
+$var wire 1 ~& B $end
+$var wire 1 -' out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 #' A $end
-$var wire 1 $' B $end
-$var wire 1 2' out $end
+$var wire 1 }& A $end
+$var wire 1 ~& B $end
+$var wire 1 .' out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 #' A $end
-$var wire 1 $' B $end
-$var wire 1 3' out $end
+$var wire 1 }& A $end
+$var wire 1 ~& B $end
+$var wire 1 /' out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 $' A $end
-$var wire 1 4' B $end
-$var wire 1 (' out $end
+$var wire 1 ~& A $end
+$var wire 1 0' B $end
+$var wire 1 $' out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 #' A $end
-$var wire 1 $' B $end
-$var wire 1 5' out $end
+$var wire 1 }& A $end
+$var wire 1 ~& B $end
+$var wire 1 1' out $end
 $upscope $end
 $scope module xorgate2 $end
-$var wire 1 &' A $end
-$var wire 1 B B $end
+$var wire 1 "' A $end
+$var wire 1 A B $end
 $var wire 1 9 out $end
 $upscope $end
 $scope module xorgate3 $end
 $var wire 1 9 A $end
-$var wire 1 )' B $end
-$var wire 1 6' out $end
+$var wire 1 %' B $end
+$var wire 1 2' out $end
 $upscope $end
 $upscope $end
 $scope module alu4 $end
-$var wire 1 7' A $end
-$var wire 1 8' B $end
-$var wire 3 9' S [2:0] $end
-$var wire 1 :' carryin $end
-$var wire 1 ;' out $end
-$var wire 1 <' modB $end
-$var wire 1 =' carryout $end
-$var wire 1 >' addORsub $end
-$var wire 8 ?' I [7:0] $end
+$var wire 1 3' A $end
+$var wire 1 4' B $end
+$var wire 3 5' S [2:0] $end
+$var wire 1 6' carryin $end
+$var wire 1 7' out $end
+$var wire 1 8' modB $end
+$var wire 1 9' carryout $end
+$var wire 1 :' addORsub $end
+$var wire 8 ;' I [7:0] $end
 $scope module addsub $end
-$var wire 1 7' A $end
-$var wire 1 :' carryin $end
-$var wire 1 =' carryout $end
-$var wire 1 @' out1 $end
-$var wire 1 A' out2 $end
-$var wire 1 B' out3 $end
-$var wire 1 >' sum $end
-$var wire 1 <' B $end
+$var wire 1 3' A $end
+$var wire 1 6' carryin $end
+$var wire 1 9' carryout $end
+$var wire 1 <' out1 $end
+$var wire 1 =' out2 $end
+$var wire 1 >' out3 $end
+$var wire 1 :' sum $end
+$var wire 1 8' B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 7' A $end
-$var wire 1 8' B $end
-$var wire 1 C' out $end
+$var wire 1 3' A $end
+$var wire 1 4' B $end
+$var wire 1 ?' out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 D' I [7:0] $end
-$var wire 3 E' S [2:0] $end
-$var wire 1 ;' out $end
+$var wire 8 @' I [7:0] $end
+$var wire 3 A' S [2:0] $end
+$var wire 1 7' out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 7' A $end
-$var wire 1 8' B $end
-$var wire 1 F' out $end
+$var wire 1 3' A $end
+$var wire 1 4' B $end
+$var wire 1 B' out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 7' A $end
-$var wire 1 8' B $end
-$var wire 1 G' out $end
+$var wire 1 3' A $end
+$var wire 1 4' B $end
+$var wire 1 C' out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 7' A $end
-$var wire 1 8' B $end
-$var wire 1 H' out $end
+$var wire 1 3' A $end
+$var wire 1 4' B $end
+$var wire 1 D' out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 8' A $end
-$var wire 1 I' B $end
-$var wire 1 <' out $end
+$var wire 1 4' A $end
+$var wire 1 E' B $end
+$var wire 1 8' out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 7' A $end
-$var wire 1 8' B $end
-$var wire 1 J' out $end
+$var wire 1 3' A $end
+$var wire 1 4' B $end
+$var wire 1 F' out $end
 $upscope $end
 $upscope $end
 $scope module alu5 $end
-$var wire 1 K' A $end
-$var wire 1 L' B $end
-$var wire 3 M' S [2:0] $end
-$var wire 1 N' carryin $end
-$var wire 1 O' out $end
-$var wire 1 P' modB $end
-$var wire 1 Q' carryout $end
-$var wire 1 R' addORsub $end
-$var wire 8 S' I [7:0] $end
+$var wire 1 G' A $end
+$var wire 1 H' B $end
+$var wire 3 I' S [2:0] $end
+$var wire 1 J' carryin $end
+$var wire 1 K' out $end
+$var wire 1 L' modB $end
+$var wire 1 M' carryout $end
+$var wire 1 N' addORsub $end
+$var wire 8 O' I [7:0] $end
 $scope module addsub $end
-$var wire 1 K' A $end
-$var wire 1 N' carryin $end
-$var wire 1 Q' carryout $end
-$var wire 1 T' out1 $end
-$var wire 1 U' out2 $end
-$var wire 1 V' out3 $end
-$var wire 1 R' sum $end
-$var wire 1 P' B $end
+$var wire 1 G' A $end
+$var wire 1 J' carryin $end
+$var wire 1 M' carryout $end
+$var wire 1 P' out1 $end
+$var wire 1 Q' out2 $end
+$var wire 1 R' out3 $end
+$var wire 1 N' sum $end
+$var wire 1 L' B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 K' A $end
-$var wire 1 L' B $end
-$var wire 1 W' out $end
+$var wire 1 G' A $end
+$var wire 1 H' B $end
+$var wire 1 S' out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 X' I [7:0] $end
-$var wire 3 Y' S [2:0] $end
-$var wire 1 O' out $end
+$var wire 8 T' I [7:0] $end
+$var wire 3 U' S [2:0] $end
+$var wire 1 K' out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 K' A $end
-$var wire 1 L' B $end
-$var wire 1 Z' out $end
+$var wire 1 G' A $end
+$var wire 1 H' B $end
+$var wire 1 V' out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 K' A $end
-$var wire 1 L' B $end
-$var wire 1 [' out $end
+$var wire 1 G' A $end
+$var wire 1 H' B $end
+$var wire 1 W' out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 K' A $end
-$var wire 1 L' B $end
-$var wire 1 \' out $end
+$var wire 1 G' A $end
+$var wire 1 H' B $end
+$var wire 1 X' out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 L' A $end
-$var wire 1 ]' B $end
-$var wire 1 P' out $end
+$var wire 1 H' A $end
+$var wire 1 Y' B $end
+$var wire 1 L' out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 K' A $end
-$var wire 1 L' B $end
-$var wire 1 ^' out $end
+$var wire 1 G' A $end
+$var wire 1 H' B $end
+$var wire 1 Z' out $end
 $upscope $end
 $upscope $end
 $scope module alu6 $end
-$var wire 1 _' A $end
-$var wire 1 `' B $end
-$var wire 3 a' S [2:0] $end
-$var wire 1 b' carryin $end
-$var wire 1 c' out $end
-$var wire 1 d' modB $end
-$var wire 1 e' carryout $end
-$var wire 1 f' addORsub $end
-$var wire 8 g' I [7:0] $end
+$var wire 1 [' A $end
+$var wire 1 \' B $end
+$var wire 3 ]' S [2:0] $end
+$var wire 1 ^' carryin $end
+$var wire 1 _' out $end
+$var wire 1 `' modB $end
+$var wire 1 a' carryout $end
+$var wire 1 b' addORsub $end
+$var wire 8 c' I [7:0] $end
 $scope module addsub $end
-$var wire 1 _' A $end
-$var wire 1 b' carryin $end
-$var wire 1 e' carryout $end
-$var wire 1 h' out1 $end
-$var wire 1 i' out2 $end
-$var wire 1 j' out3 $end
-$var wire 1 f' sum $end
-$var wire 1 d' B $end
+$var wire 1 [' A $end
+$var wire 1 ^' carryin $end
+$var wire 1 a' carryout $end
+$var wire 1 d' out1 $end
+$var wire 1 e' out2 $end
+$var wire 1 f' out3 $end
+$var wire 1 b' sum $end
+$var wire 1 `' B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 _' A $end
-$var wire 1 `' B $end
-$var wire 1 k' out $end
+$var wire 1 [' A $end
+$var wire 1 \' B $end
+$var wire 1 g' out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 l' I [7:0] $end
-$var wire 3 m' S [2:0] $end
-$var wire 1 c' out $end
+$var wire 8 h' I [7:0] $end
+$var wire 3 i' S [2:0] $end
+$var wire 1 _' out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 _' A $end
-$var wire 1 `' B $end
-$var wire 1 n' out $end
+$var wire 1 [' A $end
+$var wire 1 \' B $end
+$var wire 1 j' out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 _' A $end
-$var wire 1 `' B $end
-$var wire 1 o' out $end
+$var wire 1 [' A $end
+$var wire 1 \' B $end
+$var wire 1 k' out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 _' A $end
-$var wire 1 `' B $end
-$var wire 1 p' out $end
+$var wire 1 [' A $end
+$var wire 1 \' B $end
+$var wire 1 l' out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 `' A $end
-$var wire 1 q' B $end
-$var wire 1 d' out $end
+$var wire 1 \' A $end
+$var wire 1 m' B $end
+$var wire 1 `' out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 _' A $end
-$var wire 1 `' B $end
-$var wire 1 r' out $end
+$var wire 1 [' A $end
+$var wire 1 \' B $end
+$var wire 1 n' out $end
 $upscope $end
 $upscope $end
 $scope module alu7 $end
-$var wire 1 s' A $end
-$var wire 1 t' B $end
-$var wire 3 u' S [2:0] $end
-$var wire 1 v' carryin $end
-$var wire 1 w' out $end
-$var wire 1 x' modB $end
-$var wire 1 y' carryout $end
-$var wire 1 z' addORsub $end
-$var wire 8 {' I [7:0] $end
+$var wire 1 o' A $end
+$var wire 1 p' B $end
+$var wire 3 q' S [2:0] $end
+$var wire 1 r' carryin $end
+$var wire 1 s' out $end
+$var wire 1 t' modB $end
+$var wire 1 u' carryout $end
+$var wire 1 v' addORsub $end
+$var wire 8 w' I [7:0] $end
 $scope module addsub $end
-$var wire 1 s' A $end
-$var wire 1 v' carryin $end
-$var wire 1 y' carryout $end
-$var wire 1 |' out1 $end
-$var wire 1 }' out2 $end
-$var wire 1 ~' out3 $end
-$var wire 1 z' sum $end
-$var wire 1 x' B $end
+$var wire 1 o' A $end
+$var wire 1 r' carryin $end
+$var wire 1 u' carryout $end
+$var wire 1 x' out1 $end
+$var wire 1 y' out2 $end
+$var wire 1 z' out3 $end
+$var wire 1 v' sum $end
+$var wire 1 t' B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 s' A $end
-$var wire 1 t' B $end
-$var wire 1 !( out $end
+$var wire 1 o' A $end
+$var wire 1 p' B $end
+$var wire 1 {' out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 "( I [7:0] $end
-$var wire 3 #( S [2:0] $end
-$var wire 1 w' out $end
+$var wire 8 |' I [7:0] $end
+$var wire 3 }' S [2:0] $end
+$var wire 1 s' out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 s' A $end
-$var wire 1 t' B $end
-$var wire 1 $( out $end
+$var wire 1 o' A $end
+$var wire 1 p' B $end
+$var wire 1 ~' out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 s' A $end
-$var wire 1 t' B $end
-$var wire 1 %( out $end
+$var wire 1 o' A $end
+$var wire 1 p' B $end
+$var wire 1 !( out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 s' A $end
-$var wire 1 t' B $end
-$var wire 1 &( out $end
+$var wire 1 o' A $end
+$var wire 1 p' B $end
+$var wire 1 "( out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 t' A $end
-$var wire 1 '( B $end
-$var wire 1 x' out $end
+$var wire 1 p' A $end
+$var wire 1 #( B $end
+$var wire 1 t' out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 s' A $end
-$var wire 1 t' B $end
-$var wire 1 (( out $end
+$var wire 1 o' A $end
+$var wire 1 p' B $end
+$var wire 1 $( out $end
 $upscope $end
 $upscope $end
 $scope module alu8 $end
-$var wire 1 )( A $end
-$var wire 1 *( B $end
-$var wire 3 +( S [2:0] $end
-$var wire 1 ,( carryin $end
-$var wire 1 -( out $end
-$var wire 1 .( modB $end
-$var wire 1 /( carryout $end
-$var wire 1 0( addORsub $end
-$var wire 8 1( I [7:0] $end
+$var wire 1 %( A $end
+$var wire 1 &( B $end
+$var wire 3 '( S [2:0] $end
+$var wire 1 (( carryin $end
+$var wire 1 )( out $end
+$var wire 1 *( modB $end
+$var wire 1 +( carryout $end
+$var wire 1 ,( addORsub $end
+$var wire 8 -( I [7:0] $end
 $scope module addsub $end
-$var wire 1 )( A $end
-$var wire 1 ,( carryin $end
-$var wire 1 /( carryout $end
-$var wire 1 2( out1 $end
-$var wire 1 3( out2 $end
-$var wire 1 4( out3 $end
-$var wire 1 0( sum $end
-$var wire 1 .( B $end
+$var wire 1 %( A $end
+$var wire 1 (( carryin $end
+$var wire 1 +( carryout $end
+$var wire 1 .( out1 $end
+$var wire 1 /( out2 $end
+$var wire 1 0( out3 $end
+$var wire 1 ,( sum $end
+$var wire 1 *( B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 )( A $end
-$var wire 1 *( B $end
-$var wire 1 5( out $end
+$var wire 1 %( A $end
+$var wire 1 &( B $end
+$var wire 1 1( out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 6( I [7:0] $end
-$var wire 3 7( S [2:0] $end
-$var wire 1 -( out $end
+$var wire 8 2( I [7:0] $end
+$var wire 3 3( S [2:0] $end
+$var wire 1 )( out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 )( A $end
-$var wire 1 *( B $end
-$var wire 1 8( out $end
+$var wire 1 %( A $end
+$var wire 1 &( B $end
+$var wire 1 4( out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 )( A $end
-$var wire 1 *( B $end
-$var wire 1 9( out $end
+$var wire 1 %( A $end
+$var wire 1 &( B $end
+$var wire 1 5( out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 )( A $end
-$var wire 1 *( B $end
-$var wire 1 :( out $end
+$var wire 1 %( A $end
+$var wire 1 &( B $end
+$var wire 1 6( out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 *( A $end
-$var wire 1 ;( B $end
-$var wire 1 .( out $end
+$var wire 1 &( A $end
+$var wire 1 7( B $end
+$var wire 1 *( out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 )( A $end
-$var wire 1 *( B $end
-$var wire 1 <( out $end
+$var wire 1 %( A $end
+$var wire 1 &( B $end
+$var wire 1 8( out $end
 $upscope $end
 $upscope $end
 $scope module alu9 $end
-$var wire 1 =( A $end
-$var wire 1 >( B $end
-$var wire 3 ?( S [2:0] $end
-$var wire 1 @( carryin $end
-$var wire 1 A( out $end
-$var wire 1 B( modB $end
-$var wire 1 C( carryout $end
-$var wire 1 D( addORsub $end
-$var wire 8 E( I [7:0] $end
+$var wire 1 9( A $end
+$var wire 1 :( B $end
+$var wire 3 ;( S [2:0] $end
+$var wire 1 <( carryin $end
+$var wire 1 =( out $end
+$var wire 1 >( modB $end
+$var wire 1 ?( carryout $end
+$var wire 1 @( addORsub $end
+$var wire 8 A( I [7:0] $end
 $scope module addsub $end
-$var wire 1 =( A $end
-$var wire 1 @( carryin $end
-$var wire 1 C( carryout $end
-$var wire 1 F( out1 $end
-$var wire 1 G( out2 $end
-$var wire 1 H( out3 $end
-$var wire 1 D( sum $end
-$var wire 1 B( B $end
+$var wire 1 9( A $end
+$var wire 1 <( carryin $end
+$var wire 1 ?( carryout $end
+$var wire 1 B( out1 $end
+$var wire 1 C( out2 $end
+$var wire 1 D( out3 $end
+$var wire 1 @( sum $end
+$var wire 1 >( B $end
 $upscope $end
 $scope module andgate $end
-$var wire 1 =( A $end
-$var wire 1 >( B $end
-$var wire 1 I( out $end
+$var wire 1 9( A $end
+$var wire 1 :( B $end
+$var wire 1 E( out $end
 $upscope $end
 $scope module elonMux $end
-$var wire 8 J( I [7:0] $end
-$var wire 3 K( S [2:0] $end
-$var wire 1 A( out $end
+$var wire 8 F( I [7:0] $end
+$var wire 3 G( S [2:0] $end
+$var wire 1 =( out $end
 $upscope $end
 $scope module nandgate $end
-$var wire 1 =( A $end
-$var wire 1 >( B $end
-$var wire 1 L( out $end
+$var wire 1 9( A $end
+$var wire 1 :( B $end
+$var wire 1 H( out $end
 $upscope $end
 $scope module norgate $end
-$var wire 1 =( A $end
-$var wire 1 >( B $end
-$var wire 1 M( out $end
+$var wire 1 9( A $end
+$var wire 1 :( B $end
+$var wire 1 I( out $end
 $upscope $end
 $scope module orgate $end
-$var wire 1 =( A $end
-$var wire 1 >( B $end
-$var wire 1 N( out $end
+$var wire 1 9( A $end
+$var wire 1 :( B $end
+$var wire 1 J( out $end
 $upscope $end
 $scope module xorgate $end
-$var wire 1 >( A $end
-$var wire 1 O( B $end
-$var wire 1 B( out $end
+$var wire 1 :( A $end
+$var wire 1 K( B $end
+$var wire 1 >( out $end
 $upscope $end
 $scope module xorgate1 $end
-$var wire 1 =( A $end
-$var wire 1 >( B $end
-$var wire 1 P( out $end
+$var wire 1 9( A $end
+$var wire 1 :( B $end
+$var wire 1 L( out $end
 $upscope $end
 $upscope $end
 $upscope $end
 $scope module mem $end
-$var wire 32 Q( Addr0 [31:0] $end
-$var wire 32 R( DataOut0 [31:0] $end
+$var wire 32 M( Addr0 [31:0] $end
+$var wire 32 N( DataOut0 [31:0] $end
 $var wire 1 , clk $end
-$var wire 32 S( instruct_Addr1 [31:0] $end
-$var wire 32 T( instruct_DataOut1 [31:0] $end
+$var wire 32 O( instruct_Addr1 [31:0] $end
+$var wire 32 P( instruct_DataOut1 [31:0] $end
 $var wire 1 4 regWE $end
-$var wire 32 U( DataIn0 [31:0] $end
+$var wire 32 Q( DataIn0 [31:0] $end
+$var reg 32 R( real_add [31:0] $end
 $upscope $end
 $scope module op_imm_mux $end
-$var wire 32 V( input0 [31:0] $end
+$var wire 32 S( input0 [31:0] $end
 $var wire 1 ; select0 $end
-$var wire 32 W( out [31:0] $end
-$var wire 32 X( input1 [31:0] $end
+$var wire 32 T( out [31:0] $end
+$var wire 32 U( input1 [31:0] $end
 $upscope $end
 $scope module pcmux $end
-$var wire 26 Y( JumpAddress [25:0] $end
-$var wire 2 Z( S [1:0] $end
+$var wire 26 V( JumpAddress [25:0] $end
+$var wire 2 W( S [1:0] $end
 $var wire 1 , clk $end
-$var wire 32 [( immediate [31:0] $end
-$var wire 32 \( regRs [31:0] $end
-$var reg 32 ]( PC [31:0] $end
-$var reg 32 ^( mux_out [31:0] $end
-$var reg 32 _( nextPC [31:0] $end
-$var reg 32 `( tempimmediate [31:0] $end
+$var wire 32 X( immediate [31:0] $end
+$var wire 32 Y( regRs [31:0] $end
+$var reg 32 Z( PC [31:0] $end
+$var reg 32 [( mux_out [31:0] $end
+$var reg 32 \( nextPC [31:0] $end
+$var reg 32 ]( tempimmediate [31:0] $end
 $upscope $end
 $scope module reg_in_mux $end
-$var wire 32 a( input0 [31:0] $end
-$var wire 32 b( input1 [31:0] $end
-$var wire 32 c( input2 [31:0] $end
-$var wire 2 d( select0 [1:0] $end
-$var wire 32 e( out [31:0] $end
+$var wire 32 ^( input0 [31:0] $end
+$var wire 32 _( input1 [31:0] $end
+$var wire 32 `( input2 [31:0] $end
+$var wire 2 a( select0 [1:0] $end
+$var wire 32 b( out [31:0] $end
 $upscope $end
 $scope module reg_select_mux $end
-$var wire 5 f( input0 [4:0] $end
-$var wire 5 g( input1 [4:0] $end
-$var wire 5 h( input2 [4:0] $end
-$var wire 2 i( select0 [1:0] $end
-$var wire 5 j( out [4:0] $end
+$var wire 5 c( input0 [4:0] $end
+$var wire 5 d( input1 [4:0] $end
+$var wire 5 e( input2 [4:0] $end
+$var wire 2 f( select0 [1:0] $end
+$var wire 5 g( out [4:0] $end
 $upscope $end
 $scope module regi $end
 $var wire 1 , Clk $end
-$var wire 5 k( ReadRegister1 [4:0] $end
-$var wire 5 l( ReadRegister2 [4:0] $end
+$var wire 5 h( ReadRegister1 [4:0] $end
+$var wire 5 i( ReadRegister2 [4:0] $end
 $var wire 1 4 RegWrite $end
-$var wire 32 m( WriteData [31:0] $end
-$var wire 5 n( WriteRegister [4:0] $end
-$var wire 32 o( decoded [31:0] $end
-$var wire 32 p( ReadData2 [31:0] $end
-$var wire 32 q( ReadData1 [31:0] $end
+$var wire 32 j( WriteData [31:0] $end
+$var wire 5 k( WriteRegister [4:0] $end
+$var wire 32 l( decoded [31:0] $end
+$var wire 32 m( ReadData2 [31:0] $end
+$var wire 32 n( ReadData1 [31:0] $end
 $scope begin genblk1[1] $end
 $upscope $end
 $scope begin genblk1[2] $end
@@ -2012,129 +2006,126 @@ $upscope $end
 $scope begin genblk1[31] $end
 $upscope $end
 $scope module deco $end
-$var wire 5 r( address [4:0] $end
+$var wire 5 o( address [4:0] $end
 $var wire 1 4 enable $end
-$var wire 32 s( out [31:0] $end
+$var wire 32 p( out [31:0] $end
 $upscope $end
 $scope module mux1 $end
-$var wire 5 t( address [4:0] $end
-$var wire 32 u( input0 [31:0] $end
-$var wire 32 v( input1 [31:0] $end
-$var wire 32 w( input10 [31:0] $end
-$var wire 32 x( input11 [31:0] $end
-$var wire 32 y( input12 [31:0] $end
-$var wire 32 z( input13 [31:0] $end
-$var wire 32 {( input14 [31:0] $end
-$var wire 32 |( input15 [31:0] $end
-$var wire 32 }( input16 [31:0] $end
-$var wire 32 ~( input17 [31:0] $end
-$var wire 32 !) input18 [31:0] $end
-$var wire 32 ") input19 [31:0] $end
-$var wire 32 #) input2 [31:0] $end
-$var wire 32 $) input20 [31:0] $end
-$var wire 32 %) input21 [31:0] $end
-$var wire 32 &) input22 [31:0] $end
-$var wire 32 ') input23 [31:0] $end
-$var wire 32 () input24 [31:0] $end
-$var wire 32 )) input25 [31:0] $end
-$var wire 32 *) input26 [31:0] $end
-$var wire 32 +) input27 [31:0] $end
-$var wire 32 ,) input28 [31:0] $end
-$var wire 32 -) input29 [31:0] $end
-$var wire 32 .) input3 [31:0] $end
-$var wire 32 /) input30 [31:0] $end
-$var wire 32 0) input31 [31:0] $end
-$var wire 32 1) input4 [31:0] $end
-$var wire 32 2) input5 [31:0] $end
-$var wire 32 3) input6 [31:0] $end
-$var wire 32 4) input7 [31:0] $end
-$var wire 32 5) input8 [31:0] $end
-$var wire 32 6) input9 [31:0] $end
-$var wire 32 7) out [31:0] $end
+$var wire 5 q( address [4:0] $end
+$var wire 32 r( input0 [31:0] $end
+$var wire 32 s( input1 [31:0] $end
+$var wire 32 t( input10 [31:0] $end
+$var wire 32 u( input11 [31:0] $end
+$var wire 32 v( input12 [31:0] $end
+$var wire 32 w( input13 [31:0] $end
+$var wire 32 x( input14 [31:0] $end
+$var wire 32 y( input15 [31:0] $end
+$var wire 32 z( input16 [31:0] $end
+$var wire 32 {( input17 [31:0] $end
+$var wire 32 |( input18 [31:0] $end
+$var wire 32 }( input19 [31:0] $end
+$var wire 32 ~( input2 [31:0] $end
+$var wire 32 !) input20 [31:0] $end
+$var wire 32 ") input21 [31:0] $end
+$var wire 32 #) input22 [31:0] $end
+$var wire 32 $) input23 [31:0] $end
+$var wire 32 %) input24 [31:0] $end
+$var wire 32 &) input25 [31:0] $end
+$var wire 32 ') input26 [31:0] $end
+$var wire 32 () input27 [31:0] $end
+$var wire 32 )) input28 [31:0] $end
+$var wire 32 *) input29 [31:0] $end
+$var wire 32 +) input3 [31:0] $end
+$var wire 32 ,) input30 [31:0] $end
+$var wire 32 -) input31 [31:0] $end
+$var wire 32 .) input4 [31:0] $end
+$var wire 32 /) input5 [31:0] $end
+$var wire 32 0) input6 [31:0] $end
+$var wire 32 1) input7 [31:0] $end
+$var wire 32 2) input8 [31:0] $end
+$var wire 32 3) input9 [31:0] $end
+$var wire 32 4) out [31:0] $end
 $upscope $end
 $scope module mux2 $end
-$var wire 5 8) address [4:0] $end
-$var wire 32 9) input0 [31:0] $end
-$var wire 32 :) input1 [31:0] $end
-$var wire 32 ;) input10 [31:0] $end
-$var wire 32 <) input11 [31:0] $end
-$var wire 32 =) input12 [31:0] $end
-$var wire 32 >) input13 [31:0] $end
-$var wire 32 ?) input14 [31:0] $end
-$var wire 32 @) input15 [31:0] $end
-$var wire 32 A) input16 [31:0] $end
-$var wire 32 B) input17 [31:0] $end
-$var wire 32 C) input18 [31:0] $end
-$var wire 32 D) input19 [31:0] $end
-$var wire 32 E) input2 [31:0] $end
-$var wire 32 F) input20 [31:0] $end
-$var wire 32 G) input21 [31:0] $end
-$var wire 32 H) input22 [31:0] $end
-$var wire 32 I) input23 [31:0] $end
-$var wire 32 J) input24 [31:0] $end
-$var wire 32 K) input25 [31:0] $end
-$var wire 32 L) input26 [31:0] $end
-$var wire 32 M) input27 [31:0] $end
-$var wire 32 N) input28 [31:0] $end
-$var wire 32 O) input29 [31:0] $end
-$var wire 32 P) input3 [31:0] $end
-$var wire 32 Q) input30 [31:0] $end
-$var wire 32 R) input31 [31:0] $end
-$var wire 32 S) input4 [31:0] $end
-$var wire 32 T) input5 [31:0] $end
-$var wire 32 U) input6 [31:0] $end
-$var wire 32 V) input7 [31:0] $end
-$var wire 32 W) input8 [31:0] $end
-$var wire 32 X) input9 [31:0] $end
-$var wire 32 Y) out [31:0] $end
+$var wire 5 5) address [4:0] $end
+$var wire 32 6) input0 [31:0] $end
+$var wire 32 7) input1 [31:0] $end
+$var wire 32 8) input10 [31:0] $end
+$var wire 32 9) input11 [31:0] $end
+$var wire 32 :) input12 [31:0] $end
+$var wire 32 ;) input13 [31:0] $end
+$var wire 32 <) input14 [31:0] $end
+$var wire 32 =) input15 [31:0] $end
+$var wire 32 >) input16 [31:0] $end
+$var wire 32 ?) input17 [31:0] $end
+$var wire 32 @) input18 [31:0] $end
+$var wire 32 A) input19 [31:0] $end
+$var wire 32 B) input2 [31:0] $end
+$var wire 32 C) input20 [31:0] $end
+$var wire 32 D) input21 [31:0] $end
+$var wire 32 E) input22 [31:0] $end
+$var wire 32 F) input23 [31:0] $end
+$var wire 32 G) input24 [31:0] $end
+$var wire 32 H) input25 [31:0] $end
+$var wire 32 I) input26 [31:0] $end
+$var wire 32 J) input27 [31:0] $end
+$var wire 32 K) input28 [31:0] $end
+$var wire 32 L) input29 [31:0] $end
+$var wire 32 M) input3 [31:0] $end
+$var wire 32 N) input30 [31:0] $end
+$var wire 32 O) input31 [31:0] $end
+$var wire 32 P) input4 [31:0] $end
+$var wire 32 Q) input5 [31:0] $end
+$var wire 32 R) input6 [31:0] $end
+$var wire 32 S) input7 [31:0] $end
+$var wire 32 T) input8 [31:0] $end
+$var wire 32 U) input9 [31:0] $end
+$var wire 32 V) out [31:0] $end
 $upscope $end
 $upscope $end
 $upscope $end
 $upscope $end
 $scope module mux32to1by1 $end
-$var wire 5 Z) address [4:0] $end
-$var wire 32 [) inputs [31:0] $end
-$var wire 1 \) out $end
+$var wire 5 W) address [4:0] $end
+$var wire 32 X) inputs [31:0] $end
+$var wire 1 Y) out $end
 $upscope $end
 $scope module register $end
-$var wire 1 ]) clk $end
-$var wire 1 ^) d $end
-$var wire 1 _) wrenable $end
-$var reg 1 `) q $end
+$var wire 1 Z) clk $end
+$var wire 1 [) d $end
+$var wire 1 \) wrenable $end
+$var reg 1 ]) q $end
 $upscope $end
 $scope module register32 $end
-$var wire 1 a) clk $end
-$var wire 32 b) d [31:0] $end
-$var wire 1 c) wrenable $end
-$var reg 32 d) q [31:0] $end
+$var wire 1 ^) clk $end
+$var wire 32 _) d [31:0] $end
+$var wire 1 `) wrenable $end
+$var reg 32 a) q [31:0] $end
 $upscope $end
 $scope module register32zero $end
-$var wire 1 e) clk $end
-$var wire 32 f) d [31:0] $end
-$var wire 1 g) wrenable $end
-$var reg 32 h) q [31:0] $end
+$var wire 1 b) clk $end
+$var wire 32 c) d [31:0] $end
+$var wire 1 d) wrenable $end
+$var reg 32 e) q [31:0] $end
 $upscope $end
 $enddefinitions $end
 #0
 $dumpvars
-bx h)
-zg)
-bz f)
-ze)
-bx d)
-zc)
-bz b)
-za)
-x`)
-z_)
+bx e)
+zd)
+bz c)
+zb)
+bx a)
+z`)
+bz _)
 z^)
-z])
-x\)
-bz [)
-bz Z)
-bx Y)
-bx X)
-bx W)
+x])
+z\)
+z[)
+zZ)
+xY)
+bz X)
+bz W)
 bx V)
 bx U)
 bx T)
@@ -2164,12 +2155,12 @@ bx =)
 bx <)
 bx ;)
 bx :)
-b0 9)
-b1000 8)
-b0 7)
-bx 6)
-bx 5)
-bx 4)
+bx 9)
+bx 8)
+bx 7)
+b0 6)
+b1000 5)
+b0 4)
 bx 3)
 bx 2)
 bx 1)
@@ -2198,718 +2189,718 @@ bx y(
 bx x(
 bx w(
 bx v(
-b0 u(
-b0 t(
-b100000000 s(
-b1000 r(
+bx u(
+bx t(
+bx s(
+b0 r(
 b0 q(
-bx p(
-b100000000 o(
-b1000 n(
-b1110111 m(
-b1000 l(
-b0 k(
-b1000 j(
-b1 i(
-b11111 h(
+b100000000 p(
+b1000 o(
+b0 n(
+bx m(
+b100000000 l(
+b1000 k(
+b1110111 j(
+b1000 i(
+b0 h(
 b1000 g(
-b0 f(
-b1110111 e(
-b0 d(
-b100 c(
-bx b(
-b1110111 a(
-bx `(
-b100 _(
-b100 ^(
-b0 ](
-b0 \(
-b1110111 [(
+b1 f(
+b11111 e(
+b1000 d(
+b0 c(
+b1110111 b(
+b0 a(
+b100 `(
+bx _(
+b1110111 ^(
+bx ](
+b100 \(
+b100 [(
 b0 Z(
-b10000000000001110111 Y(
-bx X(
-b1110111 W(
-b1110111 V(
+b0 Y(
+b1110111 X(
+b0 W(
+b10000000000001110111 V(
 bx U(
-b100000000010000000000001110111 T(
-b0 S(
+b1110111 T(
+b1110111 S(
 bx R(
-b1110111 Q(
-0P(
-0O(
-0N(
-1M(
-1L(
-b0 K(
-b1100000 J(
-0I(
-0H(
-0G(
-0F(
-b1100000 E(
+bx Q(
+b100000000010000000000001110111 P(
+b0 O(
+bx N(
+b1110111 M(
+0L(
+0K(
+0J(
+1I(
+1H(
+b0 G(
+b1100000 F(
+0E(
 0D(
 0C(
 0B(
-0A(
+b1100000 A(
 0@(
-b0 ?(
+0?(
 0>(
 0=(
 0<(
-0;(
+b0 ;(
 0:(
-19(
-18(
-b0 7(
-b1100000 6(
-05(
-04(
-03(
-02(
-b1100000 1(
+09(
+08(
+07(
+06(
+15(
+14(
+b0 3(
+b1100000 2(
+01(
 00(
 0/(
 0.(
-0-(
+b1100000 -(
 0,(
-b0 +(
+0+(
 0*(
 0)(
 0((
-0'(
+b0 '(
 0&(
-1%(
-1$(
-b0 #(
-b1100000 "(
-0!(
-0~'
-0}'
-0|'
-b1100000 {'
+0%(
+0$(
+0#(
+0"(
+1!(
+1~'
+b0 }'
+b1100000 |'
+0{'
 0z'
 0y'
 0x'
-0w'
+b1100000 w'
 0v'
-b0 u'
+0u'
 0t'
 0s'
-1r'
-0q'
-1p'
+0r'
+b0 q'
+0p'
 0o'
 1n'
-b0 m'
-b10100111 l'
+0m'
+1l'
 0k'
-0j'
-0i'
-1h'
-b10100111 g'
-1f'
+1j'
+b0 i'
+b10100111 h'
+0g'
+0f'
 0e'
 1d'
-1c'
-0b'
-b0 a'
+b10100111 c'
+1b'
+0a'
 1`'
-0_'
-1^'
-0]'
+1_'
+0^'
+b0 ]'
 1\'
 0['
 1Z'
-b0 Y'
-b10100111 X'
+0Y'
+1X'
 0W'
-0V'
-0U'
-1T'
-b10100111 S'
-1R'
+1V'
+b0 U'
+b10100111 T'
+0S'
+0R'
 0Q'
 1P'
-1O'
-0N'
-b0 M'
+b10100111 O'
+1N'
+0M'
 1L'
-0K'
-1J'
-0I'
+1K'
+0J'
+b0 I'
 1H'
 0G'
 1F'
-b0 E'
-b10100111 D'
+0E'
+1D'
 0C'
-0B'
-0A'
-1@'
-b10100111 ?'
-1>'
+1B'
+b0 A'
+b10100111 @'
+0?'
+0>'
 0='
 1<'
-1;'
-0:'
-b0 9'
+b10100111 ;'
+1:'
+09'
 18'
-07'
+17'
 06'
-05'
-04'
+b0 5'
+14'
 03'
-12'
-11'
-b0 0'
-b1100000 /'
-0.'
-0-'
-0,'
-0+'
-b1100000 *'
+02'
+01'
+00'
+0/'
+1.'
+1-'
+b0 ,'
+b1100000 +'
+0*'
 0)'
 0('
 0''
-0&'
-b0 %'
+b1100000 &'
+0%'
 0$'
 0#'
 0"'
-0!'
+b0 !'
 0~&
-1}&
-1|&
-b0 {&
-b1100000 z&
-0y&
-0x&
-0w&
-0v&
-b1100000 u&
+0}&
+0|&
+0{&
+0z&
+1y&
+1x&
+b0 w&
+b1100000 v&
+0u&
 0t&
 0s&
 0r&
-0q&
+b1100000 q&
 0p&
-b0 o&
+0o&
 0n&
 0m&
 0l&
-0k&
+b0 k&
 0j&
-1i&
-1h&
-b0 g&
-b1100000 f&
-0e&
-0d&
-0c&
-0b&
-b1100000 a&
+0i&
+0h&
+0g&
+0f&
+1e&
+1d&
+b0 c&
+b1100000 b&
+0a&
 0`&
 0_&
 0^&
-0]&
+b1100000 ]&
 0\&
-b0 [&
+0[&
 0Z&
 0Y&
 0X&
-0W&
+b0 W&
 0V&
-1U&
-1T&
-b0 S&
-b1100000 R&
-0Q&
-0P&
-0O&
-0N&
-b1100000 M&
+0U&
+0T&
+0S&
+0R&
+1Q&
+1P&
+b0 O&
+b1100000 N&
+0M&
 0L&
 0K&
 0J&
-0I&
+b1100000 I&
 0H&
-b0 G&
+0G&
 0F&
 0E&
 0D&
-0C&
+b0 C&
 0B&
-1A&
-1@&
-b0 ?&
-b1100000 >&
-0=&
-0<&
-0;&
-0:&
-b1100000 9&
+0A&
+0@&
+0?&
+0>&
+1=&
+1<&
+b0 ;&
+b1100000 :&
+09&
 08&
 07&
 06&
-05&
+b1100000 5&
 04&
-b0 3&
+03&
 02&
 01&
 00&
-0/&
+b0 /&
 0.&
-1-&
-1,&
-b0 +&
-b1100000 *&
-0)&
-0(&
-0'&
-0&&
-b1100000 %&
+0-&
+0,&
+0+&
+0*&
+1)&
+1(&
+b0 '&
+b1100000 &&
+0%&
 0$&
 0#&
 0"&
-0!&
+b1100000 !&
 0~%
-b0 }%
+0}%
 0|%
 0{%
 0z%
-0y%
+b0 y%
 0x%
-1w%
-1v%
-b0 u%
-b1100000 t%
-0s%
-0r%
-0q%
-0p%
-b1100000 o%
+0w%
+0v%
+0u%
+0t%
+1s%
+1r%
+b0 q%
+b1100000 p%
+0o%
 0n%
 0m%
 0l%
-0k%
+b1100000 k%
 0j%
-b0 i%
+0i%
 0h%
 0g%
 0f%
-0e%
+b0 e%
 0d%
-1c%
-1b%
-b0 a%
-b1100000 `%
-0_%
-0^%
-0]%
-0\%
-b1100000 [%
+0c%
+0b%
+0a%
+0`%
+1_%
+1^%
+b0 ]%
+b1100000 \%
+0[%
 0Z%
 0Y%
 0X%
-0W%
+b1100000 W%
 0V%
-b0 U%
+0U%
 0T%
 0S%
 0R%
-0Q%
+b0 Q%
 0P%
-1O%
-1N%
-b0 M%
-b1100000 L%
-0K%
-0J%
-0I%
-0H%
-b1100000 G%
+0O%
+0N%
+0M%
+0L%
+1K%
+1J%
+b0 I%
+b1100000 H%
+0G%
 0F%
 0E%
 0D%
-0C%
+b1100000 C%
 0B%
-b0 A%
+0A%
 0@%
 0?%
 0>%
-0=%
+b0 =%
 0<%
-1;%
-1:%
-b0 9%
-b1100000 8%
-07%
-06%
-05%
-04%
-b1100000 3%
+0;%
+0:%
+09%
+08%
+17%
+16%
+b0 5%
+b1100000 4%
+03%
 02%
 01%
 00%
-0/%
+b1100000 /%
 0.%
-b0 -%
+0-%
 0,%
 0+%
 0*%
-0)%
+b0 )%
 0(%
-1'%
-1&%
-b0 %%
-b1100000 $%
-0#%
-0"%
-0!%
-0~$
-b1100000 }$
+0'%
+0&%
+0%%
+0$%
+1#%
+1"%
+b0 !%
+b1100000 ~$
+0}$
 0|$
 0{$
 0z$
-0y$
+b1100000 y$
 0x$
-b0 w$
+0w$
 0v$
 0u$
 0t$
-0s$
+b0 s$
 0r$
-1q$
-1p$
-b0 o$
-b1100000 n$
-0m$
-0l$
-0k$
-0j$
-b1100000 i$
+0q$
+0p$
+0o$
+0n$
+1m$
+1l$
+b0 k$
+b1100000 j$
+0i$
 0h$
 0g$
 0f$
-0e$
+b1100000 e$
 0d$
-b0 c$
+0c$
 0b$
 0a$
 0`$
-0_$
+b0 _$
 0^$
-1]$
-1\$
-b0 [$
-b1100000 Z$
-0Y$
-0X$
-0W$
-0V$
-b1100000 U$
+0]$
+0\$
+0[$
+0Z$
+1Y$
+1X$
+b0 W$
+b1100000 V$
+0U$
 0T$
 0S$
 0R$
-0Q$
+b1100000 Q$
 0P$
-b0 O$
+0O$
 0N$
 0M$
-1L$
-0K$
-1J$
+0L$
+b0 K$
+0J$
 0I$
 1H$
-b0 G$
-b10100111 F$
+0G$
+1F$
 0E$
-0D$
-0C$
-1B$
-b10100111 A$
-1@$
+1D$
+b0 C$
+b10100111 B$
+0A$
+0@$
 0?$
 1>$
-1=$
-0<$
-b0 ;$
+b10100111 =$
+1<$
+0;$
 1:$
-09$
+19$
 08$
-07$
-06$
-15$
-14$
-b0 3$
-b1100000 2$
-01$
-00$
-0/$
-0.$
-b1100000 -$
+b0 7$
+16$
+05$
+04$
+03$
+02$
+11$
+10$
+b0 /$
+b1100000 .$
+0-$
 0,$
 0+$
 0*$
-0)$
+b1100000 )$
 0($
-b0 '$
+0'$
 0&$
 0%$
 0$$
-0#$
+b0 #$
 0"$
-1!$
-1~#
-b0 }#
-b1100000 |#
-0{#
-0z#
-0y#
-0x#
-b1100000 w#
+0!$
+0~#
+0}#
+0|#
+1{#
+1z#
+b0 y#
+b1100000 x#
+0w#
 0v#
 0u#
 0t#
-0s#
+b1100000 s#
 0r#
-b0 q#
+0q#
 0p#
 0o#
 0n#
-0m#
+b0 m#
 0l#
-1k#
-1j#
-b0 i#
-b1100000 h#
-0g#
-0f#
-0e#
-0d#
-b1100000 c#
+0k#
+0j#
+0i#
+0h#
+1g#
+1f#
+b0 e#
+b1100000 d#
+0c#
 0b#
 0a#
 0`#
-0_#
+b1100000 _#
 0^#
-b0 ]#
+0]#
 0\#
 0[#
 0Z#
-0Y#
+b0 Y#
 0X#
-1W#
-1V#
-b0 U#
-b1100000 T#
-0S#
-0R#
-0Q#
-0P#
-b1100000 O#
+0W#
+0V#
+0U#
+0T#
+1S#
+1R#
+b0 Q#
+b1100000 P#
+0O#
 0N#
 0M#
 0L#
-0K#
+b1100000 K#
 0J#
-b0 I#
+0I#
 0H#
 0G#
 0F#
-0E#
+b0 E#
 0D#
-1C#
-1B#
-b0 A#
-b1100000 @#
-0?#
-0>#
-0=#
-0<#
-b1100000 ;#
+0C#
+0B#
+0A#
+0@#
+1?#
+1>#
+b0 =#
+b1100000 <#
+0;#
 0:#
 09#
 08#
-07#
+b1100000 7#
 06#
-b0 5#
+05#
 04#
 03#
 02#
-01#
+b0 1#
 00#
-1/#
-1.#
-b0 -#
-b1100000 ,#
-0+#
-0*#
-0)#
-0(#
-b1100000 '#
+0/#
+0.#
+0-#
+0,#
+1+#
+1*#
+b0 )#
+b1100000 (#
+0'#
 0&#
 0%#
 0$#
-0##
+b1100000 ##
 0"#
-b0 !#
+0!#
 0~"
 0}"
 0|"
-0{"
+b0 {"
 0z"
-1y"
-1x"
-b0 w"
-b1100000 v"
-0u"
-0t"
-0s"
-0r"
-b1100000 q"
+0y"
+0x"
+0w"
+0v"
+1u"
+1t"
+b0 s"
+b1100000 r"
+0q"
 0p"
 0o"
 0n"
-0m"
+b1100000 m"
 0l"
-b0 k"
+0k"
 0j"
 0i"
 0h"
-0g"
+b0 g"
 0f"
-1e"
-1d"
-b0 c"
-b1100000 b"
-0a"
-0`"
-0_"
-0^"
-b1100000 ]"
+0e"
+0d"
+0c"
+0b"
+1a"
+1`"
+b0 _"
+b1100000 ^"
+0]"
 0\"
 0["
 0Z"
-0Y"
+b1100000 Y"
 0X"
-b0 W"
+0W"
 0V"
 0U"
 0T"
-0S"
+b0 S"
 0R"
-1Q"
-1P"
-b0 O"
-b1100000 N"
-0M"
-0L"
-0K"
-0J"
-b1100000 I"
+0Q"
+0P"
+0O"
+0N"
+1M"
+1L"
+b0 K"
+b1100000 J"
+0I"
 0H"
 0G"
 0F"
-0E"
+b1100000 E"
 0D"
-b0 C"
+0C"
 0B"
 0A"
 0@"
-0?"
+b0 ?"
 0>"
-1="
-1<"
-b0 ;"
-b1100000 :"
-09"
-08"
-07"
-06"
-b1100000 5"
+0="
+0<"
+0;"
+0:"
+19"
+18"
+b0 7"
+b1100000 6"
+05"
 04"
 03"
 02"
-01"
+b1100000 1"
 00"
-b0 /"
+0/"
 0."
 0-"
-1,"
-0+"
-1*"
+0,"
+b0 +"
+0*"
 0)"
 1("
-b0 '"
-b10100111 &"
+0'"
+1&"
 0%"
-0$"
-0#"
-1""
-b10100111 !"
-1~
+1$"
+b0 #"
+b10100111 ""
+0!"
+0~
 0}
 1|
-1{
-0z
-b0 y
+b10100111 {
+1z
+0y
 1x
-0w
-1v
-0u
+1w
+0v
+b0 u
 1t
 0s
 1r
-b0 q
-b10100111 p
+0q
+1p
 0o
-0n
-0m
-1l
-b10100111 k
-1j
+1n
+b0 m
+b10100111 l
+0k
+0j
 0i
 1h
-1g
-0f
-b0 e
+b10100111 g
+1f
+0e
 1d
-0c
-b0 b
-b1110111 a
-b0 `
-b1110111 _
+1c
+0b
+b0 a
+1`
+0_
 b0 ^
 b1110111 ]
-b1110111 \
+b0 \
 b1110111 [
-b1 Z
-b1000 Y
-b0 X
+b0 Z
+b1 Y
+b1000 X
 b0 W
 b0 V
 b0 U
-b1000 T
-b1110111 S
-b110111 R
-b1 Q
-b10000000000001110111 P
-b0 O
-b100000000010000000000001110111 N
-b0 M
-b110111 L
-b1000 K
-b0 J
-0I
+b0 T
+b1000 S
+b1110111 R
+b110111 Q
+b1 P
+b10000000000001110111 O
+b0 N
+b100000000010000000000001110111 M
+b0 L
+b110111 K
+b1000 J
+b0 I
 0H
-b10000000000001110111 G
-b0 F
+0G
+b10000000000001110111 F
 b0 E
-b1110111 D
+b0 D
 b1110111 C
-0B
-bx A
-b1110111 @
+b1110111 B
+0A
+bx @
 b1 ?
 b110111 >
 b1110111 =
@@ -2945,441 +2936,379 @@ $end
 #200
 0,
 #400
-b1000 ^(
-b1000 _(
-b1110111 5)
-b1110111 W)
+b1000 [(
+b1000 \(
+b1110111 2)
+b1110111 T)
 b1100101 2
-b1100101 e(
-b1100101 m(
-b1100101 @
-b1100101 \
-b1100101 Q(
-0;'
-0>'
+b1100101 b(
+b1100101 j(
+07'
+0:'
+b1100101 B
+b1100101 [
+b1100101 ^(
+0w
+0z
+0<'
+0|
+1C'
+0D'
+08'
+b1100000 ;'
+b1100000 @'
+0F'
+1%"
+0&"
+0x
+b1100000 {
+b1100000 ""
+0("
+04'
+0t
+b1000000000 l(
+b1000000000 p(
+b1001 1
+b1001 g(
+b1001 k(
+b1001 o(
 b1100101 C
 b1100101 ]
-b1100101 _
-b1100101 a(
-0{
-0~
-0@'
-0""
-1G'
-0H'
-0<'
-b1100000 ?'
-b1100000 D'
-0J'
-1)"
-0*"
-0|
-b1100000 !"
-b1100000 &"
-0,"
-08'
-0x
-b1000000000 o(
-b1000000000 s(
-b1001 1
-b1001 j(
-b1001 n(
-b1001 r(
-b1100101 D
-b1100101 a
-b1100101 W(
-b10010000000001100101 G
-b10010000000001100101 P
-b10010000000001100101 Y(
+b1100101 T(
+b10010000000001100101 F
+b10010000000001100101 O
+b10010000000001100101 V(
+b1100101 M(
 b1100101 =
-b1100101 S
-b1100101 [
-b1100101 V(
-b1100101 [(
+b1100101 R
+b1100101 S(
+b1100101 X(
 b1001 /
-b1001 Y
-b1001 g(
-b1001 l(
-b1001 8)
+b1001 X
+b1001 d(
+b1001 i(
+b1001 5)
 b100101 >
-b100101 L
-b100101 R
+b100101 K
+b100101 Q
 b100000000010010000000001100101 <
-b100000000010010000000001100101 N
-b100000000010010000000001100101 T(
-b1 S(
-b1000 c(
-b100 F
-b100 ](
+b100000000010010000000001100101 M
+b100000000010010000000001100101 P(
+b1 O(
+b1110001000 R(
+b1000 `(
+b100 E
+b100 Z(
 1,
 #600
 0,
 #800
-b1100 ^(
-b1100 _(
-b1100101 6)
-b1100101 X)
-b10000000000 o(
-b10000000000 s(
+b1100 [(
+b1100 \(
+b1100101 3)
+b1100101 U)
+b10000000000 l(
+b10000000000 p(
 b1010 1
-b1010 j(
-b1010 n(
-b1010 r(
-b10100000000001100101 G
-b10100000000001100101 P
-b10100000000001100101 Y(
-b1010 /
-b1010 Y
 b1010 g(
-b1010 l(
-b1010 8)
+b1010 k(
+b1010 o(
+b10100000000001100101 F
+b10100000000001100101 O
+b10100000000001100101 V(
+b1010 /
+b1010 X
+b1010 d(
+b1010 i(
+b1010 5)
 b100000000010100000000001100101 <
-b100000000010100000000001100101 N
-b100000000010100000000001100101 T(
-b10 S(
-b1100 c(
-b1000 F
-b1000 ](
+b100000000010100000000001100101 M
+b100000000010100000000001100101 P(
+b10 O(
+b1100 `(
+b1000 E
+b1000 Z(
+b1110011010 R(
 1,
 #1000
 0,
 #1200
-b10000 ^(
-b10000 _(
-b1100101 w(
-b1100101 ;)
+b10000 [(
+b10000 \(
+b1100101 t(
+b1100101 8)
 b1110100 2
-b1110100 e(
-b1110100 m(
-b1110100 @
-b1110100 \
-b1110100 Q(
-1;'
-1>'
+b1110100 b(
+b1110100 j(
+17'
+1:'
+b1110100 B
+b1110100 [
+b1110100 ^(
+0c
+0f
+1<'
+0h
+0C'
+1D'
+18'
+b10100111 ;'
+b10100111 @'
+1F'
+1o
+0p
+0d
+b1100000 g
+b1100000 l
+0r
+14'
+0`
+b100000000000 l(
+b100000000000 p(
+b1011 1
+b1011 g(
+b1011 k(
+b1011 o(
 b1110100 C
 b1110100 ]
-b1110100 _
-b1110100 a(
-0g
-0j
-1@'
-0l
-0G'
-1H'
-1<'
-b10100111 ?'
-b10100111 D'
-1J'
-1s
-0t
-0h
-b1100000 k
-b1100000 p
-0v
-18'
-0d
-b100000000000 o(
-b100000000000 s(
-b1011 1
-b1011 j(
-b1011 n(
-b1011 r(
-b1110100 D
-b1110100 a
-b1110100 W(
-b10110000000001110100 G
-b10110000000001110100 P
-b10110000000001110100 Y(
+b1110100 T(
+b10110000000001110100 F
+b10110000000001110100 O
+b10110000000001110100 V(
+b1110100 M(
 b1110100 =
-b1110100 S
-b1110100 [
-b1110100 V(
-b1110100 [(
+b1110100 R
+b1110100 S(
+b1110100 X(
 b1011 /
-b1011 Y
-b1011 g(
-b1011 l(
-b1011 8)
+b1011 X
+b1011 d(
+b1011 i(
+b1011 5)
 b110100 >
-b110100 L
-b110100 R
+b110100 K
+b110100 Q
 b100000000010110000000001110100 <
-b100000000010110000000001110100 N
-b100000000010110000000001110100 T(
-b11 S(
-b10000 c(
-b1100 F
-b1100 ](
+b100000000010110000000001110100 M
+b100000000010110000000001110100 P(
+b11 O(
+b10000 `(
+b1100 E
+b1100 Z(
 1,
 #1400
 0,
 #1600
-b10100 _(
-b1110100 x(
-b1110100 <)
+b10100 \(
+b1110100 u(
+b1110100 9)
 1-
-1B
-1,'
+1A
+1('
 09
-1&'
+1"'
+1o&
 1s&
-1w&
-1p&
+1l&
+1G&
 1K&
-1O&
-1H&
+1D&
+13&
 17&
-1;&
-14&
+10&
+1}%
 1#&
-1'&
-1~%
+1z%
+1i%
 1m%
-1q%
-1j%
+1f%
+1U%
 1Y%
-1]%
-1V%
+1R%
+1A%
 1E%
-1I%
-1B%
+1>%
+1-%
 11%
-15%
-1.%
+1*%
+1w$
 1{$
-1!%
-1x$
+1t$
+1c$
 1g$
-1k$
-1d$
+1`$
+1O$
 1S$
-1W$
-1P$
+1L$
+1'$
 1+$
-1/$
-1($
+1$$
+1q#
 1u#
-1y#
-1r#
+1n#
+1]#
 1a#
-1e#
-1^#
+1Z#
+1I#
 1M#
-1Q#
-1J#
+1F#
+15#
 19#
-1=#
-16#
+12#
+1!#
 1%#
-1)#
-1"#
+1|"
+1k"
 1o"
-1s"
-1l"
+1h"
+1W"
 1["
-1_"
-1X"
+1T"
+1C"
 1G"
-1K"
-1D"
+1@"
+1/"
 13"
-17"
-10"
+1,"
+1?(
+1Q'
 1C(
-1U'
-1G(
-1N'
-0w'
-b1100000 {'
-b1100000 "(
-0z'
-1@(
-1C$
+1J'
+0s'
+b1100000 w'
+b1100000 |'
+0v'
+1<(
+1?$
+19'
+1+(
+18$
+07'
+0:'
 1='
 1/(
-1<$
-0;'
-0>'
-1A'
-13(
+1y
+0Y&
+b1100000 ]&
+b1100000 b&
+0\&
+16'
+1((
 1}
-0]&
-b1100000 a&
-b1100000 f&
-0`&
-1:'
-1,(
-1#"
-1_&
-06'
-1y'
+1[&
+02'
+1u'
 b0 2
-b0 e(
-b0 m(
-1z
-0{
-b1100000 !"
-b1100000 &"
-0~
-01"
-b1100000 5"
-b1100000 :"
-04"
-0E"
-b1100000 I"
-b1100000 N"
-0H"
-0Y"
-b1100000 ]"
-b1100000 b"
-0\"
-0m"
-b1100000 q"
-b1100000 v"
-0p"
-0##
-b1100000 '#
-b1100000 ,#
-0&#
-07#
-b1100000 ;#
-b1100000 @#
-0:#
-0K#
-b1100000 O#
-b1100000 T#
-0N#
-0_#
-b1100000 c#
-b1100000 h#
-0b#
-0s#
-b1100000 w#
-b1100000 |#
-0v#
-0)$
-b1100000 -$
-b1100000 2$
-0,$
-0Q$
-b1100000 U$
-b1100000 Z$
-0T$
-0e$
-b1100000 i$
-b1100000 n$
-0h$
-0y$
-b1100000 }$
-b1100000 $%
-0|$
-0/%
-b1100000 3%
-b1100000 8%
-02%
-0C%
-b1100000 G%
-b1100000 L%
-0F%
-0W%
-b1100000 [%
-b1100000 `%
-0Z%
-0k%
-b1100000 o%
-b1100000 t%
-0n%
-0!&
-b1100000 %&
-b1100000 *&
-0$&
-05&
-b1100000 9&
-b1100000 >&
-08&
-0I&
-b1100000 M&
-b1100000 R&
-0L&
-1c&
-0q&
-b1100000 u&
-b1100000 z&
-0t&
-0''
-b1100000 *'
-b1100000 /'
-0)'
-1i'
-1}'
-0-(
-b1100000 1(
-b1100000 6(
-00(
-0A(
-b1100000 E(
-b1100000 J(
-0D(
-1v'
-1b'
-b100000000010000000000001110111 +
-b100000000010000000000001110111 A
-b100000000010000000000001110111 R(
-b100000000010000000000001110111 b(
-b0 @
-b0 \
-b0 Q(
-1\&
-1i
-1""
-16"
-1J"
-1^"
-1r"
-1(#
-1<#
-1P#
-1d#
-1x#
-1.$
-1V$
-1j$
-1~$
-14%
-1H%
-1\%
-1p%
-1&&
-1:&
-1N&
-1b&
-1v&
-1+'
-1|'
-12(
-1F(
-1G'
-0H'
-b1100000 ?'
-b1100000 D'
-0J'
-1o
-0r
-0c'
-0f'
+b0 b(
+b0 j(
+1v
+0w
+b1100000 {
+b1100000 ""
+0z
+0-"
+b1100000 1"
+b1100000 6"
+00"
+0A"
+b1100000 E"
+b1100000 J"
+0D"
+0U"
+b1100000 Y"
+b1100000 ^"
+0X"
+0i"
+b1100000 m"
+b1100000 r"
+0l"
+0}"
+b1100000 ##
+b1100000 (#
+0"#
+03#
+b1100000 7#
+b1100000 <#
+06#
+0G#
+b1100000 K#
+b1100000 P#
+0J#
+0[#
+b1100000 _#
+b1100000 d#
+0^#
+0o#
+b1100000 s#
+b1100000 x#
+0r#
+0%$
+b1100000 )$
+b1100000 .$
+0($
+0M$
+b1100000 Q$
+b1100000 V$
+0P$
+0a$
+b1100000 e$
+b1100000 j$
+0d$
+0u$
+b1100000 y$
+b1100000 ~$
+0x$
+0+%
+b1100000 /%
+b1100000 4%
+0.%
+0?%
+b1100000 C%
+b1100000 H%
+0B%
+0S%
+b1100000 W%
+b1100000 \%
+0V%
+0g%
+b1100000 k%
+b1100000 p%
+0j%
+0{%
+b1100000 !&
+b1100000 &&
+0~%
+01&
+b1100000 5&
+b1100000 :&
+04&
+0E&
+b1100000 I&
+b1100000 N&
+0H&
+1_&
+0m&
+b1100000 q&
+b1100000 v&
+0p&
+0#'
+b1100000 &'
+b1100000 +'
+0%'
 1e'
-0O'
-0R'
-1Q'
-b0 C
-b0 ]
-b0 _
-b0 a(
-0=$
-0@$
-b1111111111111111111111111111111 `
-1?$
-1m
+1y'
+0)(
+b1100000 -(
+b1100000 2(
+0,(
+0=(
+b1100000 A(
+b1100000 F(
+0@(
+1r'
+1^'
+1X&
+1e
 1|
 12"
 1F"
@@ -3391,7 +3320,6 @@ b1111111111111111111111111111111 `
 1`#
 1t#
 1*$
-0>$
 1R$
 1f$
 1z$
@@ -3404,486 +3332,472 @@ b1111111111111111111111111111111 `
 1J&
 1^&
 1r&
-1('
-0P'
-0d'
+1''
 1x'
 1.(
 1B(
-08'
-1d
+1C'
+0D'
+b1100000 ;'
+b1100000 @'
+0F'
+1k
+0n
+0_'
+0b'
+1a'
+0K'
+0N'
+1M'
+b0 B
+b0 [
+b0 ^(
+09$
+0<$
+b1111111111111111111111111111111 \
+1;$
+1i
+1x
+1."
+1B"
+1V"
+1j"
+1~"
+14#
+1H#
+1\#
+1p#
+1&$
+0:$
+1N$
+1b$
+1v$
+1,%
+1@%
+1T%
+1h%
+1|%
+12&
+1F&
+1Z&
+1n&
+1$'
+0L'
+0`'
+1t'
+1*(
+1>(
+04'
+1`
 b0 1
-b0 j(
-b0 n(
-b0 r(
-1h'
-0j'
-1k'
-0n'
-b10010000 g'
-b10010000 l'
-0r'
-1T'
-0V'
-1W'
-0Z'
-b10010000 S'
-b10010000 X'
-0^'
-1B$
-0D$
-1E$
-0H$
-b10010000 A$
-b10010000 F$
-0L$
-1l
-0s
-1t
-b10010000 k
-b10010000 p
-0v
-1f
-1u
-1+"
-1?"
-1S"
-1g"
-1{"
-11#
-1E#
-1Y#
-1m#
-1#$
-17$
-1K$
-1_$
-1s$
-1)%
-1=%
-1Q%
-1e%
-1y%
-1/&
-1C&
-1W&
-1k&
-1!'
-14'
-1I'
-1]'
-1q'
-1'(
-1;(
-1O(
-b1100101 D
-b1100101 a
-b1100101 W(
-1_'
-1K'
-19$
-1c
-b100000 ^(
-b1100 `(
-b10 E
-b10 M
-b10 8
-b10 U
-b10 Z(
-b0 ?
-b0 Q
-b0 i(
-0;
-b1 J
-b1 O
-b1 ^
-b1 e
-b1 q
-b1 y
-b1 '"
-b1 /"
-b1 ;"
-b1 C"
-b1 O"
-b1 W"
-b1 c"
-b1 k"
-b1 w"
-b1 !#
-b1 -#
-b1 5#
-b1 A#
-b1 I#
-b1 U#
-b1 ]#
-b1 i#
-b1 q#
-b1 }#
-b1 '$
-b1 3$
-b1 ;$
-b1 G$
-b1 O$
-b1 [$
-b1 c$
-b1 o$
-b1 w$
-b1 %%
-b1 -%
-b1 9%
-b1 A%
-b1 M%
-b1 U%
-b1 a%
-b1 i%
-b1 u%
-b1 }%
-b1 +&
-b1 3&
-b1 ?&
-b1 G&
-b1 S&
-b1 [&
-b1 g&
-b1 o&
-b1 {&
-b1 %'
-b1 0'
-b1 9'
-b1 E'
-b1 M'
-b1 Y'
-b1 a'
-b1 m'
-b1 u'
-b1 #(
-b1 +(
-b1 7(
-b1 ?(
-b1 K(
+b0 g(
+b0 k(
 b0 o(
-b0 s(
+1d'
+0f'
+1g'
+0j'
+b10010000 c'
+b10010000 h'
+0n'
+1P'
+0R'
+1S'
+0V'
+b10010000 O'
+b10010000 T'
+0Z'
+1>$
+0@$
+1A$
+0D$
+b10010000 =$
+b10010000 B$
+0H$
+1h
+0o
+1p
+b10010000 g
+b10010000 l
+0r
+1b
+1q
+1'"
+1;"
+1O"
+1c"
+1w"
+1-#
+1A#
+1U#
+1i#
+1}#
+13$
+1G$
+1[$
+1o$
+1%%
+19%
+1M%
+1a%
+1u%
+1+&
+1?&
+1S&
+1g&
+1{&
+10'
+1E'
+1Y'
+1m'
+1#(
+17(
+1K(
+b1100101 C
+b1100101 ]
+b1100101 T(
+1['
+1G'
+15$
+1_
+b100000 [(
+b1100 ](
+b10 D
+b10 L
+b10 8
+b10 T
+b10 W(
+b0 ?
+b0 P
+b0 f(
+0;
+b1 I
+b1 N
+b1 Z
+b1 a
+b1 m
+b1 u
+b1 #"
+b1 +"
+b1 7"
+b1 ?"
+b1 K"
+b1 S"
+b1 _"
+b1 g"
+b1 s"
+b1 {"
+b1 )#
+b1 1#
+b1 =#
+b1 E#
+b1 Q#
+b1 Y#
+b1 e#
+b1 m#
+b1 y#
+b1 #$
+b1 /$
+b1 7$
+b1 C$
+b1 K$
+b1 W$
+b1 _$
+b1 k$
+b1 s$
+b1 !%
+b1 )%
+b1 5%
+b1 =%
+b1 I%
+b1 Q%
+b1 ]%
+b1 e%
+b1 q%
+b1 y%
+b1 '&
+b1 /&
+b1 ;&
+b1 C&
+b1 O&
+b1 W&
+b1 c&
+b1 k&
+b1 w&
+b1 !'
+b1 ,'
+b1 5'
+b1 A'
+b1 I'
+b1 U'
+b1 ]'
+b1 i'
+b1 q'
+b1 }'
+b1 '(
+b1 3(
+b1 ;(
+b1 G(
+b0 l(
+b0 p(
 04
-b1001010100000000000000011 G
-b1001010100000000000000011 P
-b1001010100000000000000011 Y(
+b1001010100000000000000011 F
+b1001010100000000000000011 O
+b1001010100000000000000011 V(
 b11 =
-b11 S
-b11 [
-b11 V(
-b11 [(
+b11 R
+b11 S(
+b11 X(
 b0 .
-b0 Z
+b0 Y
 b1100101 *
 b1100101 5
+b1100101 Q(
 b1100101 U(
-b1100101 X(
-b1100101 p(
-b1100101 Y)
+b1100101 m(
+b1100101 V)
 b1010 /
-b1010 Y
-b1010 g(
-b1010 l(
-b1010 8)
+b1010 X
+b1010 d(
+b1010 i(
+b1010 5)
+b1101000 M(
 b1100101 6
-b1100101 b
-b1100101 \(
-b1100101 q(
-b1100101 7)
+b1100101 ^
+b1100101 Y(
+b1100101 n(
+b1100101 4)
 b1001 0
-b1001 X
-b1001 k(
-b1001 t(
+b1001 W
+b1001 h(
+b1001 q(
 b11 >
-b11 L
-b11 R
+b11 K
+b11 Q
 b100 :
-b100 K
-b100 T
+b100 J
+b100 S
 b10001001010100000000000000011 <
-b10001001010100000000000000011 N
-b10001001010100000000000000011 T(
-b100 S(
-b10100 c(
-b10000 F
-b10000 ](
+b10001001010100000000000000011 M
+b10001001010100000000000000011 P(
+b100 O(
+b10100 `(
+b10000 E
+b10000 Z(
+b1110001011 R(
 1,
 #1800
 0,
 #2000
-b100100 _(
-b11000 ^(
+b100100 \(
+b11000 [(
 1-
-0<$
-0D"
-0X"
-0l"
-0"#
-06#
-0J#
-0^#
-0r#
-0($
-0P$
-0d$
-0x$
-0.%
-0B%
-0V%
-0j%
-0~%
-04&
-0H&
-0p&
-0:'
-0&'
-09
-0N'
-0,(
-0@(
-00"
-0}
-03"
-0G"
-0["
-0o"
-0%#
-09#
-0M#
-0a#
-0u#
-0+$
-0S$
-0g$
-0{$
-01%
-0E%
-0Y%
-0m%
-0#&
-07&
-0K&
-0_&
-0s&
+08$
+0@"
+0T"
+0h"
+0|"
+02#
+0F#
+0Z#
+0n#
+0$$
+0L$
+0`$
+0t$
+0*%
+0>%
+0R%
+0f%
+0z%
+00&
+0D&
+0l&
 06'
-0B
-0='
-0y'
-0/(
-0C(
-0v'
-0b'
-0\&
+0"'
+09
+0J'
+0((
+0<(
+0,"
+0y
+0/"
+0C"
+0W"
+0k"
+0!#
+05#
+0I#
+0]#
+0q#
+0'$
+0O$
+0c$
+0w$
+0-%
+0A%
+0U%
+0i%
+0}%
+03&
+0G&
+0[&
+0o&
+02'
+0A
+09'
+0u'
+0+(
+0?(
+0r'
+0^'
+0X&
+0v
+0w
+b1100000 {
+b1100000 ""
 0z
-0{
-b1100000 !"
-b1100000 &"
-0~
-0#"
-01"
-b1100000 5"
-b1100000 :"
-04"
-07"
-0E"
-b1100000 I"
-b1100000 N"
-0H"
-0K"
-0Y"
-b1100000 ]"
-b1100000 b"
-0\"
-0_"
-0m"
-b1100000 q"
-b1100000 v"
-0p"
-0s"
-0##
-b1100000 '#
-b1100000 ,#
-0&#
-0)#
-07#
-b1100000 ;#
-b1100000 @#
-0:#
-0=#
-0K#
-b1100000 O#
-b1100000 T#
-0N#
-0Q#
-0_#
-b1100000 c#
-b1100000 h#
-0b#
-0e#
-0s#
-b1100000 w#
-b1100000 |#
-0v#
-0y#
-0)$
-b1100000 -$
-b1100000 2$
-0,$
-0/$
-0Q$
-b1100000 U$
-b1100000 Z$
-0T$
-0W$
-0e$
-b1100000 i$
-b1100000 n$
-0h$
-0k$
-0y$
-b1100000 }$
-b1100000 $%
-0|$
-0!%
-0/%
-b1100000 3%
-b1100000 8%
-02%
-05%
-0C%
-b1100000 G%
-b1100000 L%
-0F%
-0I%
-0W%
-b1100000 [%
-b1100000 `%
-0Z%
-0]%
-0k%
-b1100000 o%
-b1100000 t%
-0n%
-0q%
-0!&
-b1100000 %&
-b1100000 *&
-0$&
-0'&
-05&
-b1100000 9&
-b1100000 >&
-08&
-0;&
-0I&
-b1100000 M&
-b1100000 R&
-0L&
-0O&
-0]&
-b1100000 a&
-b1100000 f&
-0`&
-0c&
-0q&
-b1100000 u&
-b1100000 z&
-0t&
-0w&
-0''
-b1100000 *'
-b1100000 /'
-0)'
-0,'
-0;'
-b1100000 ?'
-b1100000 D'
-0>'
-0A'
-0w'
-b1100000 {'
-b1100000 "(
-0z'
-0}'
-0-(
-b1100000 1(
-b1100000 6(
-00(
-03(
-0A(
-b1100000 E(
-b1100000 J(
-0D(
-0G(
-0e'
-0Q'
-b100000000010000000000001110111 +
-b100000000010000000000001110111 A
-b100000000010000000000001110111 R(
-b100000000010000000000001110111 b(
-b0 @
+0}
+0-"
+b1100000 1"
+b1100000 6"
+00"
+03"
+0A"
+b1100000 E"
+b1100000 J"
+0D"
+0G"
+0U"
+b1100000 Y"
+b1100000 ^"
+0X"
+0["
+0i"
+b1100000 m"
+b1100000 r"
+0l"
+0o"
+0}"
+b1100000 ##
+b1100000 (#
+0"#
+0%#
+03#
+b1100000 7#
+b1100000 <#
+06#
+09#
+0G#
+b1100000 K#
+b1100000 P#
+0J#
+0M#
+0[#
+b1100000 _#
+b1100000 d#
+0^#
+0a#
+0o#
+b1100000 s#
+b1100000 x#
+0r#
+0u#
+0%$
+b1100000 )$
+b1100000 .$
+0($
+0+$
+0M$
+b1100000 Q$
+b1100000 V$
+0P$
+0S$
+0a$
+b1100000 e$
+b1100000 j$
+0d$
+0g$
+0u$
+b1100000 y$
+b1100000 ~$
+0x$
+0{$
+0+%
+b1100000 /%
+b1100000 4%
+0.%
+01%
+0?%
+b1100000 C%
+b1100000 H%
+0B%
+0E%
+0S%
+b1100000 W%
+b1100000 \%
+0V%
+0Y%
+0g%
+b1100000 k%
+b1100000 p%
+0j%
+0m%
+0{%
+b1100000 !&
+b1100000 &&
+0~%
+0#&
+01&
+b1100000 5&
+b1100000 :&
+04&
+07&
+0E&
+b1100000 I&
+b1100000 N&
+0H&
+0K&
+0Y&
+b1100000 ]&
+b1100000 b&
+0\&
+0_&
+0m&
+b1100000 q&
+b1100000 v&
+0p&
+0s&
+0#'
+b1100000 &'
+b1100000 +'
+0%'
+0('
+07'
+b1100000 ;'
+b1100000 @'
+0:'
+0='
+0s'
+b1100000 w'
+b1100000 |'
+0v'
+0y'
+0)(
+b1100000 -(
+b1100000 2(
+0,(
+0/(
+0=(
+b1100000 A(
+b1100000 F(
+0@(
+0C(
+0a'
+0M'
+0;$
 b0 \
-b0 Q(
-0?$
-b0 `
-0i
-0""
-06"
-0J"
-0^"
-0r"
-0(#
-0<#
-0P#
-0d#
-0x#
-0.$
-0V$
-0j$
-0~$
-04%
-0H%
-0\%
-0p%
-0&&
-0:&
-0N&
-0b&
-0v&
-0+'
-0@'
-0|'
-02(
-0F(
-1o'
-0p'
-1['
-0\'
-1I$
-0J$
-1s
-0t
-0c'
-0f'
-0i'
-0O'
-0R'
-0U'
-b0 C
-b0 ]
-b0 _
-b0 a(
-0=$
-0@$
-0C$
-b100100 2
-b100100 e(
-b100100 m(
-b11111 1
-b11111 j(
-b11111 n(
-b11111 r(
-0m
+0e
 0|
 02"
 0F"
@@ -3907,689 +3821,736 @@ b11111 r(
 0J&
 0^&
 0r&
-0('
+0''
 0<'
 0x'
 0.(
 0B(
-0`'
-0L'
-0:$
-0d
-0h'
-0k'
-1n'
-b1100000 g'
-b1100000 l'
-0r'
-0T'
-0W'
-1Z'
-b1100000 S'
-b1100000 X'
-0^'
-0B$
-0E$
-1H$
-b1100000 A$
-b1100000 F$
-0L$
-0l
-0o
-1r
-b1100000 k
-b1100000 p
-0v
-0f
-0u
-0+"
-0?"
-0S"
-0g"
-0{"
-01#
-0E#
-0Y#
-0m#
-0#$
-07$
-0K$
-0_$
-0s$
-0)%
-0=%
-0Q%
-0e%
-0y%
-0/&
-0C&
-0W&
-0k&
-0!'
-04'
-0I'
-0]'
-0q'
-0'(
-0;(
-0O(
-b0 D
-b0 a
-b0 W(
+1k'
+0l'
+1W'
+0X'
+1E$
+0F$
+1o
+0p
 0_'
+0b'
+0e'
 0K'
+0N'
+0Q'
+b0 B
+b0 [
+b0 ^(
 09$
-0c
-b1 E
-b1 M
+0<$
+0?$
+b100100 2
+b100100 b(
+b100100 j(
+b11111 1
+b11111 g(
+b11111 k(
+b11111 o(
+0i
+0x
+0."
+0B"
+0V"
+0j"
+0~"
+04#
+0H#
+0\#
+0p#
+0&$
+0N$
+0b$
+0v$
+0,%
+0@%
+0T%
+0h%
+0|%
+02&
+0F&
+0Z&
+0n&
+0$'
+08'
+0t'
+0*(
+0>(
+0\'
+0H'
+06$
+0`
+0d'
+0g'
+1j'
+b1100000 c'
+b1100000 h'
+0n'
+0P'
+0S'
+1V'
+b1100000 O'
+b1100000 T'
+0Z'
+0>$
+0A$
+1D$
+b1100000 =$
+b1100000 B$
+0H$
+0h
+0k
+1n
+b1100000 g
+b1100000 l
+0r
+0b
+0q
+0'"
+0;"
+0O"
+0c"
+0w"
+0-#
+0A#
+0U#
+0i#
+0}#
+03$
+0G$
+0[$
+0o$
+0%%
+09%
+0M%
+0a%
+0u%
+0+&
+0?&
+0S&
+0g&
+0{&
+00'
+0E'
+0Y'
+0m'
+0#(
+07(
+0K(
+b0 C
+b0 ]
+b0 T(
+0['
+0G'
+05$
+0_
+b1 D
+b1 L
 b1 8
-b1 U
-b1 Z(
+b1 T
+b1 W(
 b10 3
-b10 W
-b10 d(
+b10 V
+b10 a(
 b10 ?
-b10 Q
-b10 i(
-b0 J
-b0 O
-b0 ^
-b0 e
-b0 q
-b0 y
-b0 '"
-b0 /"
-b0 ;"
-b0 C"
-b0 O"
-b0 W"
-b0 c"
-b0 k"
-b0 w"
-b0 !#
-b0 -#
-b0 5#
-b0 A#
-b0 I#
-b0 U#
-b0 ]#
-b0 i#
-b0 q#
-b0 }#
-b0 '$
-b0 3$
-b0 ;$
-b0 G$
-b0 O$
-b0 [$
-b0 c$
-b0 o$
-b0 w$
-b0 %%
-b0 -%
-b0 9%
-b0 A%
-b0 M%
-b0 U%
-b0 a%
-b0 i%
-b0 u%
-b0 }%
-b0 +&
-b0 3&
-b0 ?&
-b0 G&
-b0 S&
-b0 [&
-b0 g&
-b0 o&
-b0 {&
-b0 %'
-b0 0'
-b0 9'
-b0 E'
-b0 M'
-b0 Y'
-b0 a'
-b0 m'
-b0 u'
-b0 #(
-b0 +(
-b0 7(
-b0 ?(
-b0 K(
-b10000000000000000000000000000000 o(
-b10000000000000000000000000000000 s(
+b10 P
+b10 f(
+b0 I
+b0 N
+b0 Z
+b0 a
+b0 m
+b0 u
+b0 #"
+b0 +"
+b0 7"
+b0 ?"
+b0 K"
+b0 S"
+b0 _"
+b0 g"
+b0 s"
+b0 {"
+b0 )#
+b0 1#
+b0 =#
+b0 E#
+b0 Q#
+b0 Y#
+b0 e#
+b0 m#
+b0 y#
+b0 #$
+b0 /$
+b0 7$
+b0 C$
+b0 K$
+b0 W$
+b0 _$
+b0 k$
+b0 s$
+b0 !%
+b0 )%
+b0 5%
+b0 =%
+b0 I%
+b0 Q%
+b0 ]%
+b0 e%
+b0 q%
+b0 y%
+b0 '&
+b0 /&
+b0 ;&
+b0 C&
+b0 O&
+b0 W&
+b0 c&
+b0 k&
+b0 w&
+b0 !'
+b0 ,'
+b0 5'
+b0 A'
+b0 I'
+b0 U'
+b0 ]'
+b0 i'
+b0 q'
+b0 }'
+b0 '(
+b0 3(
+b0 ;(
+b0 G(
+b10000000000000000000000000000000 l(
+b10000000000000000000000000000000 p(
 14
-b110 G
-b110 P
-b110 Y(
-b110 =
-b110 S
-b110 [
+b110 F
+b110 O
 b110 V(
-b110 [(
+b110 =
+b110 R
+b110 S(
+b110 X(
 b0 *
 b0 5
+b0 Q(
 b0 U(
-b0 X(
-b0 p(
-b0 Y)
+b0 m(
+b0 V)
 b0 /
-b0 Y
-b0 g(
-b0 l(
-b0 8)
-b0 6
-b0 b
-b0 \(
-b0 q(
-b0 7)
-b0 0
 b0 X
-b0 k(
-b0 t(
+b0 d(
+b0 i(
+b0 5)
+b100001011010110000000000000001 +
+b100001011010110000000000000001 @
+b100001011010110000000000000001 N(
+b100001011010110000000000000001 _(
+b110 M(
+b0 6
+b0 ^
+b0 Y(
+b0 n(
+b0 4)
+b0 0
+b0 W
+b0 h(
+b0 q(
 b110 >
-b110 L
-b110 R
+b110 K
+b110 Q
 b11 :
-b11 K
-b11 T
+b11 J
+b11 S
 b1100000000000000000000000110 <
-b1100000000000000000000000110 N
-b1100000000000000000000000110 T(
-b1000 S(
-b100100 c(
-b100000 F
-b100000 ](
+b1100000000000000000000000110 M
+b1100000000000000000000000110 P(
+b1000 O(
+b100100 `(
+b100000 E
+b100000 Z(
 1,
 #2200
 0,
 #2400
-b11100 _(
-b11100 ^(
-b100100 0)
-b100100 R)
+b11100 \(
+b11100 [(
+b100100 -)
+b100100 O)
 0-
-1g
-1j
-1l
-bx +
-bx A
-bx R(
-bx b(
-b1110101 @
-b1110101 \
-b1110101 Q(
-0s
-1t
+1c
+1f
 1h
-b10100111 k
-b10100111 p
-1v
-1c'
-1f'
-1O'
-1R'
-1;'
-1>'
-b1110101 C
-b1110101 ]
-b1110101 _
-b1110101 a(
-1=$
-1@$
-b100000000000 o(
-b100000000000 s(
-b1011 1
-b1011 j(
-b1011 n(
-b1011 r(
+0o
+1p
 1d
-1h'
-0o'
-1p'
-b10100111 g'
-b10100111 l'
-1r'
-1T'
-0['
-1\'
-b10100111 S'
-b10100111 X'
-1^'
-1@'
-0G'
-1H'
-b10100111 ?'
-b10100111 D'
-1J'
-1B$
-0I$
-1J$
-b10100111 A$
-b10100111 F$
-1L$
-b1 D
-b1 a
-b1 W(
+b10100111 g
+b10100111 l
+1r
 1_'
+1b'
 1K'
+1N'
 17'
+1:'
+b1110101 B
+b1110101 [
+b1110101 ^(
 19$
-b0 E
-b0 M
+1<$
+b100000000000 l(
+b100000000000 p(
+b1011 1
+b1011 g(
+b1011 k(
+b1011 o(
+1`
+1d'
+0k'
+1l'
+b10100111 c'
+b10100111 h'
+1n'
+1P'
+0W'
+1X'
+b10100111 O'
+b10100111 T'
+1Z'
+1<'
+0C'
+1D'
+b10100111 ;'
+b10100111 @'
+1F'
+1>$
+0E$
+1F$
+b10100111 =$
+b10100111 B$
+1H$
+b1 C
+b1 ]
+b1 T(
+1['
+1G'
+13'
+15$
+b0 D
+b0 L
 b1110101 2
-b1110101 e(
-b1110101 m(
+b1110101 b(
+b1110101 j(
 b0 8
-b0 U
-b0 Z(
+b0 T
+b0 W(
 b0 3
-b0 W
-b0 d(
+b0 V
+b0 a(
 b1 ?
-b1 Q
-b1 i(
+b1 P
+b1 f(
 1;
-b1011010110000000000000001 G
-b1011010110000000000000001 P
-b1011010110000000000000001 Y(
+b1011010110000000000000001 F
+b1011010110000000000000001 O
+b1011010110000000000000001 V(
 b1 =
-b1 S
-b1 [
-b1 V(
-b1 [(
+b1 R
+b1 S(
+b1 X(
 b1110100 *
 b1110100 5
+b1110100 Q(
 b1110100 U(
-b1110100 X(
-b1110100 p(
-b1110100 Y)
+b1110100 m(
+b1110100 V)
 b1011 /
-b1011 Y
-b1011 g(
-b1011 l(
-b1011 8)
-b1110100 6
-b1110100 b
-b1110100 \(
-b1110100 q(
-b1110100 7)
-b1011 0
 b1011 X
-b1011 k(
-b1011 t(
+b1011 d(
+b1011 i(
+b1011 5)
+bx +
+bx @
+bx N(
+bx _(
+b1110101 M(
+b1110100 6
+b1110100 ^
+b1110100 Y(
+b1110100 n(
+b1110100 4)
+b1011 0
+b1011 W
+b1011 h(
+b1011 q(
 b1 >
-b1 L
-b1 R
+b1 K
+b1 Q
 b1000 :
-b1000 K
-b1000 T
+b1000 J
+b1000 S
 b100001011010110000000000000001 <
-b100001011010110000000000000001 N
-b100001011010110000000000000001 T(
-b110 S(
-b11100 c(
-b11000 F
-b11000 ](
+b100001011010110000000000000001 M
+b100001011010110000000000000001 P(
+b110 O(
+b11100 `(
+b11000 E
+b11000 Z(
+b1111111001 R(
 1,
 #2600
 0,
 #2800
-b100000 _(
-b100100 ^(
-b1110101 x(
-b1110101 <)
-0g
-0j
+b100000 \(
+b100100 [(
+b1110101 u(
+b1110101 9)
+0c
+0f
 b100100 2
-b100100 e(
-b100100 m(
-0l
-b100100 @
-b100100 \
-b100100 Q(
-1s
-0t
+b100100 b(
+b100100 j(
 0h
-b1100000 k
-b1100000 p
-0v
-0c'
-0f'
-b100100 C
-b100100 ]
-b100100 _
-b100100 a(
-0;'
-0>'
+1o
+0p
 0d
-b0 1
-b0 j(
-b0 n(
-b0 r(
-0h'
-1o'
-0p'
-b1100000 g'
-b1100000 l'
-0r'
-0@'
-1G'
-0H'
-b1100000 ?'
-b1100000 D'
-0J'
-b0 D
-b0 a
-b0 W(
+b1100000 g
+b1100000 l
+0r
 0_'
+0b'
+b100100 B
+b100100 [
+b100100 ^(
 07'
-b11 E
-b11 M
-b11 8
-b11 U
-b11 Z(
-b0 ?
-b0 Q
-b0 i(
-0;
+0:'
+0`
+b0 1
+b0 g(
+b0 k(
 b0 o(
-b0 s(
+0d'
+1k'
+0l'
+b1100000 c'
+b1100000 h'
+0n'
+0<'
+1C'
+0D'
+b1100000 ;'
+b1100000 @'
+0F'
+b0 C
+b0 ]
+b0 T(
+0['
+03'
+b11 D
+b11 L
+b11 8
+b11 T
+b11 W(
+b0 ?
+b0 P
+b0 f(
+0;
+b0 l(
+b0 p(
 04
-b11111000000000000000001000 G
-b11111000000000000000001000 P
-b11111000000000000000001000 Y(
+b11111000000000000000001000 F
+b11111000000000000000001000 O
+b11111000000000000000001000 V(
 b1000 =
-b1000 S
-b1000 [
-b1000 V(
-b1000 [(
+b1000 R
+b1000 S(
+b1000 X(
 b0 *
 b0 5
+b0 Q(
 b0 U(
-b0 X(
-b0 p(
-b0 Y)
+b0 m(
+b0 V)
 b0 /
-b0 Y
-b0 g(
-b0 l(
-b0 8)
+b0 X
+b0 d(
+b0 i(
+b0 5)
+b101100 M(
 b100100 6
-b100100 b
-b100100 \(
-b100100 q(
-b100100 7)
+b100100 ^
+b100100 Y(
+b100100 n(
+b100100 4)
 b11111 0
-b11111 X
-b11111 k(
-b11111 t(
+b11111 W
+b11111 h(
+b11111 q(
 b1000 >
-b1000 L
-b1000 R
+b1000 K
+b1000 Q
 b0 :
-b0 K
-b0 T
+b0 J
+b0 S
 b11111000000000000000001000 <
-b11111000000000000000001000 N
-b11111000000000000000001000 T(
-b111 S(
-b100000 c(
-b11100 F
-b11100 ](
+b11111000000000000000001000 M
+b11111000000000000000001000 P(
+b111 O(
+b1110001010 R(
+b100000 `(
+b11100 E
+b11100 Z(
 1,
 #3000
 0,
 #3200
-b101000 _(
-b101000 ^(
-1{
-b1100011 !"
-b1100011 &"
-1~
+b101000 \(
+b101000 [(
+1w
+b1100011 {
+b1100011 ""
 1z
-b1 `
-1i
+1v
+b1 \
+1e
 b1110110 2
-b1110110 e(
-b1110110 m(
-1n
-b1110110 @
-b1110110 \
-b1110110 Q(
+b1110110 b(
+b1110110 j(
+1j
 b1011 1
-b1011 j(
-b1011 n(
-b1011 r(
-1o
-0r
-1h
-1c'
-1f'
-1;'
-1>'
-b1110110 C
-b1110110 ]
-b1110110 _
-b1110110 a(
-0g
-0j
+b1011 g(
+b1011 k(
+b1011 o(
+1k
+0n
 1d
-1h'
-0o'
-1p'
-b10100111 g'
-b10100111 l'
-1r'
-1@'
-0G'
-1H'
-b10100111 ?'
-b10100111 D'
-1J'
-0l
-0s
-1t
-b10010000 k
-b10010000 p
-0v
-b1 D
-b1 a
-b1 W(
 1_'
+1b'
 17'
-1c
-b0 E
-b0 M
+1:'
+b1110110 B
+b1110110 [
+b1110110 ^(
+0c
+0f
+1`
+1d'
+0k'
+1l'
+b10100111 c'
+b10100111 h'
+1n'
+1<'
+0C'
+1D'
+b10100111 ;'
+b10100111 @'
+1F'
+0h
+0o
+1p
+b10010000 g
+b10010000 l
+0r
+b1 C
+b1 ]
+b1 T(
+1['
+13'
+1_
+b0 D
+b0 L
 b0 8
-b0 U
-b0 Z(
+b0 T
+b0 W(
 b1 ?
-b1 Q
-b1 i(
+b1 P
+b1 f(
 1;
-b100000000000 o(
-b100000000000 s(
+b100000000000 l(
+b100000000000 p(
 14
-b1011010110000000000000001 G
-b1011010110000000000000001 P
-b1011010110000000000000001 Y(
+b1011010110000000000000001 F
+b1011010110000000000000001 O
+b1011010110000000000000001 V(
 b1 =
-b1 S
-b1 [
-b1 V(
-b1 [(
+b1 R
+b1 S(
+b1 X(
 b1110101 *
 b1110101 5
+b1110101 Q(
 b1110101 U(
-b1110101 X(
-b1110101 p(
-b1110101 Y)
+b1110101 m(
+b1110101 V)
 b1011 /
-b1011 Y
-b1011 g(
-b1011 l(
-b1011 8)
-b1110101 6
-b1110101 b
-b1110101 \(
-b1110101 q(
-b1110101 7)
-b1011 0
 b1011 X
-b1011 k(
-b1011 t(
+b1011 d(
+b1011 i(
+b1011 5)
+b1110110 M(
+b1110101 6
+b1110101 ^
+b1110101 Y(
+b1110101 n(
+b1110101 4)
+b1011 0
+b1011 W
+b1011 h(
+b1011 q(
 b1 >
-b1 L
-b1 R
+b1 K
+b1 Q
 b1000 :
-b1000 K
-b1000 T
+b1000 J
+b1000 S
 b100001011010110000000000000001 <
-b100001011010110000000000000001 N
-b100001011010110000000000000001 T(
-b1001 S(
-b101000 c(
-b100100 F
-b100100 ](
+b100001011010110000000000000001 M
+b100001011010110000000000000001 P(
+b1001 O(
+b101000 `(
+b100100 E
+b100100 Z(
 1,
 #3400
 0,
 #3600
-b101100 ^(
-b101100 _(
-b1110110 x(
-b1110110 <)
+b101100 [(
+b101100 \(
+b1110110 u(
+b1110110 9)
 1-
 b0 2
-b0 e(
-b0 m(
-0{
-b1100000 !"
-b1100000 &"
-0~
-b0 +
-b0 A
-b0 R(
 b0 b(
-b0 @
-b0 \
-b0 Q(
+b0 j(
+0w
+b1100000 {
+b1100000 ""
 0z
-1s
-0t
+0v
+1o
+0p
+0d
+0_'
+0b'
+0K'
+0N'
+07'
+0:'
+09$
+0<$
+b0 B
+b0 [
+b0 ^(
+0c
+0f
+b0 \
+0e
+0`
+b1 l(
+b1 p(
+b0 1
+b0 g(
+b0 k(
+b0 o(
+0d'
+1k'
+0l'
+b1100000 c'
+b1100000 h'
+0n'
+0P'
+1W'
+0X'
+b1100000 O'
+b1100000 T'
+0Z'
+0<'
+1C'
+0D'
+b1100000 ;'
+b1100000 @'
+0F'
+0>$
+1E$
+0F$
+b1100000 =$
+b1100000 B$
+0H$
 0h
-0c'
-0f'
-0O'
-0R'
-0;'
-0>'
-0=$
-0@$
+0j
+0k
+1n
+b1100000 g
+b1100000 l
+0r
 b0 C
 b0 ]
-b0 _
-b0 a(
-0g
-0j
-b0 `
-0i
-0d
-b1 o(
-b1 s(
-b0 1
-b0 j(
-b0 n(
-b0 r(
-0h'
-1o'
-0p'
-b1100000 g'
-b1100000 l'
-0r'
-0T'
-1['
-0\'
-b1100000 S'
-b1100000 X'
-0^'
-0@'
-1G'
-0H'
-b1100000 ?'
-b1100000 D'
-0J'
-0B$
-1I$
-0J$
-b1100000 A$
-b1100000 F$
-0L$
-0l
-0n
-0o
-1r
-b1100000 k
-b1100000 p
-0v
-b0 D
-b0 a
-b0 W(
-0_'
-0K'
-07'
-09$
-0c
-b0 G
-b0 P
-b0 Y(
-b0 =
-b0 S
-b0 [
+b0 T(
+0['
+0G'
+03'
+05$
+0_
+b0 F
+b0 O
 b0 V(
-b0 [(
+b0 =
+b0 R
+b0 S(
+b0 X(
 b0 *
 b0 5
+b0 Q(
 b0 U(
-b0 X(
-b0 p(
-b0 Y)
+b0 m(
+b0 V)
 b0 /
-b0 Y
-b0 g(
-b0 l(
-b0 8)
-b0 6
-b0 b
-b0 \(
-b0 q(
-b0 7)
-b0 0
 b0 X
-b0 k(
-b0 t(
+b0 d(
+b0 i(
+b0 5)
+b100000000010000000000001110111 +
+b100000000010000000000001110111 @
+b100000000010000000000001110111 N(
+b100000000010000000000001110111 _(
+b0 M(
+b0 6
+b0 ^
+b0 Y(
+b0 n(
+b0 4)
+b0 0
+b0 W
+b0 h(
+b0 q(
 b0 >
-b0 L
-b0 R
-b0 :
 b0 K
-b0 T
+b0 Q
+b0 :
+b0 J
+b0 S
 b0 <
-b0 N
-b0 T(
-b1010 S(
-b101100 c(
-b101000 F
-b101000 ](
+b0 M
+b0 P(
+b1010 O(
+b1110001001 R(
+b101100 `(
+b101000 E
+b101000 Z(
 1,
 #3800
 0,
 #4000
-b1011 S(
-b110000 c(
-b101100 F
-b101100 ](
+b1011 O(
+b110000 `(
+b101100 E
+b101100 Z(
 1,

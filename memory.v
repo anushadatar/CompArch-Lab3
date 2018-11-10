@@ -8,13 +8,14 @@ module memory
   output[31:0]  DataOut0,
   output[31:0]  instruct_DataOut1
 );
-
-  reg [31:0] mem[31:0]; //1023 will change based on size of address
+  reg[31:0] real_add;
+  reg [31:0] mem[1023:0]; //1023 will change based on size of address
       //address was size 10 and thus mem was 1023 big
   always @(posedge clk) begin
     $display("thing %b",mem[1]);
     if (regWE) begin
-      mem[Addr0] <= DataIn0;
+      real_add = 32'd1023-(Addr0);
+      mem[real_add] <= DataIn0;
     end
   end
   initial $readmemh("yeet.text", mem);
