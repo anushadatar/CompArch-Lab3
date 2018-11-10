@@ -11,15 +11,16 @@ module memory
   reg[31:0] real_add;
   reg [31:0] mem[1023:0]; //1023 will change based on size of address
       //address was size 10 and thus mem was 1023 big
+
   always @(posedge clk) begin
+    real_add = 32'd1023-(Addr0);
     $display("thing %b",mem[1]);
     if (regWE) begin
-      real_add = 32'd1023-(Addr0);
       mem[real_add] <= DataIn0;
     end
   end
   initial $readmemh("yeet.text", mem);
 
-  assign DataOut0 = mem[Addr0];
+  assign DataOut0 = mem[real_add];
   assign instruct_DataOut1 = mem[instruct_Addr1];
 endmodule
