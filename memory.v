@@ -19,7 +19,7 @@ module memory
       mem[real_add] <= DataIn0;
     end
   end
-  initial $readmemh("yeet.text", mem);
+  initial $readmemh("fib.text", mem);
 
   assign DataOut0 = mem[real_add];
   assign instruct_DataOut1 = mem[instruct_Addr1];

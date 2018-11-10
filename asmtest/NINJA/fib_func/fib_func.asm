@@ -4,6 +4,7 @@ main:
 # Set up arguments for call to fib_test
 addi  $a0, $zero, 4	# arg0 = 4
 addi  $a1, $zero, 10	# arg1 = 10
+addi $sp, $zero, 0
 jal   fib_test
 
 # Jump to "exit", rather than falling through to subroutines
