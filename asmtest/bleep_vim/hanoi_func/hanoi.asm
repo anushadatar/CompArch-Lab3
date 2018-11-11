@@ -4,6 +4,7 @@ main:
 # Set up arguments for call to hanoi_test
 addi  $a0, $zero, 4	# arg0 = 4
 addi  $a1, $zero, 8	# arg1 = 8
+addi $sp, $zero, 32760
 jal   hanoi_test
 
 # Jump to "exit", rather than falling through to subroutines

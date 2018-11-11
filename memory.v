@@ -17,7 +17,7 @@ module memory
       mem[Addr0] <= DataIn0;
     end
   end
-  initial $readmemh("array.text", mem);
+  initial $readmemh("hanoi.text", mem);
   assign memAtAdd = mem[Addr0];
   assign DataOut0 = mem[Addr0];
   assign instruct_DataOut1 = mem[instruct_Addr1];
