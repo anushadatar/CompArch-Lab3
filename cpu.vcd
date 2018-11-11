@@ -1,5 +1,5 @@
 $date
-	Sun Nov 11 16:23:13 2018
+	Sun Nov 11 16:32:48 2018
 $end
 $version
 	Icarus Verilog
@@ -1896,10 +1896,10 @@ $scope module mem $end
 $var wire 32 M( Addr0 [31:0] $end
 $var wire 32 N( DataOut0 [31:0] $end
 $var wire 1 , clk $end
+$var wire 1 H dmWE $end
 $var wire 32 O( instruct_Addr1 [31:0] $end
 $var wire 32 P( instruct_DataOut1 [31:0] $end
 $var wire 32 Q( memAtAdd [31:0] $end
-$var wire 1 H regWE $end
 $var wire 32 R( DataIn0 [31:0] $end
 $upscope $end
 $scope module op_imm_mux $end
