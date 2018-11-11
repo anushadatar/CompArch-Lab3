@@ -40,15 +40,18 @@ module instructionDecoder
 );
 
 always @(instruction)begin
-opcode = instruction[31:26];
-funct = instruction[5:0];
-rs = instruction[25:21];
-rt = instruction[20:16];
-rd = instruction[15:11];
-shamt = instruction[10:6];
-immediate[31:16] = 16'b0;
-immediate[15:0] = instruction[15:0];
-address[25:0] = instruction[25:0];
+  if (instruction[15]==0)
+    immediate[31:16] = 16'd0;
+  else
+    immediate[31:16] = 16'b1111111111111111;
+  opcode = instruction[31:26];
+  funct = instruction[5:0];
+  rs = instruction[25:21];
+  rt = instruction[20:16];
+  rd = instruction[15:11];
+  shamt = instruction[10:6];
+  immediate[15:0] = instruction[15:0];
+  address[25:0] = instruction[25:0];
     case(opcode)
         `LW:   begin reg_WE = 1; ALU_op = `aluADD; op_imm = 1; DM_WE = 0; dest_add = 1; reg_in = 1; DM_add = 1; pc = 0; end //I Type
         `SW:   begin reg_WE = 0; ALU_op = `aluADD; op_imm = 1; DM_WE = 1; dest_add = 1; reg_in = 0; DM_add = 1; pc = 0; end //I Type

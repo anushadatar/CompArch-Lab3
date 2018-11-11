@@ -4,18 +4,13 @@
 `include "decoders.v"
 `include "mux.v"
 `include "regfile.v"
-//`include "register32.v"
-//`include "register32zero.v"
 `include "register.v"
-//`include "register/regfile.v"
 `include "muxes.v"
 `include "ALU/alu.v"
-//`include "register/register.v"
-//`include "register/multiplexer.v"
-//`include "register/decoders.v"
 `include "ALU/operations/multiplexer.v"
 `include "ALU/operations/gates.v"
 `include "ALU/operations/add_sub.v"
+//`include "behavioral_alu.v"
 `include "pcController.v"
 
 module singlecycleCPU
@@ -50,7 +45,7 @@ wire co_flag, zero_flag, ov_flag;
 wire [1:0] S;
 wire[31:0] data_mem_address;
 
-pc_multiplexer pcmux(.PC(PC), .immediate(immediate), .JumpAddress(JumpAddress), .regRs(regRS), .clk(clk), .S(pc));
+pc_multiplexer pcmux(.PC(PC), .immediate(immediate), .JumpAddress(JumpAddress), .regRs(regRS), .clk(clk), .S(S));
 pcController controlPC(.zeroFlag(zero_flag),.opcode(opcode),.function1(funct),.controlSig(S));
 
 memory mem(.clk(clk), .regWE(DM_WE), .Addr0(immediate+regRS), .instruct_Addr1(PC>>2),.DataIn0(regRT), .DataOut0(dataMem), .instruct_DataOut1(instruction));
@@ -62,6 +57,7 @@ instructionDecoder decode(.clk(clk),.instruction(instruction), .rs(rs), .rt(rt),
 regfile regi(.ReadData1(regRS), .ReadData2(regRT), .WriteData(reg_in_mux_out), .ReadRegister1(rs), .ReadRegister2(rt), .WriteRegister(reg_select_mux_out), .RegWrite(reg_WE), .Clk(clk));
 
 ALU lulu(.result(alu_out), .carryout(co_flag), .zero(zero_flag), .overflow(ov_flag), .A(regRS), .B(alu2), .command(ALU_op));
+//ALU lulu(.result(alu_out), .zero(zero_flag), .A(regRS), .B(alu2), .command(ALU_op));
 
 mux3_5bit reg_select_mux(.input0(rd),.input1(rt),.input2(5'd31),.select0(dest_add),.out(reg_select_mux_out));
 mux3_32bit reg_in_mux(.input0(alu_out),.input1(dataMem),.input2(PC+4),.select0(reg_in),.out(reg_in_mux_out));

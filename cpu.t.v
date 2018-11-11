@@ -78,7 +78,7 @@ $display("reg RT : %b", regRT);
 
 #200
 $display("dataMem: %b", dataMem);
-$display("reg RT : %b", regRT); #20000
+$display("reg RT : %b", regRT); #200000
 $finish;
 end
 endmodule
