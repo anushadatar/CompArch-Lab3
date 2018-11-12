@@ -17,7 +17,7 @@ module memory
       mem[Addr0] <= DataIn0;
     end
   end
-  initial $readmemh("fib2.text", mem);
+  initial $readmemh("cpuSubmodules/hexTxt/fib2.text", mem);
   assign memAtAdd = mem[Addr0];
   assign DataOut0 = mem[Addr0];
   assign instruct_DataOut1 = mem[instruct_Addr1];
